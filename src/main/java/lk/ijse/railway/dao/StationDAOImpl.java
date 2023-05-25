@@ -2,16 +2,13 @@ package lk.ijse.railway.dao;
 
 import lk.ijse.railway.db.DBConnection;
 import lk.ijse.railway.dto.Station;
-import lk.ijse.railway.dto.Train;
 import lk.ijse.railway.util.CrudUtil;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.sun.javafx.css.FontFaceImpl.FontFaceSrcType.URL;
-
-public class StationModel {
+public class StationDAOImpl {
     public static boolean save(Station station) throws SQLException {
 
         String sql = "INSERT INTO Station(StationID, StationName, Distance) " +

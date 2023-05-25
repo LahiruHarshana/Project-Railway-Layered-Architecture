@@ -21,7 +21,7 @@ import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.StationDetails;
 import lk.ijse.railway.dto.Train;
 import lk.ijse.railway.dao.StationDetailsDAOImpl;
-import lk.ijse.railway.dao.StationModel;
+import lk.ijse.railway.dao.StationDAOImpl;
 import lk.ijse.railway.dao.TrainModel;
 import lk.ijse.railway.util.AlertTypes;
 
@@ -142,7 +142,7 @@ public class trainFormController implements Initializable {
     private void loadTrainIDCB() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = StationModel.loadtrainIds();
+            List<String> ids = StationDAOImpl.loadtrainIds();
 
             for (String id : ids) {
                 obList.add(id);
@@ -157,7 +157,7 @@ public class trainFormController implements Initializable {
     private void loadStationNameComboBox() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = StationModel.loadIds();
+            List<String> ids = StationDAOImpl.loadIds();
 
             for (String id : ids) {
                 obList.add(id);

@@ -14,7 +14,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.Station;
 import lk.ijse.railway.dto.tm.StationTM;
-import lk.ijse.railway.dao.StationModel;
+import lk.ijse.railway.dao.StationDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.net.URL;
@@ -59,7 +59,7 @@ public class stationFormController implements Initializable {
     void btnDeleteOnAction(ActionEvent event) {
         String code = idText.getText();
         try {
-            boolean isDeleted = StationModel.delete(code);
+            boolean isDeleted = StationDAOImpl.delete(code);
             if (isDeleted) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Delete Successfull !");
             }
@@ -94,7 +94,7 @@ public class stationFormController implements Initializable {
 
         try {
 //            boolean isSaved = ItemModel.save(code, description, unitPrice, qtyOnHand);
-            boolean isSaved = StationModel.save(station);
+            boolean isSaved = StationDAOImpl.save(station);
             if (isSaved) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","save Successfull !");
             }
@@ -110,7 +110,7 @@ public class stationFormController implements Initializable {
     @FXML
     void searchButtonOnAction(ActionEvent event) {
         try {
-            Station station = StationModel.search(idText.getText());
+            Station station = StationDAOImpl.search(idText.getText());
             if (station != null) {
                 idText.setText(station.getId());
                 stationNameText.setText(station.getName());
@@ -133,7 +133,7 @@ public class stationFormController implements Initializable {
 
 
         try {
-            boolean isUpdated = StationModel.update(station);
+            boolean isUpdated = StationDAOImpl.update(station);
             Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Updated Successfull !");
         } catch (SQLException e) {
             e.printStackTrace();
@@ -156,7 +156,7 @@ public class stationFormController implements Initializable {
     private void LoadTable() {
         try {
             ObservableList<StationTM> obList = FXCollections.observableArrayList();
-            List<Station> cusList = StationModel.getAll();
+            List<Station> cusList = StationDAOImpl.getAll();
 
             for (Station station : cusList) {
                 obList.add(new StationTM(
