@@ -15,7 +15,7 @@ import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.Employee;
 import lk.ijse.railway.dto.Salary;
 import lk.ijse.railway.dao.EmployeeDAOImpl;
-import lk.ijse.railway.dao.SalaryModel;
+import lk.ijse.railway.dao.SalaryDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
 
@@ -63,7 +63,7 @@ public class SalaryFormController implements Initializable {
          Salary salary = new Salary(id, empId, date,amount);
 
         try {
-            boolean isSaved = SalaryModel.save(salary);
+            boolean isSaved = SalaryDAOImpl.save(salary);
             if (isSaved) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Saved Successfull !");
 

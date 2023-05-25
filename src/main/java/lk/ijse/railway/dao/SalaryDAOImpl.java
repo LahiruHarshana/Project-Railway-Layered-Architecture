@@ -5,7 +5,7 @@ import lk.ijse.railway.util.CrudUtil;
 
 import java.sql.SQLException;
 
-public class SalaryModel {
+public class SalaryDAOImpl {
     public static boolean save(Salary salary) throws SQLException {
 
         String sql = "INSERT INTO Salary(SalaryID, EmployeeID, Date,Amount) " +
