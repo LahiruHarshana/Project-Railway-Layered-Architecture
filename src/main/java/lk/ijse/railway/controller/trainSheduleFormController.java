@@ -36,6 +36,8 @@ public class trainSheduleFormController implements Initializable {
     @FXML
     private TableView<TrainTM> timeTable;
 
+    TrainDAOImpl trainDAO = new TrainDAOImpl();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         LoadTable();
@@ -56,7 +58,7 @@ public class trainSheduleFormController implements Initializable {
     private void LoadTable() {
         try {
             ObservableList<TrainTM> obList = FXCollections.observableArrayList();
-            List<Train> cusList = TrainDAOImpl.getAll();
+            List<Train> cusList = trainDAO.getAll();
 
             for (Train train : cusList) {
                 obList.add(new TrainTM(

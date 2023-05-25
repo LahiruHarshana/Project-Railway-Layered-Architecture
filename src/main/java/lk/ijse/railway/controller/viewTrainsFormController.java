@@ -45,6 +45,8 @@ public class viewTrainsFormController implements Initializable {
     @FXML
     private AnchorPane viewTrain;
 
+    TrainDAOImpl trainDAO = new TrainDAOImpl();
+
     @FXML
     void btnBackOnAction(ActionEvent event) throws IOException {
 
@@ -96,7 +98,7 @@ public class viewTrainsFormController implements Initializable {
     private void LoadTable() {
         try {
             ObservableList<TrainTM> obList = FXCollections.observableArrayList();
-            List<Train> cusList = TrainDAOImpl.getAll();
+            List<Train> cusList = trainDAO.getAll();
 
             for (Train train : cusList) {
                 obList.add(new TrainTM(
