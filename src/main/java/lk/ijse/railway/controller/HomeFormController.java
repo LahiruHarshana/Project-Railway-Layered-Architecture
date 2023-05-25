@@ -23,6 +23,8 @@ import java.util.ResourceBundle;
 public class HomeFormController implements Initializable {
 
     public static int uId;
+
+    LoginHistoryDAOImpl loginHistoryDAO = new LoginHistoryDAOImpl();
     @FXML
     void btnLogOutOnAction(ActionEvent event) throws Exception {
         Launcher launcher = new Launcher();
@@ -37,7 +39,7 @@ public class HomeFormController implements Initializable {
             LocalTime time = LocalTime.now();
             Time time1 = Time.valueOf(time);
 
-            boolean isSaved = LoginHistoryDAOImpl.saveLogOut(uId,date,time1);
+            boolean isSaved = loginHistoryDAO.saveLogOut(uId,date,time1);
             if (isSaved) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !"," Log out saved!");
 

@@ -40,8 +40,6 @@ import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-//hi
-
 public class BookingFormController implements Initializable {
 
 

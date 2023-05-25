@@ -82,6 +82,8 @@ public class EmployeeFormController implements Initializable {
     @FXML
     private DatePicker pickerDob;
 
+    EmployeeDAOImpl employeeDAO = new EmployeeDAOImpl();
+
     @FXML
     void btnAddOnAction(ActionEvent event) {
 
@@ -119,7 +121,7 @@ public class EmployeeFormController implements Initializable {
             Employee employee = new Employee(id, name, date, contact, address);
 
             try {
-                boolean isSaved = EmployeeDAOImpl.save(employee);
+                boolean isSaved = employeeDAO.save(employee);
                 if (isSaved) {
                     new Alert(Alert.AlertType.CONFIRMATION, "Item saved!").show();
                 }
@@ -137,7 +139,7 @@ public class EmployeeFormController implements Initializable {
     void btnDeleteOnAction(ActionEvent event) {
         String code = textId.getText();
         try {
-            boolean isDeleted = EmployeeDAOImpl.delete(code);
+            boolean isDeleted = employeeDAO.delete(code);
             if (isDeleted) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Deleted !");
 
@@ -154,7 +156,7 @@ public class EmployeeFormController implements Initializable {
     @FXML
     void btnSearchOnAction(ActionEvent event) {
         try {
-            Employee employee = EmployeeDAOImpl.search(textId.getText());
+            Employee employee = employeeDAO.search(textId.getText());
             if (employee != null) {
                 textId.setText(employee.getId());
                 textName.setText(employee.getName());
@@ -207,7 +209,7 @@ public class EmployeeFormController implements Initializable {
             Employee employee = new Employee(id, name, date, contact, address);
 
             try {
-                boolean isUpdated = EmployeeDAOImpl.update(employee);
+                boolean isUpdated = employeeDAO.update(employee);
                 if (isUpdated) {
                     Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Employee is updated!");
 
@@ -240,7 +242,7 @@ public class EmployeeFormController implements Initializable {
     private void LoadTable() {
         try {
             ObservableList<EmployeeTM> obList = FXCollections.observableArrayList();
-            List<Employee> cusList = EmployeeDAOImpl.getAll();
+            List<Employee> cusList = employeeDAO.getAll();
 
             for (Employee employee : cusList) {
                 obList.add(new EmployeeTM(
