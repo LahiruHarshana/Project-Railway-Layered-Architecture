@@ -307,7 +307,7 @@ public class BookingFormController implements Initializable {
 //        seatsFormController.setId(idl, date);
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = StationDetailsModel.searchById(idl);
+            List<String> ids = StationDetailsDAOImpl.searchById(idl);
 
             for (String id : ids) {
                 obList.add(id);

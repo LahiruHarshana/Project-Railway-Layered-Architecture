@@ -15,7 +15,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dao.PaymentDAOImpl;
-import lk.ijse.railway.dao.StationDetailsModel;
+import lk.ijse.railway.dao.StationDetailsDAOImpl;
 import lk.ijse.railway.dao.TicketModel;
 import lk.ijse.railway.dao.TicketingModel;
 import lk.ijse.railway.db.DBConnection;
@@ -151,7 +151,7 @@ public class ticketingFormController implements Initializable {
         String idl = ticketTrainComboBox.getValue();
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = StationDetailsModel.searchById(idl);
+            List<String> ids = StationDetailsDAOImpl.searchById(idl);
 
             for (String id : ids) {
                 obList.add(id);

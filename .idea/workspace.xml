@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f7f2a54-4738-4d50-8966-9414667d47ef" name="Changes" comment="check">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d1a10015-50ff-4cd8-a7be-7ee19bb18149.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d1a10015-50ff-4cd8-a7be-7ee19bb18149.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5f7f2a54-4738-4d50-8966-9414667d47ef" name="Changes" comment="DAO Salary added">
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/SeatsFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/SeatsFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/SeatsModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/SeatsDAOImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +306,7 @@
       <workItem from="1684992015975" duration="9000" />
       <workItem from="1684992875435" duration="29000" />
       <workItem from="1684992910460" duration="2267000" />
-      <workItem from="1684996171146" duration="675000" />
+      <workItem from="1684996171146" duration="950000" />
     </task>
     <task id="LOCAL-00001" summary="commit all">
       <created>1680420622427</created>
@@ -399,7 +399,35 @@
       <option name="project" value="LOCAL" />
       <updated>1684996227983</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="check">
+      <created>1685005252404</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685005252404</updated>
+    </task>
+    <task id="LOCAL-00015" summary="DAO Passenger added">
+      <created>1685005376657</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685005376657</updated>
+    </task>
+    <task id="LOCAL-00016" summary="DAO Payment added">
+      <created>1685005436515</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1685005436515</updated>
+    </task>
+    <task id="LOCAL-00017" summary="DAO Salary added">
+      <created>1685005486268</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1685005486268</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +453,10 @@
     <MESSAGE value="near also" />
     <MESSAGE value="check commit" />
     <MESSAGE value="check" />
-    <option name="LAST_COMMIT_MESSAGE" value="check" />
+    <MESSAGE value="DAO Passenger added" />
+    <MESSAGE value="DAO Payment added" />
+    <MESSAGE value="DAO Salary added" />
+    <option name="LAST_COMMIT_MESSAGE" value="DAO Salary added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

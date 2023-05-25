@@ -20,7 +20,7 @@ import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.StationDetails;
 import lk.ijse.railway.dto.Train;
-import lk.ijse.railway.dao.StationDetailsModel;
+import lk.ijse.railway.dao.StationDetailsDAOImpl;
 import lk.ijse.railway.dao.StationModel;
 import lk.ijse.railway.dao.TrainModel;
 import lk.ijse.railway.util.AlertTypes;
@@ -185,7 +185,7 @@ public class trainFormController implements Initializable {
         StationDetails stationDetails = new StationDetails(trainId,StationId, time);
 
         try {
-            boolean isSaved = StationDetailsModel.saveTrainStation(stationDetails);
+            boolean isSaved = StationDetailsDAOImpl.saveTrainStation(stationDetails);
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Item saved!").show();
             }
