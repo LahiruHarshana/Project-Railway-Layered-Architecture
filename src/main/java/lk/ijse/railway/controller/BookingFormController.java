@@ -31,10 +31,10 @@ import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Date;
-import java.sql.SQLException;
+import java.sql.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.regex.Matcher;
@@ -307,6 +307,7 @@ public class BookingFormController implements Initializable {
 
 
     }
+
 
     @FXML
     void trainIDCBOnAction(ActionEvent event) {

@@ -56,6 +56,9 @@ public class settingFormController implements Initializable {
     @FXML
     private TextField txtRoll;
 
+    UserDAOImpl userDAO = new UserDAOImpl();
+    LoginHistoryDAOImpl loginHistoryDAO = new LoginHistoryDAOImpl();
+
     private void setUI(String fileName) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/"+fileName));
         Pane registerPane = fxmlLoader.load();
@@ -88,7 +91,7 @@ public class settingFormController implements Initializable {
         User user = new User( uId,name,num,address,email);
 
         try {
-            boolean isUpdated = UserDAOImpl.update(user);
+            boolean isUpdated = userDAO.update(user);
             if (isUpdated) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Updated Successfull !");
             }
@@ -133,7 +136,7 @@ public class settingFormController implements Initializable {
             LocalTime time = LocalTime.now();
             Time time1 = Time.valueOf(time);
 
-            boolean isSaved = LoginHistoryDAOImpl.saveLogOut(uId,date,time1);
+            boolean isSaved = loginHistoryDAO.saveLogOut(uId,date,time1);
             if (isSaved) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Save Successfull !");
             }
@@ -155,7 +158,7 @@ public class settingFormController implements Initializable {
     private void LoadTxts() {
 
         try {
-            LoginHistory loginHistory = LoginHistoryDAOImpl.searchLastID();
+            LoginHistory loginHistory = loginHistoryDAO.searchLastID();
             if (loginHistory != null) {
                 uId =loginHistory.getUId();
                 System.out.println(uId);
@@ -166,7 +169,7 @@ public class settingFormController implements Initializable {
             new Alert(Alert.AlertType.ERROR, "something happened!").show();
         }
         try {
-            User user = UserDAOImpl.searchAll(uId);
+            User user = userDAO.searchAll(uId);
             if (user != null) {
                 txtID.setText(String.valueOf(user.getUId()));
                 txtName.setText(user.getName());
