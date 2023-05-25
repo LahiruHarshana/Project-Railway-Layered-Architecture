@@ -53,13 +53,14 @@ public class stationFormController implements Initializable {
 
     @FXML
     private TableView<StationTM> tblStations;
+    StationDAOImpl stationDAO = new StationDAOImpl();
 
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
         String code = idText.getText();
         try {
-            boolean isDeleted = StationDAOImpl.delete(code);
+            boolean isDeleted = stationDAO.delete(code);
             if (isDeleted) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Delete Successfull !");
             }
@@ -93,8 +94,7 @@ public class stationFormController implements Initializable {
         Station station = new Station(id,name,distance);
 
         try {
-//            boolean isSaved = ItemModel.save(code, description, unitPrice, qtyOnHand);
-            boolean isSaved = StationDAOImpl.save(station);
+            boolean isSaved = stationDAO.save(station);
             if (isSaved) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","save Successfull !");
             }
@@ -110,7 +110,7 @@ public class stationFormController implements Initializable {
     @FXML
     void searchButtonOnAction(ActionEvent event) {
         try {
-            Station station = StationDAOImpl.search(idText.getText());
+            Station station = stationDAO.search(idText.getText());
             if (station != null) {
                 idText.setText(station.getId());
                 stationNameText.setText(station.getName());
@@ -133,7 +133,7 @@ public class stationFormController implements Initializable {
 
 
         try {
-            boolean isUpdated = StationDAOImpl.update(station);
+            boolean isUpdated = stationDAO.update(station);
             Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Updated Successfull !");
         } catch (SQLException e) {
             e.printStackTrace();
@@ -156,7 +156,7 @@ public class stationFormController implements Initializable {
     private void LoadTable() {
         try {
             ObservableList<StationTM> obList = FXCollections.observableArrayList();
-            List<Station> cusList = StationDAOImpl.getAll();
+            List<Station> cusList = stationDAO.getAll();
 
             for (Station station : cusList) {
                 obList.add(new StationTM(
