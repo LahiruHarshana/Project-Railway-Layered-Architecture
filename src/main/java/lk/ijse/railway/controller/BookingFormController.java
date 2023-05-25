@@ -95,6 +95,16 @@ public class BookingFormController implements Initializable {
     @FXML
     private JFXComboBox<String > trainIdCB;
 
+    StationDAOImpl stationDAO = new StationDAOImpl();
+
+    BookingDAOImpl bookingDAO = new BookingDAOImpl();
+
+    PassengerDAOImpl passengerDAO = new PassengerDAOImpl();
+
+    StationDetailsDAOImpl stationDetailsDAO = new StationDetailsDAOImpl();
+
+    TrainDAOImpl trainDAO = new TrainDAOImpl();
+
     public static void seatsGetValue(String seatsId) {
         seat = seatsId;
 
@@ -141,7 +151,7 @@ public class BookingFormController implements Initializable {
         String name = StationNameCB.getValue();
 
         try {
-            Ticket ticket = StationDAOImpl.searchById(name);
+            Ticket ticket = stationDAO.searchById(name);
             distance = ticket.getDistance();
             System.out.println(distance);
         } catch (SQLException e) {
@@ -275,7 +285,7 @@ public class BookingFormController implements Initializable {
         boolean isPlaced = false;
         try {
             if (validation==0) {
-                isPlaced = BookingDAOImpl.paymentBooking(bookingId, date, toDate, trainId, stationName, seatsId, paymentId, price, passengerId, passengerName, contactNum, email, address, Nic);
+                isPlaced = bookingDAO.paymentBooking(bookingId, date, toDate, trainId, stationName, seatsId, paymentId, price, passengerId, passengerName, contactNum, email, address, Nic);
             }
             if(isPlaced) {
                 value =1;
@@ -307,7 +317,7 @@ public class BookingFormController implements Initializable {
 //        seatsFormController.setId(idl, date);
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = StationDetailsDAOImpl.searchById(idl);
+            List<String> ids = stationDetailsDAO.searchById(idl);
 
             for (String id : ids) {
                 obList.add(id);
@@ -344,13 +354,10 @@ public class BookingFormController implements Initializable {
 
     private void LoadPassengerID() {
         try {
-            int id = PassengerDAOImpl.search();
+            int id = passengerDAO.search();
             int idl = id+1;
 
-
             passengerLabel.setText(String.valueOf(idl));
-
-
 
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, "wrong").show();
@@ -371,7 +378,7 @@ public class BookingFormController implements Initializable {
     private void LoadTrainIDCB() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = TrainDAOImpl.loadIds();
+            List<String> ids = trainDAO.loadIds();
 
             for (String id : ids) {
                 obList.add(id);
