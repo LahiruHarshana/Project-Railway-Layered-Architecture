@@ -65,6 +65,9 @@ public class LoginFormController implements Initializable {
 
     int eka;
 
+    UserDAOImpl userDAO = new UserDAOImpl();
+    LoginHistoryDAOImpl loginHistoryDAO = new LoginHistoryDAOImpl();
+
     @FXML
     void loginButtonOnAction(ActionEvent event) throws IOException {
         wrongUser.setVisible(false);
@@ -72,7 +75,7 @@ public class LoginFormController implements Initializable {
         String user = txtUser.getText();
 
         try {
-            User user1 = UserDAOImpl.search1(txtUser.getText());
+            User user1 = userDAO.search1(txtUser.getText());
             if (user1 != null) {
                 password=user1.getPswd();
                 System.out.println(password);
@@ -96,7 +99,7 @@ public class LoginFormController implements Initializable {
             }
 
             try {
-                User user1 = UserDAOImpl.search1(txtUser.getText());
+                User user1 = userDAO.search1(txtUser.getText());
                 if (user1 != null) {
                     uid = user1.getUId();
 
@@ -116,7 +119,7 @@ public class LoginFormController implements Initializable {
                 LocalTime time = LocalTime.now();
                 Time time1 = Time.valueOf(time);
 
-                boolean isSaved = LoginHistoryDAOImpl.save(uid,date,time1);
+                boolean isSaved = loginHistoryDAO.save(uid,date,time1);
                 if (isSaved) {
                     Notification.notification(AlertTypes.CONFORMATION,"CONFIRMATION ","Saved Log History");
                 }

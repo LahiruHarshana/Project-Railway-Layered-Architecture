@@ -38,6 +38,8 @@ public class LogHistoryFormController implements Initializable {
     @FXML
     private TableView<LoginHistoryTM> tblLoginHistory;
 
+    LoginHistoryDAOImpl loginHistoryDAO = new LoginHistoryDAOImpl();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setCellValueFactory();
@@ -47,7 +49,7 @@ public class LogHistoryFormController implements Initializable {
     private void LoadTable() {
         try {
             ObservableList<LoginHistoryTM> obList = FXCollections.observableArrayList();
-            List<LoginHistory> cusList = LoginHistoryDAOImpl.getAll();
+            List<LoginHistory> cusList = loginHistoryDAO.getAll();
 
             for (LoginHistory loginHistory : cusList) {
                 obList.add(new LoginHistoryTM(
