@@ -50,6 +50,9 @@ public class SalaryFormController implements Initializable {
     @FXML
     private TextField txtsalaryId;
 
+    EmployeeDAOImpl employeeDAO = new EmployeeDAOImpl();
+    SalaryDAOImpl salaryDAO = new SalaryDAOImpl();
+
 
 
     @FXML
@@ -63,7 +66,7 @@ public class SalaryFormController implements Initializable {
          Salary salary = new Salary(id, empId, date,amount);
 
         try {
-            boolean isSaved = SalaryDAOImpl.save(salary);
+            boolean isSaved = salaryDAO.save(salary);
             if (isSaved) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Saved Successfull !");
 
@@ -79,7 +82,7 @@ public class SalaryFormController implements Initializable {
     @FXML
     void btnSearchOnAction(ActionEvent event) {
         try {
-            Employee employee = EmployeeDAOImpl.search(txtId.getText());
+            Employee employee = employeeDAO.search(txtId.getText());
             if (employee != null) {
                 txtId.setText(employee.getId());
                 txtName.setText(employee.getName());
