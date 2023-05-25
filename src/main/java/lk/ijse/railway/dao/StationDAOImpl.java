@@ -66,17 +66,6 @@ public class StationDAOImpl {
         return data;
     }
 
-    public static List<String> loadtrainIds() throws SQLException {
-        Connection con = DBConnection.getInstance().getConnection();
-        ResultSet resultSet = con.createStatement().executeQuery("SELECT TrainID FROM Train");
-
-        List<String> data = new ArrayList<>();
-
-        while (resultSet.next()) {
-            data.add(resultSet.getString(1));
-        }
-        return data;
-    }
 
 
     public static boolean delete(String code) throws SQLException {

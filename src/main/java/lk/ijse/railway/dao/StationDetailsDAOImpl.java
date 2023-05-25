@@ -44,17 +44,4 @@ public class StationDetailsDAOImpl {
         }
         return data;    }
 
-    public static List<String> searchBySeats(String idl) throws SQLException {
-
-        String sql = "SELECT SeatsID FROM Booking WHERE TrainID = ?";
-
-        ResultSet resultSet = CrudUtil.execute(sql,idl);
-
-        List<String> data = new ArrayList<>();
-
-        while (resultSet.next()) {
-            data.add(resultSet.getString(1));
-        }
-        return data;
-    }
 }

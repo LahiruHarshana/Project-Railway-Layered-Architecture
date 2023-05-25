@@ -153,4 +153,27 @@ public class TrainDAOImpl {
 
 
     }
+    public static List<String> loadtrainIds() throws SQLException {
+        Connection con = DBConnection.getInstance().getConnection();
+        ResultSet resultSet = con.createStatement().executeQuery("SELECT TrainID FROM Train");
+
+        List<String> data = new ArrayList<>();
+
+        while (resultSet.next()) {
+            data.add(resultSet.getString(1));
+        }
+        return data;
+    }
+    public static List<String> loadTrainIds() throws SQLException {
+        Connection con = DBConnection.getInstance().getConnection();
+        ResultSet resultSet = con.createStatement().executeQuery("SELECT TrainID FROM train");
+
+        List<String> data = new ArrayList<>();
+
+        while (resultSet.next()) {
+            data.add(resultSet.getString(1));
+        }
+        return data;
+
+    }
 }

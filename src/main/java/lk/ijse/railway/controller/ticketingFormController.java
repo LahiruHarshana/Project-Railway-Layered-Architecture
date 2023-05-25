@@ -375,7 +375,7 @@ public class ticketingFormController implements Initializable {
     private void loadTrainCB() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = TicketDAOImpl.loadTrainIds();
+            List<String> ids = TrainDAOImpl.loadTrainIds();
 
             for (String id : ids) {
                 obList.add(id);

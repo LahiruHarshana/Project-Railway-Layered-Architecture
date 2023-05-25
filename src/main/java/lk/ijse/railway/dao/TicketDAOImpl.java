@@ -10,18 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TicketDAOImpl {
-    public static List<String> loadTrainIds() throws SQLException {
-        Connection con = DBConnection.getInstance().getConnection();
-        ResultSet resultSet = con.createStatement().executeQuery("SELECT TrainID FROM train");
-
-        List<String> data = new ArrayList<>();
-
-        while (resultSet.next()) {
-            data.add(resultSet.getString(1));
-        }
-        return data;
-
-    }
 
     public static int search() throws SQLException {
         Connection con = DBConnection.getInstance().getConnection();
@@ -63,17 +51,6 @@ public class TicketDAOImpl {
         return 0;
     }
 
-    public static int search3class(String idl) throws SQLException {
-        Connection con = DBConnection.getInstance().getConnection();
-        PreparedStatement pstm = con.prepareStatement("SELECT COUNT(BookingID) FROM Booking WHERE TrainID = ?");
-        pstm.setString(1, idl);
-
-        ResultSet resultSet = pstm.executeQuery();
-        if (resultSet.next()) {
-            return resultSet.getInt(1);
-        }
-        return 0;
-    }
     public static boolean save(String ticketID, String trainID,String stationName,String classType,int howMany,Double price) throws SQLException {
         Connection con = DBConnection.getInstance().getConnection();
 

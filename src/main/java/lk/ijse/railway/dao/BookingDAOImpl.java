@@ -4,9 +4,9 @@ package lk.ijse.railway.dao;
 import lk.ijse.railway.db.DBConnection;
 import lk.ijse.railway.util.CrudUtil;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BookingDAOImpl {
 
@@ -57,6 +57,30 @@ public class BookingDAOImpl {
                 SeatsId,
                 price);
 
+    }
+    public static List<String> searchBySeats(String idl) throws SQLException {
+
+        String sql = "SELECT SeatsID FROM Booking WHERE TrainID = ?";
+
+        ResultSet resultSet = CrudUtil.execute(sql,idl);
+
+        List<String> data = new ArrayList<>();
+
+        while (resultSet.next()) {
+            data.add(resultSet.getString(1));
+        }
+        return data;
+    }
+    public static int search3class(String idl) throws SQLException {
+        Connection con = DBConnection.getInstance().getConnection();
+        PreparedStatement pstm = con.prepareStatement("SELECT COUNT(BookingID) FROM Booking WHERE TrainID = ?");
+        pstm.setString(1, idl);
+
+        ResultSet resultSet = pstm.executeQuery();
+        if (resultSet.next()) {
+            return resultSet.getInt(1);
+        }
+        return 0;
     }
 
 }

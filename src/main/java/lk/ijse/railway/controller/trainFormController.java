@@ -142,7 +142,7 @@ public class trainFormController implements Initializable {
     private void loadTrainIDCB() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = StationDAOImpl.loadtrainIds();
+            List<String> ids = TrainDAOImpl.loadtrainIds();
 
             for (String id : ids) {
                 obList.add(id);
