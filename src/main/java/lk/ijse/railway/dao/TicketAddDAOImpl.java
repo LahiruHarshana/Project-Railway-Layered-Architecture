@@ -2,14 +2,12 @@ package lk.ijse.railway.dao;
 
 
 import lk.ijse.railway.db.DBConnection;
-import lk.ijse.railway.dto.TicketAdd;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class TicketAddModel {
+public class TicketAddDAOImpl {
 
     public static boolean save(String ticketID, String trainID,String stationName,String classType,int howMany,Double price) throws SQLException {
         Connection con = DBConnection.getInstance().getConnection();

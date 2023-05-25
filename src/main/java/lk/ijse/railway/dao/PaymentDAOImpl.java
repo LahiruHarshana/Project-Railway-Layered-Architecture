@@ -13,7 +13,7 @@ public class PaymentDAOImpl {
             con = DBConnection.getInstance().getConnection();
             con.setAutoCommit(false);
 
-            boolean isTicketSaved = TicketAddModel.save(ticketID, trainID,stationName,classType,howMany,price);
+            boolean isTicketSaved = TicketAddDAOImpl.save(ticketID, trainID,stationName,classType,howMany,price);
             if(isTicketSaved) {
                 boolean isPaymentSaved = PaymentDAOImpl.save(paymentID,ticketID,date,price);
                 System.out.println(isPaymentSaved);
