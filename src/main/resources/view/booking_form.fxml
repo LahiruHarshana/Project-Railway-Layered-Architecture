@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="832.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.railway.controller.BookingFormController">
+   <children>
+      <ImageView fitHeight="832.0" fitWidth="889.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Ticketing.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="bookingPane" layoutX="18.0" layoutY="34.0" prefHeight="729.0" prefWidth="849.0" style="-fx-background-radius: 35;" stylesheets="@../sheets/bookingFormSheet.css">
+         <children>
+            <JFXButton layoutX="524.0" layoutY="632.0" onAction="#btnResitOnAction" style="-fx-background-color: white;" text="View Booking Resite" />
+            <Label layoutX="517.0" layoutY="68.0" text="Passenger ID :" textFill="WHITE">
+               <font>
+                  <Font name="Baloo Bhaina 2 Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="PriceLabel" layoutX="160.0" layoutY="604.0" prefHeight="29.0" prefWidth="112.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ToDateTextField" layoutX="202.0" layoutY="482.0" prefHeight="37.0" prefWidth="196.0" style="-fx-background-color: kk; -fx-border-color: #0B4874; -fx-border-radius: 10;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <JFXComboBox fx:id="trainIdCB" focusColor="#0b4874" labelFloat="true" layoutX="219.0" layoutY="439.0" onAction="#trainIDCBOnAction" prefHeight="26.0" prefWidth="143.0" promptText="Train" unFocusColor="#65ece5" />
+            <Label layoutX="71.0" layoutY="428.0" text="train Name :" textFill="WHITE">
+               <font>
+                  <Font name="Baloo Bhaina 2 Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="71.0" layoutY="326.0" text="Contact Number :" textFill="WHITE">
+               <font>
+                  <Font name="Baloo Bhaina 2 Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="99.0" text="Date : " textFill="WHITE">
+               <font>
+                  <Font name="Baloo Bhaina 2 Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="CurrentDateLabel" layoutX="157.0" layoutY="109.0" prefHeight="17.0" prefWidth="123.0" text="Date" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="76.0" layoutY="138.0" text="Booking ID :" textFill="WHITE">
+               <font>
+                  <Font name="Baloo Bhaina 2 Regular" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="BookingIdTextField" layoutX="200.0" layoutY="139.0" prefHeight="37.0" prefWidth="150.0" style="-fx-background-color: kk; -fx-border-color: #0B4874; -fx-border-radius: 10;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="73.0" layoutY="181.0" text="NIC :" textFill="WHITE">
+               <font>
+                  <Font name="Baloo Bhaina 2 Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="73.0" layoutY="229.0" text="Name :" textFill="WHITE">
+               <font>
+                  <Font name="Baloo Bhaina 2 Regular" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="NameTextField" layoutX="200.0" layoutY="233.0" prefHeight="37.0" prefWidth="389.0" style="-fx-background-color: kk; -fx-border-color: #0B4874; -fx-border-radius: 10;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="71.0" layoutY="279.0" text="Address :" textFill="WHITE">
+               <font>
+                  <Font name="Baloo Bhaina 2 Regular" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="AddressTextField" layoutX="201.0" layoutY="282.0" prefHeight="37.0" prefWidth="533.0" style="-fx-background-color: kk; -fx-border-color: #0B4874; -fx-border-radius: 10;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="ContactTextField" layoutX="234.0" layoutY="331.0" prefHeight="37.0" prefWidth="291.0" style="-fx-background-color: kk; -fx-border-color: #0B4874; -fx-border-radius: 10;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="75.0" layoutY="376.0" text="Email :" textFill="WHITE">
+               <font>
+                  <Font name="Baloo Bhaina 2 Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="70.0" layoutY="478.0" text="Journey Date :" textFill="WHITE">
+               <font>
+                  <Font name="Baloo Bhaina 2 Regular" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailTextField" layoutX="199.0" layoutY="384.0" prefHeight="37.0" prefWidth="570.0" style="-fx-background-color: kk; -fx-border-color: #0B4874; -fx-border-radius: 10;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="438.0" layoutY="430.0" text="Journey To :" textFill="WHITE">
+               <font>
+                  <Font name="Baloo Bhaina 2 Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="71.0" layoutY="531.0" text="Select Sheat :" textFill="WHITE">
+               <font>
+                  <Font name="Baloo Bhaina 2 Regular" size="20.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="SheetsButton" buttonType="RAISED" layoutX="218.0" layoutY="540.0" onAction="#SheetsButtonOnAction" style="-fx-background-color: white;" text="Add Sheat">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="72.0" layoutY="591.0" text="Price Rs :" textFill="WHITE">
+               <font>
+                  <Font name="Baloo Bhaina 2 Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="passengerLabel" layoutX="658.0" layoutY="78.0" text="Label">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="518.0" layoutY="123.0" text="PaymentID :" textFill="WHITE">
+               <font>
+                  <Font name="Baloo Bhaina 2 Regular" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="paymentIDTextField" layoutX="627.0" layoutY="130.0" style="-fx-background-color: kk; -fx-border-radius: 7; -fx-border-color: #0B4874;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <JFXComboBox fx:id="StationNameCB" focusColor="#0b4874" labelFloat="true" layoutX="564.0" layoutY="440.0" onAction="#StationNameCBOnAction" prefHeight="26.0" prefWidth="157.0" promptText="Station" unFocusColor="#65ece5" />
+            <JFXButton fx:id="payButton" buttonType="RAISED" layoutX="690.0" layoutY="622.0" onAction="#payButtonOnAction" prefHeight="45.0" prefWidth="83.0" ripplerFill="#119cff" style="-fx-background-color: #0B4874; -fx-background-radius: 7;" text="Pay" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="413.0" layoutY="628.0" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="83.0" ripplerFill="#119cff" style="-fx-background-color: #0B4874; -fx-background-radius: 7;" text="Clear" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <TextField layoutX="220.0" layoutY="220.0" prefHeight="37.0" prefWidth="223.0" style="-fx-background-color: kk; -fx-border-color: 0B4874; -fx-border-radius: 10;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="NicTextField" layoutX="216.0" layoutY="219.0" prefHeight="37.0" prefWidth="196.0" style="-fx-background-color: kk; -fx-border-color: #0B4874; -fx-border-radius: 10;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

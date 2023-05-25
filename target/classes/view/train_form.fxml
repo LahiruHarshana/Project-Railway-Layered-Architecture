@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="PaneStation" prefHeight="832.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.railway.controller.trainFormController">
+   <children>
+      <ImageView fitHeight="832.0" fitWidth="889.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Ticketing.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="trainAddStationPane" layoutX="24.0" layoutY="530.0" prefHeight="193.0" prefWidth="849.0" style="-fx-background-radius: 35;" stylesheets="@../sheets/trainAddFormSheet.css">
+         <children>
+            <Label layoutX="32.0" layoutY="75.0" text="Train ID :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="TrainIDComboBox" focusColor="#0b4874" labelFloat="true" layoutX="121.0" layoutY="75.0" onAction="#TrainIDCBOnAction" prefHeight="26.0" prefWidth="112.0" promptText="Train ID" unFocusColor="#65ece5" />
+            <Label layoutX="258.0" layoutY="75.0" text="Stop Stations :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="stationNameComboBox" focusColor="#0b4874" labelFloat="true" layoutX="404.0" layoutY="75.0" onAction="#StationNameComboBoxOnAction" prefHeight="26.0" prefWidth="112.0" promptText="Station Name" unFocusColor="#65ece5" />
+            <Label layoutX="532.0" layoutY="75.0" text="Time :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="timeTextField" layoutX="593.0" layoutY="65.0" prefHeight="41.0" prefWidth="107.0" style="-fx-background-color: kk; -fx-background-radius: 7; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="trainaddStationButton" buttonType="RAISED" layoutX="716.0" layoutY="75.0" onAction="#trainaddStationButtonOnAction" style="-fx-background-color: white;" text="train add Station" />
+         </children></Pane>
+      <Pane fx:id="trainPane" layoutX="22.0" layoutY="10.0" prefHeight="458.0" prefWidth="849.0" style="-fx-background-radius: 35;" stylesheets="@../sheets/trainFormSheet.css">
+         <children>
+            <Label layoutX="80.0" layoutY="102.0" text="Train ID :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="78.0" layoutY="157.0" text="Train Name :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="209.0" text="Time:" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="77.0" layoutY="278.0" text="End Station :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="68.0" layoutY="336.0" text="Days To Go :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXCheckBox checkedColor="#65ece5" layoutX="212.0" layoutY="340.0" text="Weekdays Only" />
+            <JFXCheckBox checkedColor="#65ece5" layoutX="363.0" layoutY="339.0" text="Weekend Only" />
+            <JFXCheckBox checkedColor="#65ece5" layoutX="522.0" layoutY="339.0" text="Every day" />
+            <TextField fx:id="EndStationTextField" layoutX="200.0" layoutY="264.0" style="-fx-background-color: kk; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="journeyToTextField" layoutX="201.0" layoutY="204.0" prefHeight="41.0" prefWidth="253.0" style="-fx-background-color: kk; -fx-background-radius: 7; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="nameTextField" layoutX="198.0" layoutY="149.0" prefHeight="41.0" prefWidth="485.0" style="-fx-background-color: kk; -fx-background-radius: 7; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="trainIDButton" layoutX="198.0" layoutY="93.0" prefHeight="41.0" prefWidth="253.0" style="-fx-background-color: kk; -fx-background-radius: 7; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="searchButton" buttonType="RAISED" layoutX="476.0" layoutY="96.0" onAction="#searchButtonOnAction" style="-fx-background-color: #0b4874; -fx-background-radius: 7; -fx-border-color: #65ece5; -fx-border-radius: 7;" text="Search" textFill="WHITE" />
+            <JFXButton fx:id="addStationButton" buttonType="RAISED" layoutX="692.0" layoutY="12.0" onAction="#addStationOnAction" prefHeight="57.0" prefWidth="140.0" style="-fx-background-color: #65ece5; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #0b4874;" text="Add Station" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="addTrainButton" buttonType="RAISED" layoutX="544.0" layoutY="394.0" onAction="#addTrainButtonOnAction" style="-fx-background-color: #0b4874; -fx-background-radius: 7; -fx-border-color: #65ece5; -fx-border-radius: 7;" text="Add Train" textFill="WHITE" />
+            <JFXButton fx:id="updateButton" buttonType="RAISED" layoutX="635.0" layoutY="393.0" onAction="#updateButtonOnAction" style="-fx-background-color: #0b4874; -fx-background-radius: 7; -fx-border-color: #65ece5; -fx-border-radius: 7;" text="Update" textFill="WHITE" />
+            <JFXButton fx:id="deleteButton" buttonType="RAISED" layoutX="716.0" layoutY="393.0" onAction="#deleteButtonOnAction" style="-fx-background-color: #0b4874; -fx-background-radius: 7; -fx-border-color: #65ece5; -fx-border-radius: 7;" text="Delete" textFill="WHITE" />
+            <JFXButton fx:id="btnViewTrains" layoutX="54.0" layoutY="409.0" onAction="#btnViewTrainsOnAction" style="-fx-background-color: kk; -fx-border-color: #0b4874; -fx-border-radius: 7;" text="View Button" />
+            <JFXButton fx:id="addTrainButton1" buttonType="RAISED" layoutX="475.0" layoutY="395.0" onAction="#btnClearOnAction" style="-fx-background-color: #0b4874; -fx-background-radius: 7; -fx-border-color: #65ece5; -fx-border-radius: 7;" text="Clear" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Label layoutX="106.0" layoutY="489.0" text="Add Stop Stations" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Line endX="491.46087646484375" layoutX="331.0" layoutY="503.0" startX="-39.212066650390625" stroke="WHITE" />
+   </children>
+</AnchorPane>

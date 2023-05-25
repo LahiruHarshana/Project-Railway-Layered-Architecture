@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="832.0" prefWidth="889.0" style="-fx-background-color: linear-gradient(to right, #9EFFF7, #2270A1);;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.railway.controller.settingFormController">
+   <children>
+      <JFXButton onAction="#btnEditProfileOnAction" prefHeight="80.0" prefWidth="222.0" stylesheets="@../sheets/settingsButtons.css" text="Edit Profile">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="222.0" onAction="#btnChangePswdOnAction" prefHeight="80.0" prefWidth="222.0" stylesheets="@../sheets/settingsButtons.css" text="Change Password">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="444.0" onAction="#btnLogHistoryOnAction" prefHeight="80.0" prefWidth="222.0" stylesheets="@../sheets/settingsButtons.css" text="Log History">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="666.0" onAction="#btnLogOutOnAction" prefHeight="80.0" prefWidth="222.0" stylesheets="@../sheets/settingsButtons.css" text="Log Out">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane fx:id="childPane" layoutY="80.0" prefHeight="752.0" prefWidth="889.0" style="-fx-background-color: linear-gradient(to right, #9EFFF7, #2270A1);">
+         <children>
+            <Label layoutX="150.0" layoutY="93.0" text="User ID :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="150.0" layoutY="155.0" text="User Name :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="150.0" layoutY="224.0" text="Contact Number :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="150.0" layoutY="294.0" text="Email :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="150.0" layoutY="360.0" text="Address" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtID" layoutX="400.0" layoutY="82.0" prefHeight="45.0" prefWidth="275.0" style="-fx-background-color: kk; -fx-border-color: #65ECE5; -fx-border-radius: 7; -fx-border-width: 2 2 2 2;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtName" layoutX="420.0" layoutY="149.0" prefHeight="45.0" prefWidth="320.0" style="-fx-background-color: kk; -fx-border-color: #65ECE5; -fx-border-radius: 7; -fx-border-width: 2 2 2 2;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtNum" layoutX="440.0" layoutY="216.0" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color: kk; -fx-border-color: #65ECE5; -fx-border-radius: 7; -fx-border-width: 2 2 2 2;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtEmail" layoutX="380.0" layoutY="286.0" prefHeight="45.0" prefWidth="320.0" style="-fx-background-color: kk; -fx-border-color: #65ECE5; -fx-border-radius: 7; -fx-border-width: 2 2 2 2;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="btnEdit" buttonType="RAISED" layoutX="736.0" layoutY="426.0" onAction="#btnEditOnAction" prefHeight="29.0" prefWidth="80.0" style="-fx-background-color: #0B4874; -fx-background-radius: 7;" text="Edit" textFill="#65ece5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="txtRoll" layoutX="350.0" layoutY="351.0" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color: kk; -fx-border-color: #65ECE5; -fx-border-radius: 7; -fx-border-width: 2 2 2 2;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

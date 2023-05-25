@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" prefHeight="832.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.railway.controller.signUpFormController">
+   <children>
+      <ImageView fitHeight="832.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/finalSignUp.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtName" layoutX="800.0" layoutY="403.0" prefHeight="35.0" prefWidth="300.0" promptText="User Name" style="-fx-background-color: kk; -fx-border-width: 0 0 2 0; -fx-border-color: white;" stylesheets="@../sheets/textColor-2.css">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtNum" layoutX="800.0" layoutY="472.0" prefHeight="35.0" prefWidth="300.0" promptText="Contact Number" style="-fx-background-color: kk; -fx-border-width: 0 0 2 0; -fx-border-color: white;" stylesheets="@../sheets/textColor-2.css">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtAddress" layoutX="800.0" layoutY="544.0" prefHeight="35.0" prefWidth="300.0" promptText="Address" style="-fx-background-color: kk; -fx-border-width: 0 0 2 0; -fx-border-color: white;" stylesheets="@../sheets/textColor-2.css">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtEmail" layoutX="800.0" layoutY="620.0" prefHeight="35.0" prefWidth="300.0" promptText="Email" style="-fx-background-color: kk; -fx-border-width: 0 0 2 0; -fx-border-color: white;" stylesheets="@../sheets/textColor-2.css">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <JFXButton buttonType="RAISED" layoutX="1073.0" layoutY="707.0" onAction="#btnNextOnAction" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: #65ECE5; -fx-background-radius: 20;" text="Next">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="933.0" layoutY="707.0" onAction="#btnBackOnaction" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: #65ECE5; -fx-background-radius: 20;" text="Back">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblEmail" layoutX="836.0" layoutY="667.0" text="Not Valid Email !" textFill="RED" visible="false" />
+      <Label fx:id="lblNumber" layoutX="836.0" layoutY="520.0" text="Not Valid Contact Number !" textFill="RED" visible="false" />
+   </children>
+</AnchorPane>

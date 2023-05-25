@@ -1,0 +1,14 @@
+.text-field {
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: gray;
+    -fx-effect: null;
+}
+.text-field:focused {
+    -fx-prompt-text-fill: #555; /* color of prompt text when field is focused */
+    -fx-translate-y: -16px; /* move prompt text up */
+    -fx-effect: dropshadow(three-pass-box, black, 10, 0, 0, 0); /* add focus effect */
+}
+
+.text-field:disabled {
+    -fx-opacity: 0.5; /* reduce opacity of disabled field */
+}

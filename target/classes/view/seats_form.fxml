@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="612.0" prefWidth="669.0" style="-fx-background-repeat: 20; -fx-border-radius: 14;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.railway.controller.SeatsFormController">
+   <children>
+      <ImageView fitHeight="612.0" fitWidth="669.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Frame%204.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="73.0" layoutY="15.0" prefHeight="32.0" prefWidth="75.0" text="1st Box">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="288.0" layoutY="15.0" prefHeight="32.0" prefWidth="75.0" text="2nd Box">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="513.0" layoutY="17.0" prefHeight="32.0" prefWidth="75.0" text="3rd Box">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="2.611907958984375" endY="438.6876220703125" layoutX="200.0" layoutY="152.0" startX="2.6119384765625" startY="-128.1563262939453" />
+      <Line endX="2.611907958984375" endY="438.6876220703125" layoutX="434.0" layoutY="147.0" startX="2.61187744140625" startY="-120.61465454101562" />
+      <Rectangle fx:id="S1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="10.0" layoutY="71.0" onMouseClicked="#s1Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="41.0" layoutY="71.0" onMouseClicked="#s2Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S9" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="120.0" layoutY="71.0" onMouseClicked="#s9Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S10" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="151.0" layoutY="71.0" onMouseClicked="#s10Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S3" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="10.0" layoutY="103.0" onMouseClicked="#s3Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S4" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="42.0" layoutY="103.0" onMouseClicked="#s4Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S11" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="120.0" layoutY="103.0" onMouseClicked="#s11Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S12" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="151.0" layoutY="103.0" onMouseClicked="#s12Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S5" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="10.0" layoutY="133.0" onMouseClicked="#s5Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S6" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="42.0" layoutY="133.0" onMouseClicked="#s6Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S13" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="120.0" layoutY="133.0" onMouseClicked="#s13Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S14" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="151.0" layoutY="133.0" onMouseClicked="#s14Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S7" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="10.0" layoutY="163.0" onMouseClicked="#s7Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S8" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="42.0" layoutY="163.0" onMouseClicked="#s8Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S15" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="121.0" layoutY="163.0" onMouseClicked="#s15Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S16" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="151.0" layoutY="163.0" onMouseClicked="#s16Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S17" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="233.0" layoutY="71.0" onMouseClicked="#s17Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S18" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="264.0" layoutY="71.0" onMouseClicked="#s18Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S25" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="343.0" layoutY="71.0" onMouseClicked="#s25Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S26" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="374.0" layoutY="71.0" onMouseClicked="#s26Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S19" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="233.0" layoutY="103.0" onMouseClicked="#s19Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S20" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="265.0" layoutY="103.0" onMouseClicked="#s20Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S27" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="343.0" layoutY="103.0" onMouseClicked="#s27Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S28" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="374.0" layoutY="103.0" onMouseClicked="#s28Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S21" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="233.0" layoutY="133.0" onMouseClicked="#s21Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S22" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="265.0" layoutY="133.0" onMouseClicked="#s22Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S29" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="343.0" layoutY="133.0" onMouseClicked="#s29Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S30" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="374.0" layoutY="133.0" onMouseClicked="#s30Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S23" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="233.0" layoutY="163.0" onMouseClicked="#s23Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S24" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="265.0" layoutY="163.0" onMouseClicked="#s24Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S31" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="344.0" layoutY="163.0" onMouseClicked="#s31Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S32" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="374.0" layoutY="163.0" onMouseClicked="#s32Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S33" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="473.0" layoutY="71.0" onMouseClicked="#s33Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S34" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="504.0" layoutY="71.0" onMouseClicked="#s34Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S41" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="583.0" layoutY="71.0" onMouseClicked="#s41Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S42" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="614.0" layoutY="71.0" onMouseClicked="#s42Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S35" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="473.0" layoutY="103.0" onMouseClicked="#s35Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S36" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="505.0" layoutY="103.0" onMouseClicked="#s36Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S43" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="583.0" layoutY="103.0" onMouseClicked="#s43Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S44" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="614.0" layoutY="103.0" onMouseClicked="#s44Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S37" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="473.0" layoutY="133.0" onMouseClicked="#s37Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S38" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="505.0" layoutY="133.0" onMouseClicked="#s38Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S45" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="583.0" layoutY="133.0" onMouseClicked="#s45Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S46" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="614.0" layoutY="133.0" onMouseClicked="#s46Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S39" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="473.0" layoutY="163.0" onMouseClicked="#s39Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S40" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="505.0" layoutY="163.0" onMouseClicked="#s40Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S47" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="584.0" layoutY="163.0" onMouseClicked="#s47Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S48" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="614.0" layoutY="163.0" onMouseClicked="#s48Clicked" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+      <Rectangle fx:id="S481" arcHeight="4.0" arcWidth="4.0" fill="DODGERBLUE" height="20.0" layoutX="486.0" layoutY="271.0" onMouseClicked="#s48Clicked" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+      <Label layoutX="515.0" layoutY="272.0" text="Available Seats" />
+      <Rectangle fx:id="S4811" arcHeight="4.0" arcWidth="4.0" fill="PINK" height="20.0" layoutX="486.0" layoutY="297.0" onMouseClicked="#s48Clicked" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+      <Label layoutX="514.0" layoutY="300.0" text="Unavailable Seats" />
+   </children>
+</AnchorPane>

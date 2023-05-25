@@ -1,0 +1,8 @@
+#bookingPane {
+    -fx-background-color: rgba(255, 255, 255, 0.30); /* Set the opacity to 86% */
+    -fx-border-color: white;
+    -fx-border-radius: 35;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);
+    -fx-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+
+}

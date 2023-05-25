@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="832.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.railway.controller.PassengerFormController">
+   <children>
+      <ImageView fitHeight="832.0" fitWidth="889.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Ticketing.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="passengerPane" layoutX="18.0" layoutY="30.0" prefHeight="720.0" prefWidth="849.0" style="-fx-background-radius: 35;" stylesheets="@../sheets/passengerFromSheet.css">
+         <children>
+            <TextField fx:id="emailTextField" layoutX="99.0" layoutY="400.0" prefHeight="41.0" prefWidth="657.0" style="-fx-background-color: f; -fx-border-color: #0B4874; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="addressTextField" layoutX="114.0" layoutY="232.0" prefHeight="41.0" prefWidth="583.0" style="-fx-background-color: f; -fx-border-color: #0B4874; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="35.0" layoutY="348.0" text="Booking ID :" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="292.0" text="Contac Number :" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="185.0" text="Name :" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="74.0" text="Passenger ID :" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="130.0" text="NIC :" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="240.0" text="Address :" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="405.0" text="Email :" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="passengerIDTextField" layoutX="160.0" layoutY="70.0" style="-fx-background-color: f; -fx-border-color: #0B4874; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="nicTextField" layoutX="96.0" layoutY="123.0" style="-fx-background-color: f; -fx-border-color: #0B4874; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="nameTextField" layoutX="100.0" layoutY="179.0" prefHeight="41.0" prefWidth="395.0" style="-fx-background-color: f; -fx-border-color: #0B4874; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="contactNumberTextField" layoutX="180.0" layoutY="285.0" prefHeight="41.0" prefWidth="303.0" style="-fx-background-color: f; -fx-border-color: #0B4874; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textBookingID" layoutX="143.0" layoutY="340.0" style="-fx-background-color: k; -fx-border-color: #0B4874; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="updateButton" buttonType="RAISED" layoutX="545.0" layoutY="571.0" onAction="#updateButtonOnAction" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: white; -fx-background-radius: 7; -fx-border-radius: 7;" text="Update" textFill="#0b4874">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="deleteButton" buttonType="RAISED" layoutX="667.0" layoutY="570.0" onAction="#deleteButtonOnAction" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: kk; -fx-border-color: white; -fx-background-radius: 7; -fx-border-radius: 7;" text="Delete" textFill="#0b4874">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="serchButton" buttonType="RAISED" layoutX="434.0" layoutY="77.0" onAction="#searchButtonOnAction" style="-fx-background-color: black;" text="serach" textFill="WHITE" />
+            <JFXButton fx:id="deleteButton1" buttonType="RAISED" layoutX="415.0" layoutY="572.0" onAction="#btnClearOnAction" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: #0B4874; -fx-border-color: white; -fx-background-radius: 7; -fx-border-radius: 7;" text="Clear" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="832.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.railway.controller.ticketingFormController">
+   <children>
+      <ImageView fitHeight="832.0" fitWidth="889.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Ticketing.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="ticketingPane" layoutX="20.0" layoutY="20.0" prefHeight="720.0" prefWidth="849.0" style="-fx-background-radius: 35;" stylesheets="@../sheets/paneStyle.css" AnchorPane.bottomAnchor="92.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <JFXButton fx:id="ticketAddButton" buttonType="RAISED" layoutX="651.0" layoutY="451.0" onAction="#ticketAddButtonOnAction" prefHeight="25.0" prefWidth="70.0" style="-fx-border-width: 2 2 2 2; -fx-border-color: white; -fx-border-radius: 10; -fx-background-color: #65ECE5; -fx-background-radius: 10;" text="ADD">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXComboBox fx:id="ticketStationComboBox" labelFloat="true" layoutX="657.0" layoutY="201.0" onAction="#ticketStationComboBoxOnAction" prefHeight="26.0" prefWidth="101.0" promptText="Station" unFocusColor="WHITE" />
+            <JFXComboBox fx:id="classTypeCB" labelFloat="true" layoutX="651.0" layoutY="133.0" prefHeight="26.0" prefWidth="116.0" promptText="Select Class" unFocusColor="WHITE" />
+            <Label layoutX="530.0" layoutY="132.0" text="Class Type :" textFill="#0b4874">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="276.0" text="Payment ID :" textFill="#65ece5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="DateLAbel" layoutX="60.0" layoutY="22.0" text="Date" textFill="#65ece5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="132.0" text="Ticket ID :" textFill="#65ece5">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ticketIDTextField" layoutX="206.0" layoutY="130.0" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: kk; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="82.0" layoutY="203.0" text="Select Train :" textFill="#65ece5">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="ticketTrainComboBox" labelFloat="true" layoutX="210.0" layoutY="202.0" onAction="#ticketTrainComboBoxOnAction" prefHeight="26.0" prefWidth="101.0" promptText="Train ID" unFocusColor="WHITE" />
+            <TextField fx:id="PaymentTextField" layoutX="193.0" layoutY="276.0" style="-fx-background-color: kk; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="319.0" layoutY="408.0" text="Price  Rs: " textFill="#0b4874">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="ticketPriceLabel" layoutX="411.0" layoutY="404.0" prefHeight="32.0" prefWidth="91.0" style="-fx-border-width: 0 0 2 0; -fx-border-color: white;">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="686.0" layoutY="25.0" text="Time" textFill="#0b4874">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="528.0" layoutY="202.0" text="Select Station :" textFill="#0b4874">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="532.0" layoutY="285.0" text="How Many :" textFill="#0b4874">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="howManyTextField" layoutX="644.0" layoutY="281.0" onAction="#howManyTextFieldOnAction" onKeyTyped="#handleKeyTyped" prefHeight="26.0" prefWidth="73.0" style="-fx-background-color: kk; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="ticketAddButton1" buttonType="RAISED" layoutX="739.0" layoutY="452.0" onAction="#btnClearOnAction" prefHeight="25.0" prefWidth="70.0" style="-fx-border-width: 2 2 2 2; -fx-border-color: white; -fx-border-radius: 10; -fx-background-color: #0b4874; -fx-background-radius: 10;" text="Clear" textFill="#65ece5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="ticketAddButton11" buttonType="RAISED" layoutX="510.0" layoutY="454.0" onAction="#btnReportOnAction" prefHeight="33.0" prefWidth="119.0" style="-fx-border-width: 2 2 2 2; -fx-border-color: white; -fx-border-radius: 10; -fx-background-color: #0b4874; -fx-background-radius: 10;" text="View Report" textFill="#65ece5">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children></Pane>
+   </children>
+</AnchorPane>

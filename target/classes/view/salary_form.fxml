@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="832.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.railway.controller.SalaryFormController">
+   <children>
+      <ImageView fitHeight="832.0" fitWidth="889.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Ticketing.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="paneSalary" layoutX="18.0" layoutY="20.0" prefHeight="720.0" prefWidth="849.0" style="-fx-background-radius: 35;" stylesheets="@../sheets/salaryPaneSheet.css">
+         <children>
+            <Label fx:id="salaryPane" layoutX="80.0" layoutY="76.0" text="Employee ID :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="187.0" text="Amount  Rs :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="242.0" text="Date :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="298.0" text="Salary ID :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtId" layoutX="210.0" layoutY="70.0" style="-fx-background-color: f; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtRs" layoutX="198.0" layoutY="184.0" style="-fx-background-color: f; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtsalaryId" layoutX="194.0" layoutY="290.0" style="-fx-background-color: f; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="505.0" layoutY="68.0" onAction="#btnSearchOnAction" style="-fx-background-color: white; -fx-background-radius: 7; -fx-border-color: #65ece5; -fx-border-radius: 7;" text="Search" textFill="#0b4874">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnSalary" buttonType="RAISED" layoutX="630.0" layoutY="329.0" onAction="#btnSalaryOnAction" prefHeight="29.0" prefWidth="80.0" style="-fx-background-color: #0B4874; -fx-background-radius: 7; -fx-border-color: #65ece5; -fx-border-radius: 7;" text="Pay salary" textFill="WHITE" />
+            <TextField fx:id="txtDate" layoutX="169.0" layoutY="236.0" style="-fx-background-color: f; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label fx:id="salaryPane1" layoutX="80.0" layoutY="134.0" text="Employee Name :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtName" layoutX="239.0" layoutY="127.0" style="-fx-background-color: f; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <JFXButton buttonType="RAISED" layoutX="564.0" layoutY="330.0" onAction="#btnClearOnAction" style="-fx-background-color: white; -fx-background-radius: 7; -fx-border-color: #65ece5; -fx-border-radius: 7;" text="Clear" textFill="#0b4874">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children></Pane>
+   </children>
+</AnchorPane>

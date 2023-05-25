@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="832.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.railway.controller.ticketFormController">
+   <children>
+      <ImageView fitHeight="832.0" fitWidth="889.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Frame%204.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="ticketPane" layoutX="102.0" layoutY="100.0" prefHeight="198.0" prefWidth="284.0" style="-fx-background-radius: 35;" stylesheets="@../sheets/ticketPane.css">
+         <children>
+            <Label fx:id="lblTicket2" layoutX="86.0" layoutY="68.0" text="2nd class &amp;" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTicket21" layoutX="135.0" layoutY="102.0" text="3rd class" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTicket12" layoutX="23.0" layoutY="14.0" text="Ticket" textFill="#0b4874">
+               <font>
+                  <Font name="Arial Black" size="25.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="ticketingButton" onAction="#ticketingButtonOnAction" prefHeight="199.0" prefWidth="287.0" style="-fx-background-color: kk;" text="Button" textFill="#0d0d0d00" />
+         </children></Pane>
+      <Pane fx:id="bookingPane" layoutX="468.0" layoutY="101.0" prefHeight="198.0" prefWidth="284.0" style="-fx-background-radius: 35; -fx-border-radius: 35;" stylesheets="@../sheets/bookingPane.css">
+         <children>
+            <Label fx:id="lblTicket1" layoutX="26.0" layoutY="10.0" text="Booking" textFill="#0b4874">
+               <font>
+                  <Font name="Arial Black" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTicket11" layoutX="138.0" layoutY="83.0" text="1st class" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="25.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="bookingButton" layoutX="1.0" onAction="#bookingButtonOnAction" prefHeight="199.0" prefWidth="287.0" style="-fx-background-color: kk; -fx-background-radius: 35;" textFill="#0d0d0d00" />
+         </children></Pane>
+      <Pane fx:id="lblPane" layoutX="93.0" layoutY="447.0" prefHeight="275.0" prefWidth="694.0" style="-fx-background-radius: 35; -fx-border-color: white; -fx-border-radius: 35;" stylesheets="@../sheets/lblPane.css">
+         <children>
+            <Pane layoutX="503.0" layoutY="126.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <effect>
+                  <DropShadow height="34.0" radius="8.0" width="0.0" />
+               </effect>
+            </Pane>
+            <Pane layoutX="297.0" layoutY="124.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <effect>
+                  <DropShadow height="34.0" radius="8.0" width="0.0" />
+               </effect>
+            </Pane>
+            <Pane layoutX="105.0" layoutY="124.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <effect>
+                  <DropShadow height="34.0" radius="8.0" width="0.0" />
+               </effect>
+            </Pane>
+            <Label fx:id="lblTicket" layoutX="44.0" layoutY="57.0" text="Select Train" textFill="#0b4874">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="classLabel1" alignment="CENTER" layoutX="104.0" layoutY="131.0" prefHeight="90.0" prefWidth="101.0" style="-fx-background-color: kk;" text="07" textFill="#9a9a9a">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="classLabel3" alignment="CENTER" layoutX="503.0" layoutY="133.0" prefHeight="90.0" prefWidth="101.0" style="-fx-background-color: kk;" text="07" textFill="#595959">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="classLabel2" alignment="CENTER" layoutX="296.0" layoutY="132.0" prefHeight="90.0" prefWidth="101.0" style="-fx-background-color: kk;" text="07" textFill="#747474">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="selectTrainCB" layoutX="160.0" layoutY="54.0" onAction="#selectTrainOnAction" prefHeight="26.0" prefWidth="88.0" />
+            <Label layoutX="130.0" layoutY="95.0" text="1st class" textFill="#4d4b4b">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="316.0" layoutY="95.0" text="2nd class" textFill="#4d4b4b">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="519.0" layoutY="95.0" text="3rd class" textFill="#4d4b4b">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Label fx:id="lblTicket3" layoutX="85.0" layoutY="374.0" text="Ticket Summary" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="27.0" />
+         </font>
+      </Label>
+      <Line endX="236.47174072265625" layoutX="520.0" layoutY="398.0" startX="-189.38699340820312" stroke="WHITE" />
+   </children>
+</AnchorPane>

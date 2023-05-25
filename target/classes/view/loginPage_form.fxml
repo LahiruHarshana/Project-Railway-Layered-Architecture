@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="832.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.railway.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="832.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/finalSignIn%2018.08.12.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="loginButton" layoutX="939.0" layoutY="688.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="40.0" prefWidth="125.0" style="-fx-background-radius: 35;" stylesheets="@../sheets/buttonStyle.css" text="Sign In">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <TextField fx:id="txtUser" layoutX="846.0" layoutY="462.0" prefHeight="39.0" prefWidth="258.0" promptText="UserName" style="-fx-background-color: kk; -fx-border-color: 0 0 2 0;" stylesheets="@../sheets/textColor.css">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPassword" layoutX="841.0" layoutY="554.0" prefHeight="39.0" prefWidth="268.0" promptText="Password" style="-fx-border-width: 0 0 2 0; -fx-background-color: kk;" stylesheets="@../sheets/textColor.css">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label fx:id="wrongPassword" layoutX="854.0" layoutY="592.0" text="wrong password !" textFill="RED" visible="false">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label fx:id="wrongUser" layoutX="853.0" layoutY="501.0" text="wrong username !" textFill="RED" visible="false">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Button fx:id="btnSignUp" layoutX="1082.0" layoutY="688.0" mnemonicParsing="false" onAction="#btnSignUpOnAction" prefHeight="40.0" prefWidth="125.0" style="-fx-background-radius: 35;" stylesheets="@../sheets/buttonStyle.css" text="Sign Up">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+
+
+
+   </children>
+</AnchorPane>

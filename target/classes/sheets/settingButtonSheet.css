@@ -1,0 +1,21 @@
+.button{
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 2);
+    -fx-background-color: linear-gradient(to right, #1D6FA3, #65FDF0);
+
+
+
+
+
+}
+.button:hover{
+    /*-fx-background-color: #8d99ae;*/
+    -fx-background-radius: 10 10 10 10;
+    -fx-background-color: linear-gradient(to bottom, #1D6FA3, #65FDF0);
+
+
+}
+.button:pressed{
+    -fx-background-color: #65FDF0;
+    -fx-text-fill: WHITE;
+    -fx-background-radius: 10 10 10 10;
+}

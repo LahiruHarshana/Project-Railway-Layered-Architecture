@@ -1,0 +1,25 @@
+.button{
+    /*-fx-background-color: #0B4874;*/
+    -fx-text-fill: white;
+    /*-fx-background-radius: 10 10 10 10;*/
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.70), 10, 0, 3, 5);
+    /*-fx-border-radius: 10 10 10 10;*/
+    -fx-background-color: linear-gradient(to bottom, #65FDF0, #1D6FA3);
+
+
+
+
+
+}
+.button:hover{
+    /*-fx-background-color: #8d99ae;*/
+    /*-fx-background-radius: 10 10 10 10;*/
+    -fx-background-color: linear-gradient(to right, #1D6FA3, #65FDF0);
+
+
+}
+.button:pressed{
+    -fx-background-color: #65FDF0;
+    -fx-text-fill: WHITE;
+    -fx-background-radius: 10 10 10 10;
+}

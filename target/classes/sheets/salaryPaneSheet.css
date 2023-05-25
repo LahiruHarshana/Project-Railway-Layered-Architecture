@@ -1,0 +1,7 @@
+#paneSalary {
+    -fx-background-color: linear-gradient(to right, #9EFFF7, #1D6FA3);
+    /*-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.70), 10, 0, 2, 5);*/
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,10), 15, 0, 0, 0);
+
+
+}

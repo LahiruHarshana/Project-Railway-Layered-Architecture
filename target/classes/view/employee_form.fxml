@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="832.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.railway.controller.EmployeeFormController">
+   <children>
+      <ImageView fitHeight="832.0" fitWidth="889.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Ticketing.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="employeePane" layoutX="20.0" layoutY="23.0" prefHeight="730.0" prefWidth="849.0" style="-fx-background-radius: 35;" stylesheets="@../sheets/employeeFormSheet.css">
+         <children>
+            <Label layoutX="80.0" layoutY="90.0" text="Employee ID :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="138.0" text="Employee Name :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="188.0" text="Address :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="243.0" text="Date Of Birth :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="301.0" text="Contact Number :" textFill="#0b4874">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textId" layoutX="208.0" layoutY="79.0" style="-fx-background-color: f; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textName" layoutX="237.0" layoutY="130.0" style="-fx-background-color: f; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textAddress" layoutX="176.0" layoutY="179.0" prefHeight="41.0" prefWidth="606.0" style="-fx-background-color: f; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <DatePicker fx:id="pickerDob" layoutX="208.0" layoutY="241.0" promptText="Date Of Birth">
+               <effect>
+                  <DropShadow height="47.53" radius="20.317500000000003" width="35.74">
+                     <color>
+                        <Color opacity="0.5411089658737183" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </DatePicker>
+            <TextField fx:id="textContact" layoutX="235.0" layoutY="295.0" prefHeight="41.0" prefWidth="322.0" style="-fx-background-color: f; -fx-border-color: white; -fx-border-radius: 7;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="507.0" layoutY="84.0" onAction="#btnSearchOnAction" style="-fx-background-color: black; -fx-background-radius: 7; -fx-border-color: #65ece5; -fx-border-radius: 6;" text="Search" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="582.0" layoutY="83.0" onAction="#btnDeleteOnAction" style="-fx-background-color: #65ece5; -fx-background-radius: 7; -fx-border-color: #65ece5; -fx-border-radius: 7;" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/delete%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="574.0" layoutY="367.0" onAction="#btnAddOnAction" prefHeight="27.0" prefWidth="78.0" style="-fx-background-color: white; -fx-background-radius: 7; -fx-border-radius: 7;" text="Add" textFill="#0b4874">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="661.0" layoutY="365.0" onAction="#btnUpdateOnAction" style="-fx-background-color: black; -fx-background-radius: 7; -fx-border-color: #65ece5; -fx-border-radius: 6;" text="Update" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="tblEmployee" layoutX="66.0" layoutY="424.0" prefHeight="275.0" prefWidth="731.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="108.46278381347656" text="Employee ID" />
+                <TableColumn fx:id="colName" prefWidth="146.0371856689453" text="Name" />
+                  <TableColumn fx:id="colDob" prefWidth="157.09609985351562" text="D O B" />
+                  <TableColumn fx:id="colNum" prefWidth="175.4468994140625" text="Contact Number" />
+                  <TableColumn fx:id="colAddress" prefWidth="144.05859375" text="Address" />
+              </columns>
+            </TableView>
+            <JFXButton buttonType="RAISED" layoutX="510.0" layoutY="366.0" onAction="#btnClearOnAction" style="-fx-background-color: black; -fx-background-radius: 7; -fx-border-color: #65ece5; -fx-border-radius: 6;" text="Clear" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

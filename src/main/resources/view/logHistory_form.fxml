@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="752.0" prefWidth="889.0" style="-fx-background-color: linear-gradient(to right, #2270A1, #9EFFF7);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.railway.controller.LogHistoryFormController">
+   <children>
+      <TableView fx:id="tblLoginHistory" layoutX="127.0" layoutY="145.0" prefHeight="493.0" prefWidth="631.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="105.94300842285156" text="User ID" />
+          <TableColumn fx:id="colLoginDate" prefWidth="129.55697631835938" text="Login Date" />
+            <TableColumn fx:id="colLoginTime" prefWidth="141.71612548828125" text="Login Time" />
+            <TableColumn fx:id="colLogOutDate" prefWidth="129.92630004882812" text="LogOut Date" />
+            <TableColumn fx:id="colLogOutTime" prefWidth="125.71319580078125" text="LogOut Time" />
+        </columns>
+      </TableView>
+      <Label layoutX="367.0" layoutY="47.0" text="Log History">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <effect>
+            <DropShadow radius="8.525" width="15.1">
+               <color>
+                  <Color opacity="0.5219885110855103" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

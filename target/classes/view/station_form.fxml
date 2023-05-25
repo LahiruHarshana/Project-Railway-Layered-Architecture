@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="832.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.railway.controller.stationFormController">
+   <children>
+      <ImageView fitHeight="832.0" fitWidth="889.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Ticketing.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="100.0" layoutY="91.0" text="Station ID :" textFill="#0b4874">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idText" layoutX="242.0" layoutY="85.0" style="-fx-background-color: kk; -fx-background-radius: 7; -fx-border-color: white; -fx-border-radius: 7;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="100.0" layoutY="149.0" text="Station Name :" textFill="#0b4874">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="stationNameText" layoutX="240.0" layoutY="142.0" prefHeight="41.0" prefWidth="569.0" style="-fx-background-color: kk; -fx-background-radius: 7; -fx-border-color: white; -fx-border-radius: 7;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="100.0" layoutY="208.0" text="Distance :" textFill="#0b4874">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="distanceText" layoutX="239.0" layoutY="195.0" prefHeight="41.0" prefWidth="61.0" style="-fx-background-color: kk; -fx-background-radius: 7; -fx-border-color: white; -fx-border-radius: 7;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="searchButton" buttonType="RAISED" layoutX="511.0" layoutY="90.0" onAction="#searchButtonOnAction" style="-fx-background-color: white; -fx-background-radius: 7; -fx-border-color: #65ece5; -fx-border-radius: 7;" text="Search" textFill="#0b4874">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="addButton" buttonType="RAISED" layoutX="589.0" layoutY="273.0" onAction="#addButtonOnAction" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: #0b4874; -fx-background-radius: 7; -fx-border-radius: 7;" text="Add" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="307.0" layoutY="212.0" text="Km" textFill="#0b4874">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="updateButton" layoutX="691.0" layoutY="276.0" onAction="#updateButtonOnAction" style="-fx-background-color: white;" text="Update" />
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="591.0" layoutY="90.0" onAction="#btnDeleteOnAction" style="-fx-background-color: white; -fx-background-radius: 7; -fx-border-color: #65ece5; -fx-border-radius: 7;" textFill="#0b4874">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/delete%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TableView fx:id="tblStations" layoutX="125.0" layoutY="410.0" prefHeight="336.0" prefWidth="633.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="194.6470947265625" text="Station ID" />
+          <TableColumn fx:id="colName" prefWidth="215.35293579101562" text="Station Name" />
+            <TableColumn fx:id="colDistance" prefWidth="223.23001098632812" text="Distance" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="512.0" layoutY="275.0" onAction="#btnClearOnAction" style="-fx-background-color: white; -fx-background-radius: 7; -fx-border-color: #65ece5; -fx-border-radius: 7;" text="Clear" textFill="#0b4874">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

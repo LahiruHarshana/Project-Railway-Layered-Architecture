@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="viewTrain" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to bottom, #2270A1, #9EFFF7); -fx-border-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.railway.controller.viewTrainsFormController">
+   <children>
+      <TableView fx:id="tblViewTrains" layoutX="32.0" layoutY="200.0" prefHeight="320.0" prefWidth="733.0" style="-fx-background-color: kk;">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="170.30766677856445" text="Train ID" />
+          <TableColumn fx:id="colName" prefWidth="176.19235229492188" text="Train Name" />
+            <TableColumn fx:id="colTime" prefWidth="186.57699584960938" text="Time" />
+            <TableColumn fx:id="colEndStation" prefWidth="201.4808349609375" text="End Station" />
+        </columns>
+      </TableView>
+      <Label layoutX="312.0" layoutY="59.0" text="Trains" textFill="#65ece5">
+         <font>
+            <Font name="Hiragino Sans W8" size="40.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

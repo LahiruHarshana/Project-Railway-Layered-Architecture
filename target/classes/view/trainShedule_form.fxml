@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="832.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.railway.controller.trainSheduleFormController">
+   <children>
+      <ImageView fitHeight="832.0" fitWidth="889.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Ticketing.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="timeTable" layoutX="59.0" layoutY="305.0" prefHeight="344.0" prefWidth="777.0" style="-fx-background-color: kk;">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="168.75689697265625" text="Train ID" />
+          <TableColumn fx:id="colName" prefWidth="201.7430877685547" text="Train Name" />
+            <TableColumn fx:id="colTime" prefWidth="203.77230834960938" text="Time" />
+            <TableColumn fx:id="colEndStation" prefWidth="203.727783203125" text="End Station" />
+        </columns>
+      </TableView>
+      <Label alignment="TOP_CENTER" layoutX="135.0" layoutY="85.0" prefHeight="56.0" prefWidth="461.0" text="Train Time " textFill="#0b4874" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="295.0">
+         <font>
+            <Font name="Arial Bold Italic" size="45.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.466539204120636" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label alignment="TOP_CENTER" layoutX="286.0" layoutY="138.0" prefHeight="56.0" prefWidth="461.0" text="Table" textFill="#65ece5">
+         <font>
+            <Font name="Arial Bold Italic" size="45.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.4799235165119171" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

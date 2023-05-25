@@ -1,0 +1,7 @@
+#trainAddStationPane {
+    -fx-background-color: linear-gradient(to bottom, #9DFFF7, #4E8FB8);
+    /*-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.70), 10, 0, 2, 5);*/
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,10), 15, 0, 0, 0);
+
+
+}
