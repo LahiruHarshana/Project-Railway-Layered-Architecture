@@ -9,7 +9,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.User;
-import lk.ijse.railway.dao.UserModel;
+import lk.ijse.railway.dao.UserDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.sql.SQLException;
@@ -39,7 +39,7 @@ public class signUpPasswordFormController {
 
         if (txtPswd.getText().equals(txtConfirmPswd.getText())){
             try {
-                int id = UserModel.search();
+                int id = UserDAOImpl.search();
                 int idl = id+1;
 
                  uID = idl;
@@ -56,7 +56,7 @@ public class signUpPasswordFormController {
             User user = new User(uID,Name,pswd, Num,Address,Email);
 
             try {
-                boolean isSaved = UserModel.save(user);
+                boolean isSaved = UserDAOImpl.save(user);
                 if (isSaved) {
                     Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Registered Successfull !");
                 }

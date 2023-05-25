@@ -8,7 +8,7 @@ import javafx.scene.control.TextField;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.User;
-import lk.ijse.railway.dao.UserModel;
+import lk.ijse.railway.dao.UserDAOImpl;
 import lk.ijse.railway.dao.LoginHistoryDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
@@ -40,7 +40,7 @@ public class ChangePasswordFormController implements Initializable {
                 User user = new User( uId,txtConfirm.getText());
 
                 try {
-                    boolean isUpdated = UserModel.update1(user);
+                    boolean isUpdated = UserDAOImpl.update1(user);
                     if (isUpdated) {
                         Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","User Updated!");
                     }
@@ -70,7 +70,7 @@ public class ChangePasswordFormController implements Initializable {
             new Alert(Alert.AlertType.ERROR, "something happened!").show();
         }
         try {
-            User user = UserModel.searchAll(uId);
+            User user = UserDAOImpl.searchAll(uId);
             if (user != null) {
                 currentPswd = user.getPswd();
 

@@ -15,7 +15,7 @@ import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.User;
 import lk.ijse.railway.dao.LoginHistoryDAOImpl;
-import lk.ijse.railway.dao.UserModel;
+import lk.ijse.railway.dao.UserDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.io.IOException;
@@ -88,7 +88,7 @@ public class settingFormController implements Initializable {
         User user = new User( uId,name,num,address,email);
 
         try {
-            boolean isUpdated = UserModel.update(user);
+            boolean isUpdated = UserDAOImpl.update(user);
             if (isUpdated) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Updated Successfull !");
             }
@@ -166,7 +166,7 @@ public class settingFormController implements Initializable {
             new Alert(Alert.AlertType.ERROR, "something happened!").show();
         }
         try {
-            User user = UserModel.searchAll(uId);
+            User user = UserDAOImpl.searchAll(uId);
             if (user != null) {
                 txtID.setText(String.valueOf(user.getUId()));
                 txtName.setText(user.getName());

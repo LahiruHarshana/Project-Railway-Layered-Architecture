@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.User;
-import lk.ijse.railway.dao.UserModel;
+import lk.ijse.railway.dao.UserDAOImpl;
 import lk.ijse.railway.dao.LoginHistoryDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 import lk.ijse.railway.util.TimeChecker;
@@ -72,7 +72,7 @@ public class LoginFormController implements Initializable {
         String user = txtUser.getText();
 
         try {
-            User user1 = UserModel.search1(txtUser.getText());
+            User user1 = UserDAOImpl.search1(txtUser.getText());
             if (user1 != null) {
                 password=user1.getPswd();
                 System.out.println(password);
@@ -96,7 +96,7 @@ public class LoginFormController implements Initializable {
             }
 
             try {
-                User user1 = UserModel.search1(txtUser.getText());
+                User user1 = UserDAOImpl.search1(txtUser.getText());
                 if (user1 != null) {
                     uid = user1.getUId();
 

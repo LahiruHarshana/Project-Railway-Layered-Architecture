@@ -1,15 +1,12 @@
 package lk.ijse.railway.dao;
 
-import lk.ijse.railway.db.DBConnection;
-import lk.ijse.railway.dto.Employee;
 import lk.ijse.railway.dto.User;
 import lk.ijse.railway.util.CrudUtil;
 
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserModel {
+public class UserDAOImpl {
     public static int search() throws SQLException {
 
         String sql = "SELECT MAX(UserID) FROM User";
