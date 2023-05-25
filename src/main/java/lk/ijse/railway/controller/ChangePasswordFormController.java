@@ -30,6 +30,10 @@ public class ChangePasswordFormController implements Initializable {
     @FXML
     private TextField txtNew;
 
+    UserDAOImpl userDAO = new UserDAOImpl();
+
+    LoginHistoryDAOImpl loginHistoryDAO = new LoginHistoryDAOImpl();
+
     @FXML
     void btnChangeOnAction(ActionEvent event) {
 
@@ -40,7 +44,7 @@ public class ChangePasswordFormController implements Initializable {
                 User user = new User( uId,txtConfirm.getText());
 
                 try {
-                    boolean isUpdated = UserDAOImpl.update1(user);
+                    boolean isUpdated = userDAO.update1(user);
                     if (isUpdated) {
                         Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","User Updated!");
                     }
@@ -59,7 +63,7 @@ public class ChangePasswordFormController implements Initializable {
 
     private void LoadUId() {
         try {
-            LoginHistory loginHistory = LoginHistoryDAOImpl.searchLastID();
+            LoginHistory loginHistory = loginHistoryDAO.searchLastID();
             if (loginHistory != null) {
                 uId =loginHistory.getUId();
                 System.out.println(uId);
