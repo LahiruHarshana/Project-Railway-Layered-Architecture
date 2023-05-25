@@ -34,12 +34,14 @@ public class signUpPasswordFormController {
     @FXML
     private PasswordField txtPswd;
 
+    UserDAOImpl userDAO = new UserDAOImpl();
+
     @FXML
     void btnRegisterOnAction(ActionEvent event) {
 
         if (txtPswd.getText().equals(txtConfirmPswd.getText())){
             try {
-                int id = UserDAOImpl.search();
+                int id = userDAO.search();
                 int idl = id+1;
 
                  uID = idl;
@@ -56,7 +58,7 @@ public class signUpPasswordFormController {
             User user = new User(uID,Name,pswd, Num,Address,Email);
 
             try {
-                boolean isSaved = UserDAOImpl.save(user);
+                boolean isSaved = userDAO.save(user);
                 if (isSaved) {
                     Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Registered Successfull !");
                 }
