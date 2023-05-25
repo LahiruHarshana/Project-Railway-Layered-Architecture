@@ -17,7 +17,7 @@ import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dao.PaymentDAOImpl;
 import lk.ijse.railway.dao.StationDetailsDAOImpl;
 import lk.ijse.railway.dao.TicketModel;
-import lk.ijse.railway.dao.TicketingModel;
+import lk.ijse.railway.dao.TicketingDAOImpl;
 import lk.ijse.railway.db.DBConnection;
 import lk.ijse.railway.dto.*;
 import lk.ijse.railway.util.AlertTypes;
@@ -202,7 +202,7 @@ public class ticketingFormController implements Initializable {
         String name = ticketStationComboBox.getValue();
 
         try {
-            Ticket ticket = TicketingModel.searchById(name);
+            Ticket ticket = TicketingDAOImpl.searchById(name);
              distance = ticket.getDistance();
             System.out.println(distance);
         } catch (SQLException e) {
