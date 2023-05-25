@@ -14,7 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import lk.ijse.railway.Notification.Notification;
-import lk.ijse.railway.dao.PaymentModel;
+import lk.ijse.railway.dao.PaymentDAOImpl;
 import lk.ijse.railway.dao.StationDetailsModel;
 import lk.ijse.railway.dao.TicketModel;
 import lk.ijse.railway.dao.TicketingModel;
@@ -125,7 +125,7 @@ public class ticketingFormController implements Initializable {
 
         boolean isPlaced = false;
         try {
-            isPlaced = PaymentModel.payemntTicket(ticketID, trainID, paymentID,date,price,classType,stationName,howMany);
+            isPlaced = PaymentDAOImpl.payemntTicket(ticketID, trainID, paymentID,date,price,classType,stationName,howMany);
             if(isPlaced) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION","Bought the ticket");
             } else {

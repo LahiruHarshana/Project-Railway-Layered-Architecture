@@ -22,7 +22,7 @@ public class BookingDAOImpl {
                 boolean isPassengerSaved = PassengerDAOImpl.save(passengerId,passengerName,bookingId,contactNum,email,address,nic);
 
                 if(isPassengerSaved) {
-                    boolean isPaymentSaved = PaymentModel.saveB(paymentId,bookingId,date,price);
+                    boolean isPaymentSaved = PaymentDAOImpl.saveB(paymentId,bookingId,date,price);
 
                     if(isPaymentSaved){
                         con.commit();

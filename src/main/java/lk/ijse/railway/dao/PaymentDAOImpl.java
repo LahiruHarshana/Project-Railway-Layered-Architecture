@@ -6,7 +6,7 @@ import lk.ijse.railway.util.CrudUtil;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class PaymentModel {
+public class PaymentDAOImpl {
     public static boolean payemntTicket(String ticketID, String trainID, String paymentID, String date, double price,String classType,String stationName,int howMany) throws SQLException {
         Connection con = null;
         try {
@@ -15,7 +15,7 @@ public class PaymentModel {
 
             boolean isTicketSaved = TicketAddModel.save(ticketID, trainID,stationName,classType,howMany,price);
             if(isTicketSaved) {
-                boolean isPaymentSaved = PaymentModel.save(paymentID,ticketID,date,price);
+                boolean isPaymentSaved = PaymentDAOImpl.save(paymentID,ticketID,date,price);
                 System.out.println(isPaymentSaved);
                 if(isPaymentSaved) {
                     con.commit();
