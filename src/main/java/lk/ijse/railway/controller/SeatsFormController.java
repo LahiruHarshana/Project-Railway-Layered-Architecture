@@ -10,7 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import lk.ijse.railway.Notification.Notification;
-import lk.ijse.railway.dao.SeatsModel;
+import lk.ijse.railway.dao.SeatsDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.net.URL;
@@ -667,7 +667,7 @@ public class SeatsFormController implements Initializable {
 
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = SeatsModel.loadIds(trainId,datee);
+            List<String> ids = SeatsDAOImpl.loadIds(trainId,datee);
 
             for (String id : ids) {
                 if (id.equals("S1")){

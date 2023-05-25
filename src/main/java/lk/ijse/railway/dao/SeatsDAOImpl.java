@@ -2,12 +2,11 @@ package lk.ijse.railway.dao;
 
 import lk.ijse.railway.db.DBConnection;
 
-import java.awt.*;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SeatsModel {
+public class SeatsDAOImpl {
     public static List<String> loadIds(String trainId, Date date) throws SQLException {
         Connection con = DBConnection.getInstance().getConnection();
         PreparedStatement pstm = con.prepareStatement("SELECT SeatsID FROM Booking WHERE TrainID = ? AND ToDate =?");
