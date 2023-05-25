@@ -87,12 +87,20 @@ public class ticketingFormController implements Initializable {
     @FXML
     private Pane ticketingPane;
 
+    TrainDAOImpl trainDAO = new TrainDAOImpl();
+
+    TicketDAOImpl ticketDAO = new TicketDAOImpl();
+    PaymentDAOImpl paymentDAO  = new PaymentDAOImpl();
+
+    StationDetailsDAOImpl stationDetailsDAO = new StationDetailsDAOImpl();
+
+    StationDAOImpl stationDAO = new StationDAOImpl();
+
     @FXML
     void howManyTextFieldOnAction(ActionEvent event) {
 
 
     }
-
     void loadTime(){
         Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {
             LocalTime currentTime = LocalTime.now();
@@ -122,7 +130,7 @@ public class ticketingFormController implements Initializable {
 
         boolean isPlaced = false;
         try {
-            isPlaced = PaymentDAOImpl.payemntTicket(ticketID, trainID, paymentID,date,price,classType,stationName,howMany);
+            isPlaced = paymentDAO.payemntTicket(ticketID, trainID, paymentID,date,price,classType,stationName,howMany);
             if(isPlaced) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION","Bought the ticket");
             } else {
@@ -148,7 +156,7 @@ public class ticketingFormController implements Initializable {
         String idl = ticketTrainComboBox.getValue();
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = StationDetailsDAOImpl.searchById(idl);
+            List<String> ids = stationDetailsDAO.searchById(idl);
 
             for (String id : ids) {
                 obList.add(id);
@@ -199,7 +207,7 @@ public class ticketingFormController implements Initializable {
         String name = ticketStationComboBox.getValue();
 
         try {
-            Ticket ticket = StationDAOImpl.searchById(name);
+            Ticket ticket = stationDAO.searchById(name);
              distance = ticket.getDistance();
             System.out.println(distance);
         } catch (SQLException e) {
@@ -358,7 +366,7 @@ public class ticketingFormController implements Initializable {
     private void loadTicketID() {
 
         try {
-            int id = TicketDAOImpl.search();
+            int id = ticketDAO.search();
                 int idl = id+1;
 
 
@@ -375,7 +383,7 @@ public class ticketingFormController implements Initializable {
     private void loadTrainCB() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = TrainDAOImpl.loadTrainIds();
+            List<String> ids = trainDAO.loadTrainIds();
 
             for (String id : ids) {
                 obList.add(id);

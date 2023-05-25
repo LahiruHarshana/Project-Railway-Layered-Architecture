@@ -14,6 +14,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.shape.TriangleMesh;
 import javafx.scene.transform.Rotate;
 import javafx.util.Duration;
 import lk.ijse.railway.dao.BookingDAOImpl;
@@ -26,6 +27,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.TreeMap;
 
 public class ticketFormController implements Initializable {
     @FXML
@@ -66,16 +68,20 @@ public class ticketFormController implements Initializable {
     @FXML
     private AnchorPane mainPane;
 
+    TicketDAOImpl ticketDAO = new TicketDAOImpl();
+    BookingDAOImpl bookingDAO = new BookingDAOImpl();
+    TrainDAOImpl trainDAO = new TrainDAOImpl();
+
     @FXML
     void selectTrainOnAction(ActionEvent event) {
         String idl = selectTrainCB.getValue();
 
         try {
-            int class1 = TicketDAOImpl.search1class(idl);
+            int class1 = ticketDAO.search1class(idl);
             classLabel3.setText(String.valueOf(class1));
-            int class2 = TicketDAOImpl.search2class(idl);
+            int class2 = ticketDAO.search2class(idl);
             classLabel2.setText(String.valueOf(class2));
-            int class3 = BookingDAOImpl.search3class(idl);
+            int class3 = bookingDAO.search3class(idl);
             classLabel1.setText(String.valueOf(class3));
 
         } catch (SQLException e) {
@@ -197,7 +203,7 @@ public class ticketFormController implements Initializable {
     private void loadSelectTrainCB() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = TrainDAOImpl.loadTrainIds();
+            List<String> ids = trainDAO.loadTrainIds();
 
             for (String id : ids) {
                 obList.add(id);
