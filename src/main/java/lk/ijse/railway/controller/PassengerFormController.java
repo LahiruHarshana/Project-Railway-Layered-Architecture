@@ -25,42 +25,29 @@ import java.util.regex.Pattern;
 public class PassengerFormController implements Initializable {
     @FXML
     private TextField addressTextField;
-
-
     @FXML
     private JFXButton serchButton;
-
     @FXML
     private TextField contactNumberTextField;
-
     @FXML
     private JFXButton deleteButton;
-
     @FXML
     private Pane passengerPane;
-
     @FXML
     private TextField emailTextField;
-
     @FXML
     private TextField nameTextField;
-
     @FXML
     private TextField nicTextField;
-
     @FXML
     private TextField passengerIDTextField;
-
     @FXML
     private JFXButton searchButton;
-
     @FXML
     private JFXButton updateButton;
-
-
     @FXML
     private TextField textBookingID;
-
+    PassengerDAOImpl passengerDAO = new PassengerDAOImpl();
     @FXML
     void deleteButtonOnAction(ActionEvent event) {
 
@@ -70,7 +57,7 @@ public class PassengerFormController implements Initializable {
     void searchButtonOnAction(ActionEvent event) {
 
         try {
-            Passenger passenger = PassengerDAOImpl.searchPassenger(passengerIDTextField.getText());
+            Passenger passenger = passengerDAO.searchPassenger(passengerIDTextField.getText());
             if (passenger != null) {
                 passengerIDTextField.setText(passenger.getId());
                 nameTextField.setText(passenger.getName());
@@ -150,7 +137,7 @@ public class PassengerFormController implements Initializable {
 
             Passenger passenger = new Passenger(id, name, bookingID, contact, email, address, nic);
 
-            boolean isUpdated = PassengerDAOImpl.update(passenger);
+            boolean isUpdated = passengerDAO.update(passenger);
             System.out.println(isUpdated);
             if (isUpdated) Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Passenger Updated !");
         }
