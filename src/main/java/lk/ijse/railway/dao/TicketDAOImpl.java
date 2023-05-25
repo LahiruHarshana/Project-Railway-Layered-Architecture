@@ -1,7 +1,6 @@
 package lk.ijse.railway.dao;
 
 import lk.ijse.railway.db.DBConnection;
-import lk.ijse.railway.dto.Ticket;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TicketModel {
+public class TicketDAOImpl {
     public static List<String> loadTrainIds() throws SQLException {
         Connection con = DBConnection.getInstance().getConnection();
         ResultSet resultSet = con.createStatement().executeQuery("SELECT TrainID FROM train");

@@ -16,7 +16,7 @@ import javafx.scene.layout.Pane;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dao.PaymentDAOImpl;
 import lk.ijse.railway.dao.StationDetailsDAOImpl;
-import lk.ijse.railway.dao.TicketModel;
+import lk.ijse.railway.dao.TicketDAOImpl;
 import lk.ijse.railway.dao.TicketingDAOImpl;
 import lk.ijse.railway.db.DBConnection;
 import lk.ijse.railway.dto.*;
@@ -361,7 +361,7 @@ public class ticketingFormController implements Initializable {
     private void loadTicketID() {
 
         try {
-            int id = TicketModel.search();
+            int id = TicketDAOImpl.search();
                 int idl = id+1;
 
 
@@ -378,7 +378,7 @@ public class ticketingFormController implements Initializable {
     private void loadTrainCB() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = TicketModel.loadTrainIds();
+            List<String> ids = TicketDAOImpl.loadTrainIds();
 
             for (String id : ids) {
                 obList.add(id);
