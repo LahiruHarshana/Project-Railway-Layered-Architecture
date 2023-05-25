@@ -14,7 +14,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.Station;
 import lk.ijse.railway.dto.tm.StationTM;
-import lk.ijse.railway.dao.StationDAOImpl;
+import lk.ijse.railway.dao.custom.impl.StationDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.net.URL;

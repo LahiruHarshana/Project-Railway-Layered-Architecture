@@ -8,8 +8,8 @@ import javafx.scene.control.TextField;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.User;
-import lk.ijse.railway.dao.UserDAOImpl;
-import lk.ijse.railway.dao.LoginHistoryDAOImpl;
+import lk.ijse.railway.dao.custom.impl.UserDAOImpl;
+import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.net.URL;

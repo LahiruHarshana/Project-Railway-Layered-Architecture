@@ -13,7 +13,7 @@ import javafx.scene.transform.Rotate;
 import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.Passenger;
-import lk.ijse.railway.dao.PassengerDAOImpl;
+import lk.ijse.railway.dao.custom.impl.PassengerDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.net.URL;

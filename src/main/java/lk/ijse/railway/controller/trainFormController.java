@@ -20,9 +20,9 @@ import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.StationDetails;
 import lk.ijse.railway.dto.Train;
-import lk.ijse.railway.dao.StationDetailsDAOImpl;
-import lk.ijse.railway.dao.StationDAOImpl;
-import lk.ijse.railway.dao.TrainDAOImpl;
+import lk.ijse.railway.dao.custom.impl.StationDetailsDAOImpl;
+import lk.ijse.railway.dao.custom.impl.StationDAOImpl;
+import lk.ijse.railway.dao.custom.impl.TrainDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.io.IOException;

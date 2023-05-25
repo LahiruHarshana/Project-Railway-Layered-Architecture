@@ -15,7 +15,7 @@ import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.Employee;
 import lk.ijse.railway.dto.tm.EmployeeTM;
-import lk.ijse.railway.dao.EmployeeDAOImpl;
+import lk.ijse.railway.dao.custom.impl.EmployeeDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.net.URL;

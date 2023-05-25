@@ -9,7 +9,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.User;
-import lk.ijse.railway.dao.UserDAOImpl;
+import lk.ijse.railway.dao.custom.impl.UserDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.sql.SQLException;

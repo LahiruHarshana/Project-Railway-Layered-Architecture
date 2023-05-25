@@ -10,7 +10,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.tm.LoginHistoryTM;
-import lk.ijse.railway.dao.LoginHistoryDAOImpl;
+import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
 
 import java.net.URL;
 import java.sql.SQLException;

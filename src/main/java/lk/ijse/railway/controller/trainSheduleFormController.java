@@ -12,7 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Duration;
 import lk.ijse.railway.dto.Train;
 import lk.ijse.railway.dto.tm.TrainTM;
-import lk.ijse.railway.dao.TrainDAOImpl;
+import lk.ijse.railway.dao.custom.impl.TrainDAOImpl;
 
 import java.net.URL;
 import java.sql.SQLException;

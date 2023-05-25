@@ -2,7 +2,7 @@ package lk.ijse.railway.util;
 import javafx.scene.control.Alert;
 import javazoom.jl.player.Player;
 import lk.ijse.railway.dto.Train;
-import lk.ijse.railway.dao.TrainDAOImpl;
+import lk.ijse.railway.dao.custom.impl.TrainDAOImpl;
 import java.io.File;
 import java.io.FileInputStream;
 import java.sql.SQLException;

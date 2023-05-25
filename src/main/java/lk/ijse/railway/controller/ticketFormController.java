@@ -14,12 +14,11 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.shape.TriangleMesh;
 import javafx.scene.transform.Rotate;
 import javafx.util.Duration;
-import lk.ijse.railway.dao.BookingDAOImpl;
-import lk.ijse.railway.dao.TicketDAOImpl;
-import lk.ijse.railway.dao.TrainDAOImpl;
+import lk.ijse.railway.dao.custom.impl.BookingDAOImpl;
+import lk.ijse.railway.dao.custom.impl.TicketDAOImpl;
+import lk.ijse.railway.dao.custom.impl.TrainDAOImpl;
 
 
 import java.io.IOException;
@@ -27,7 +26,6 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.TreeMap;
 
 public class ticketFormController implements Initializable {
     @FXML

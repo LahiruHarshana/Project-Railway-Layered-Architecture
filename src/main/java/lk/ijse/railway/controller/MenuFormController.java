@@ -11,8 +11,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
-import lk.ijse.railway.dao.LoginHistoryDAOImpl;
-import lk.ijse.railway.dto.LoginHistory;
+import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
 
 import java.io.IOException;
 

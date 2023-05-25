@@ -10,7 +10,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
-import lk.ijse.railway.dao.UserDAOImpl;
 
 import java.net.URL;
 import java.util.ResourceBundle;

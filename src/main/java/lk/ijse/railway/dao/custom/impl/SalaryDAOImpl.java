@@ -1,4 +1,4 @@
-package lk.ijse.railway.dao;
+package lk.ijse.railway.dao.custom.impl;
 
 import lk.ijse.railway.dto.Salary;
 import lk.ijse.railway.util.CrudUtil;

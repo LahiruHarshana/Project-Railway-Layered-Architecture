@@ -1,14 +1,8 @@
 package lk.ijse.railway.dao;
 
-import lk.ijse.railway.db.DBConnection;
 import lk.ijse.railway.dto.Employee;
-import lk.ijse.railway.util.CrudUtil;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public interface CrudDAO {
