@@ -14,7 +14,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 import lk.ijse.railway.dto.Train;
 import lk.ijse.railway.dto.tm.TrainTM;
-import lk.ijse.railway.dao.TrainModel;
+import lk.ijse.railway.dao.TrainDAOImpl;
 
 
 import java.io.IOException;
@@ -96,7 +96,7 @@ public class viewTrainsFormController implements Initializable {
     private void LoadTable() {
         try {
             ObservableList<TrainTM> obList = FXCollections.observableArrayList();
-            List<Train> cusList = TrainModel.getAll();
+            List<Train> cusList = TrainDAOImpl.getAll();
 
             for (Train train : cusList) {
                 obList.add(new TrainTM(

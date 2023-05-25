@@ -12,7 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Duration;
 import lk.ijse.railway.dto.Train;
 import lk.ijse.railway.dto.tm.TrainTM;
-import lk.ijse.railway.dao.TrainModel;
+import lk.ijse.railway.dao.TrainDAOImpl;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -56,7 +56,7 @@ public class trainSheduleFormController implements Initializable {
     private void LoadTable() {
         try {
             ObservableList<TrainTM> obList = FXCollections.observableArrayList();
-            List<Train> cusList = TrainModel.getAll();
+            List<Train> cusList = TrainDAOImpl.getAll();
 
             for (Train train : cusList) {
                 obList.add(new TrainTM(

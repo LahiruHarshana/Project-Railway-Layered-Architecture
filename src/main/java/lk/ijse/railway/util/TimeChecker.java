@@ -2,7 +2,7 @@ package lk.ijse.railway.util;
 import javafx.scene.control.Alert;
 import javazoom.jl.player.Player;
 import lk.ijse.railway.dto.Train;
-import lk.ijse.railway.dao.TrainModel;
+import lk.ijse.railway.dao.TrainDAOImpl;
 import java.io.File;
 import java.io.FileInputStream;
 import java.sql.SQLException;
@@ -22,7 +22,7 @@ public class TimeChecker {
                     LocalTime fiveMinutesAgo = currentTime.plusMinutes(5);
                     Time time = Time.valueOf(formatTime(fiveMinutesAgo));
                     try {
-                        Train train = TrainModel.searchTime(time);
+                        Train train = TrainDAOImpl.searchTime(time);
                         if (train != null) {
                             String name = train.getName();
                             try {

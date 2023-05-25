@@ -22,7 +22,7 @@ import lk.ijse.railway.dto.StationDetails;
 import lk.ijse.railway.dto.Train;
 import lk.ijse.railway.dao.StationDetailsDAOImpl;
 import lk.ijse.railway.dao.StationDAOImpl;
-import lk.ijse.railway.dao.TrainModel;
+import lk.ijse.railway.dao.TrainDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.io.IOException;
@@ -214,7 +214,7 @@ public class trainFormController implements Initializable {
         Train train = new Train(id, name, time,endStation);
 
         try {
-            boolean isSaved = TrainModel.save(train);
+            boolean isSaved = TrainDAOImpl.save(train);
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Item saved!").show();
             }
@@ -228,7 +228,7 @@ public class trainFormController implements Initializable {
     void deleteButtonOnAction(ActionEvent event) throws SQLException {
         String code = trainIDButton.getText();
         try {
-            boolean isDeleted = TrainModel.delete(code);
+            boolean isDeleted = TrainDAOImpl.delete(code);
             if (isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "deleted!").show();
             }
@@ -243,7 +243,7 @@ public class trainFormController implements Initializable {
     @FXML
     void searchButtonOnAction(ActionEvent event) {
         try {
-            Train train = TrainModel.search(trainIDButton.getText());
+            Train train = TrainDAOImpl.search(trainIDButton.getText());
             if (train != null) {
                 trainIDButton.setText(train.getId());
                 nameTextField.setText(train.getName());
@@ -270,7 +270,7 @@ public class trainFormController implements Initializable {
          Train train=new Train(id,name,time,endStation);
 
         try {
-            boolean isUpdated=TrainModel.update(train);
+            boolean isUpdated= TrainDAOImpl.update(train);
             System.out.println(isUpdated);
             if(isUpdated) new Alert(Alert.AlertType.CONFIRMATION, "updated!").show();
         } catch (SQLException e) {

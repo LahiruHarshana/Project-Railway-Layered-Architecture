@@ -371,7 +371,7 @@ public class BookingFormController implements Initializable {
     private void LoadTrainIDCB() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = TrainModel.loadIds();
+            List<String> ids = TrainDAOImpl.loadIds();
 
             for (String id : ids) {
                 obList.add(id);

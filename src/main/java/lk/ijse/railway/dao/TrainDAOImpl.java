@@ -5,12 +5,10 @@ import lk.ijse.railway.dto.Train;
 import lk.ijse.railway.util.CrudUtil;
 
 import java.sql.*;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TrainModel {
+public class TrainDAOImpl {
     public static Train search(String text) throws SQLException {
         /*try (Connection con = DBConnection.getInstance().getConnection()) {
             String sql = "SELECT * FROM Train WHERE TrainID = ?";
