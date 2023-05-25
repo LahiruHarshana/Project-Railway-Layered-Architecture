@@ -9,7 +9,7 @@ import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.User;
 import lk.ijse.railway.dao.UserModel;
-import lk.ijse.railway.dao.loginHistoryModel;
+import lk.ijse.railway.dao.LoginHistoryDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.net.URL;
@@ -59,7 +59,7 @@ public class ChangePasswordFormController implements Initializable {
 
     private void LoadUId() {
         try {
-            LoginHistory loginHistory = loginHistoryModel.searchLastID();
+            LoginHistory loginHistory = LoginHistoryDAOImpl.searchLastID();
             if (loginHistory != null) {
                 uId =loginHistory.getUId();
                 System.out.println(uId);

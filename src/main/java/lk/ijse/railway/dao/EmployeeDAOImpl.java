@@ -2,14 +2,13 @@ package lk.ijse.railway.dao;
 
 import lk.ijse.railway.db.DBConnection;
 import lk.ijse.railway.dto.Employee;
-import lk.ijse.railway.dto.Train;
 import lk.ijse.railway.util.CrudUtil;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeModel {
+public class EmployeeDAOImpl {
     public static Employee search(String text) throws SQLException {
         String sql = "SELECT * FROM Employee WHERE EmployeeID = ?";
         ResultSet rst = CrudUtil.execute(sql, text);

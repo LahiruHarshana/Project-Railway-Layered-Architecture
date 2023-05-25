@@ -2,7 +2,7 @@ package lk.ijse.railway.dao;
 
 import lk.ijse.railway.dto.OTP;
 
-public class otpModel {
+public class OtpDAOImpl {
 
     static OTP ootp;
 

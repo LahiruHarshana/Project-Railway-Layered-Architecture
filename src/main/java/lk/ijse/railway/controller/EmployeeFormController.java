@@ -15,7 +15,7 @@ import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.Employee;
 import lk.ijse.railway.dto.tm.EmployeeTM;
-import lk.ijse.railway.dao.EmployeeModel;
+import lk.ijse.railway.dao.EmployeeDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.net.URL;
@@ -119,7 +119,7 @@ public class EmployeeFormController implements Initializable {
             Employee employee = new Employee(id, name, date, contact, address);
 
             try {
-                boolean isSaved = EmployeeModel.save(employee);
+                boolean isSaved = EmployeeDAOImpl.save(employee);
                 if (isSaved) {
                     new Alert(Alert.AlertType.CONFIRMATION, "Item saved!").show();
                 }
@@ -137,7 +137,7 @@ public class EmployeeFormController implements Initializable {
     void btnDeleteOnAction(ActionEvent event) {
         String code = textId.getText();
         try {
-            boolean isDeleted = EmployeeModel.delete(code);
+            boolean isDeleted = EmployeeDAOImpl.delete(code);
             if (isDeleted) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Deleted !");
 
@@ -154,7 +154,7 @@ public class EmployeeFormController implements Initializable {
     @FXML
     void btnSearchOnAction(ActionEvent event) {
         try {
-            Employee employee = EmployeeModel.search(textId.getText());
+            Employee employee = EmployeeDAOImpl.search(textId.getText());
             if (employee != null) {
                 textId.setText(employee.getId());
                 textName.setText(employee.getName());
@@ -207,7 +207,7 @@ public class EmployeeFormController implements Initializable {
             Employee employee = new Employee(id, name, date, contact, address);
 
             try {
-                boolean isUpdated = EmployeeModel.update(employee);
+                boolean isUpdated = EmployeeDAOImpl.update(employee);
                 if (isUpdated) {
                     Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Employee is updated!");
 
@@ -240,7 +240,7 @@ public class EmployeeFormController implements Initializable {
     private void LoadTable() {
         try {
             ObservableList<EmployeeTM> obList = FXCollections.observableArrayList();
-            List<Employee> cusList = EmployeeModel.getAll();
+            List<Employee> cusList = EmployeeDAOImpl.getAll();
 
             for (Employee employee : cusList) {
                 obList.add(new EmployeeTM(

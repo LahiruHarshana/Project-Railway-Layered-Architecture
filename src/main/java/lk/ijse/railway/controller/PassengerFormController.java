@@ -13,7 +13,7 @@ import javafx.scene.transform.Rotate;
 import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.Passenger;
-import lk.ijse.railway.dao.PassengerModel;
+import lk.ijse.railway.dao.PassengerDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.net.URL;
@@ -70,7 +70,7 @@ public class PassengerFormController implements Initializable {
     void searchButtonOnAction(ActionEvent event) {
 
         try {
-            Passenger passenger = PassengerModel.searchPassenger(passengerIDTextField.getText());
+            Passenger passenger = PassengerDAOImpl.searchPassenger(passengerIDTextField.getText());
             if (passenger != null) {
                 passengerIDTextField.setText(passenger.getId());
                 nameTextField.setText(passenger.getName());
@@ -150,7 +150,7 @@ public class PassengerFormController implements Initializable {
 
             Passenger passenger = new Passenger(id, name, bookingID, contact, email, address, nic);
 
-            boolean isUpdated = PassengerModel.update(passenger);
+            boolean isUpdated = PassengerDAOImpl.update(passenger);
             System.out.println(isUpdated);
             if (isUpdated) Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Passenger Updated !");
         }

@@ -15,7 +15,7 @@ import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.User;
 import lk.ijse.railway.dao.UserModel;
-import lk.ijse.railway.dao.loginHistoryModel;
+import lk.ijse.railway.dao.LoginHistoryDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 import lk.ijse.railway.util.TimeChecker;
 import lombok.SneakyThrows;
@@ -116,7 +116,7 @@ public class LoginFormController implements Initializable {
                 LocalTime time = LocalTime.now();
                 Time time1 = Time.valueOf(time);
 
-                boolean isSaved = loginHistoryModel.save(uid,date,time1);
+                boolean isSaved = LoginHistoryDAOImpl.save(uid,date,time1);
                 if (isSaved) {
                     Notification.notification(AlertTypes.CONFORMATION,"CONFIRMATION ","Saved Log History");
                 }

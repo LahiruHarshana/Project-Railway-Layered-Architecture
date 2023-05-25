@@ -344,7 +344,7 @@ public class BookingFormController implements Initializable {
 
     private void LoadPassengerID() {
         try {
-            int id = PassengerModel.search();
+            int id = PassengerDAOImpl.search();
             int idl = id+1;
 
 

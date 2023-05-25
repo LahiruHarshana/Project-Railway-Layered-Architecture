@@ -14,7 +14,7 @@ import lk.ijse.railway.Launcher;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.User;
-import lk.ijse.railway.dao.loginHistoryModel;
+import lk.ijse.railway.dao.LoginHistoryDAOImpl;
 import lk.ijse.railway.dao.UserModel;
 import lk.ijse.railway.util.AlertTypes;
 
@@ -133,7 +133,7 @@ public class settingFormController implements Initializable {
             LocalTime time = LocalTime.now();
             Time time1 = Time.valueOf(time);
 
-            boolean isSaved = loginHistoryModel.saveLogOut(uId,date,time1);
+            boolean isSaved = LoginHistoryDAOImpl.saveLogOut(uId,date,time1);
             if (isSaved) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Save Successfull !");
             }
@@ -155,7 +155,7 @@ public class settingFormController implements Initializable {
     private void LoadTxts() {
 
         try {
-            LoginHistory loginHistory = loginHistoryModel.searchLastID();
+            LoginHistory loginHistory = LoginHistoryDAOImpl.searchLastID();
             if (loginHistory != null) {
                 uId =loginHistory.getUId();
                 System.out.println(uId);

@@ -10,7 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class PassengerModel {
+public class PassengerDAOImpl {
     public static boolean save(String passengerId, String passengerName, String bookingId, String contactNum, String email, String address, String nic) throws SQLException, SQLException {
 
 

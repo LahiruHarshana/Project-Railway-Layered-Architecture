@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 import lk.ijse.railway.Launcher;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.LoginHistory;
-import lk.ijse.railway.dao.loginHistoryModel;
+import lk.ijse.railway.dao.LoginHistoryDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.net.URL;
@@ -37,7 +37,7 @@ public class HomeFormController implements Initializable {
             LocalTime time = LocalTime.now();
             Time time1 = Time.valueOf(time);
 
-            boolean isSaved = loginHistoryModel.saveLogOut(uId,date,time1);
+            boolean isSaved = LoginHistoryDAOImpl.saveLogOut(uId,date,time1);
             if (isSaved) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !"," Log out saved!");
 
@@ -53,7 +53,7 @@ public class HomeFormController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         try {
-            LoginHistory loginHistory = loginHistoryModel.searchLastID();
+            LoginHistory loginHistory = LoginHistoryDAOImpl.searchLastID();
             if (loginHistory != null) {
                 uId =loginHistory.getUId();
                 System.out.println(uId);

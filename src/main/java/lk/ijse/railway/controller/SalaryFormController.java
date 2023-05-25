@@ -14,7 +14,7 @@ import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dto.Employee;
 import lk.ijse.railway.dto.Salary;
-import lk.ijse.railway.dao.EmployeeModel;
+import lk.ijse.railway.dao.EmployeeDAOImpl;
 import lk.ijse.railway.dao.SalaryModel;
 import lk.ijse.railway.util.AlertTypes;
 
@@ -79,7 +79,7 @@ public class SalaryFormController implements Initializable {
     @FXML
     void btnSearchOnAction(ActionEvent event) {
         try {
-            Employee employee = EmployeeModel.search(txtId.getText());
+            Employee employee = EmployeeDAOImpl.search(txtId.getText());
             if (employee != null) {
                 txtId.setText(employee.getId());
                 txtName.setText(employee.getName());

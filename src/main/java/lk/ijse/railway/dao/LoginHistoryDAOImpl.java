@@ -1,6 +1,5 @@
 package lk.ijse.railway.dao;
 
-import lk.ijse.railway.dto.Employee;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.util.CrudUtil;
 
@@ -11,7 +10,7 @@ import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
-public class loginHistoryModel {
+public class LoginHistoryDAOImpl {
     public static boolean save(int uid, Date date, Time time1) throws SQLException {
 
         {

@@ -10,7 +10,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.tm.LoginHistoryTM;
-import lk.ijse.railway.dao.loginHistoryModel;
+import lk.ijse.railway.dao.LoginHistoryDAOImpl;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -47,7 +47,7 @@ public class LogHistoryFormController implements Initializable {
     private void LoadTable() {
         try {
             ObservableList<LoginHistoryTM> obList = FXCollections.observableArrayList();
-            List<LoginHistory> cusList = loginHistoryModel.getAll();
+            List<LoginHistory> cusList = LoginHistoryDAOImpl.getAll();
 
             for (LoginHistory loginHistory : cusList) {
                 obList.add(new LoginHistoryTM(
