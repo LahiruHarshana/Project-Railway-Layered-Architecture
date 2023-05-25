@@ -14,10 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import lk.ijse.railway.Notification.Notification;
-import lk.ijse.railway.dao.PaymentDAOImpl;
-import lk.ijse.railway.dao.StationDetailsDAOImpl;
-import lk.ijse.railway.dao.TicketDAOImpl;
-import lk.ijse.railway.dao.TicketingDAOImpl;
+import lk.ijse.railway.dao.*;
 import lk.ijse.railway.db.DBConnection;
 import lk.ijse.railway.dto.*;
 import lk.ijse.railway.util.AlertTypes;
@@ -202,7 +199,7 @@ public class ticketingFormController implements Initializable {
         String name = ticketStationComboBox.getValue();
 
         try {
-            Ticket ticket = TicketingDAOImpl.searchById(name);
+            Ticket ticket = StationDAOImpl.searchById(name);
              distance = ticket.getDistance();
             System.out.println(distance);
         } catch (SQLException e) {

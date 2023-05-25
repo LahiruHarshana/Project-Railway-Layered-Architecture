@@ -141,7 +141,7 @@ public class BookingFormController implements Initializable {
         String name = StationNameCB.getValue();
 
         try {
-            Ticket ticket = TicketingDAOImpl.searchById(name);
+            Ticket ticket = StationDAOImpl.searchById(name);
             distance = ticket.getDistance();
             System.out.println(distance);
         } catch (SQLException e) {
