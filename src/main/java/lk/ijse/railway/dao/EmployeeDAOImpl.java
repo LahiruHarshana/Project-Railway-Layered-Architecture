@@ -73,7 +73,5 @@ public class EmployeeDAOImpl {
         }
         return data;
 
-
-
     }
 }
