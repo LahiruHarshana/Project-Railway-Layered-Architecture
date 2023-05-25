@@ -90,6 +90,11 @@ public class trainFormController implements Initializable {
     @FXML
     private JFXComboBox<?> wichComboBox;
 
+    TrainDAOImpl trainDAO = new TrainDAOImpl();
+    StationDAOImpl stationDAO = new StationDAOImpl();
+
+    StationDetailsDAOImpl stationDetailsDAO = new StationDetailsDAOImpl();
+
 
 
     @Override
@@ -142,7 +147,7 @@ public class trainFormController implements Initializable {
     private void loadTrainIDCB() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = TrainDAOImpl.loadtrainIds();
+            List<String> ids = trainDAO.loadtrainIds();
 
             for (String id : ids) {
                 obList.add(id);
@@ -157,7 +162,7 @@ public class trainFormController implements Initializable {
     private void loadStationNameComboBox() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = StationDAOImpl.loadIds();
+            List<String> ids = stationDAO.loadIds();
 
             for (String id : ids) {
                 obList.add(id);
@@ -185,7 +190,7 @@ public class trainFormController implements Initializable {
         StationDetails stationDetails = new StationDetails(trainId,StationId, time);
 
         try {
-            boolean isSaved = StationDetailsDAOImpl.saveTrainStation(stationDetails);
+            boolean isSaved = stationDetailsDAO.saveTrainStation(stationDetails);
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Item saved!").show();
             }
@@ -214,7 +219,7 @@ public class trainFormController implements Initializable {
         Train train = new Train(id, name, time,endStation);
 
         try {
-            boolean isSaved = TrainDAOImpl.save(train);
+            boolean isSaved = trainDAO.save(train);
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Item saved!").show();
             }
@@ -228,7 +233,7 @@ public class trainFormController implements Initializable {
     void deleteButtonOnAction(ActionEvent event) throws SQLException {
         String code = trainIDButton.getText();
         try {
-            boolean isDeleted = TrainDAOImpl.delete(code);
+            boolean isDeleted = trainDAO.delete(code);
             if (isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "deleted!").show();
             }
@@ -243,7 +248,7 @@ public class trainFormController implements Initializable {
     @FXML
     void searchButtonOnAction(ActionEvent event) {
         try {
-            Train train = TrainDAOImpl.search(trainIDButton.getText());
+            Train train = trainDAO.search(trainIDButton.getText());
             if (train != null) {
                 trainIDButton.setText(train.getId());
                 nameTextField.setText(train.getName());
@@ -270,7 +275,7 @@ public class trainFormController implements Initializable {
          Train train=new Train(id,name,time,endStation);
 
         try {
-            boolean isUpdated= TrainDAOImpl.update(train);
+            boolean isUpdated= trainDAO.update(train);
             System.out.println(isUpdated);
             if(isUpdated) new Alert(Alert.AlertType.CONFIRMATION, "updated!").show();
         } catch (SQLException e) {
