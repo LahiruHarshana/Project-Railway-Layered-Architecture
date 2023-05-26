@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LoginHistoryDAOImpl {
-    public static boolean save(int uid, Date date, Time time1) throws SQLException {
+    public static boolean save(LoginHistory loginHistory) throws SQLException {
 
         {
             String sql = "INSERT INTO LogHistory(UserID, LogInDate, LogInTime) " +
@@ -19,7 +19,7 @@ public class LoginHistoryDAOImpl {
 
             return CrudUtil.execute(
                     sql,
-                    uid,date,time1);
+                    loginHistory.getUId(),loginHistory.getLogInDate(),loginHistory.getLogInTime());
 
         }
 
@@ -57,14 +57,14 @@ public class LoginHistoryDAOImpl {
 
     }
 
-    public static boolean saveLogOut(int uId, Date date, Time time1) throws SQLException {
+    public static boolean saveLogOut(LoginHistory loginHistory) throws SQLException {
         {
             String sql = "INSERT INTO LogHistory(UserID, LogOutDate, LogOutTime) " +
                     "VALUES(?,?,?)";
 
             return CrudUtil.execute(
                     sql,
-                    uId,date,time1);
+                    loginHistory.getUId(),loginHistory.getLogInDate(),loginHistory.getLogInDate());
 
         }
 

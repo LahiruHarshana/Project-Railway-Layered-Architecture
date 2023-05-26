@@ -13,6 +13,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.User;
 import lk.ijse.railway.dao.custom.impl.UserDAOImpl;
 import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
@@ -119,7 +120,7 @@ public class LoginFormController implements Initializable {
                 LocalTime time = LocalTime.now();
                 Time time1 = Time.valueOf(time);
 
-                boolean isSaved = loginHistoryDAO.save(uid,date,time1);
+                boolean isSaved = loginHistoryDAO.save(new LoginHistory(uid,date,time1));
                 if (isSaved) {
                     Notification.notification(AlertTypes.CONFORMATION,"CONFIRMATION ","Saved Log History");
                 }

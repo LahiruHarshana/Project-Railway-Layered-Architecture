@@ -19,4 +19,10 @@ public class LoginHistory {
     private Date logOutDate;
 
     private Time logOutTime;
+
+    public LoginHistory(int uId, Date logInDate, Time logInTime) {
+        this.uId = uId;
+        this.logInDate = logInDate;
+        this.logInTime = logInTime;
+    }
 }

@@ -39,7 +39,7 @@ public class HomeFormController implements Initializable {
             LocalTime time = LocalTime.now();
             Time time1 = Time.valueOf(time);
 
-            boolean isSaved = loginHistoryDAO.saveLogOut(uId,date,time1);
+            boolean isSaved = loginHistoryDAO.saveLogOut(new LoginHistory(uId,date,time1));
             if (isSaved) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !"," Log out saved!");
 

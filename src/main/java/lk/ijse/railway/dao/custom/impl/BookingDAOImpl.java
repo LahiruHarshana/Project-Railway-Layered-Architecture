@@ -58,19 +58,6 @@ public class BookingDAOImpl {
                 price);
 
     }
-    public static List<String> searchBySeats(String idl) throws SQLException {
-
-        String sql = "SELECT SeatsID FROM Booking WHERE TrainID = ?";
-
-        ResultSet resultSet = CrudUtil.execute(sql,idl);
-
-        List<String> data = new ArrayList<>();
-
-        while (resultSet.next()) {
-            data.add(resultSet.getString(1));
-        }
-        return data;
-    }
     public static int search3class(String idl) throws SQLException {
         Connection con = DBConnection.getInstance().getConnection();
         PreparedStatement pstm = con.prepareStatement("SELECT COUNT(BookingID) FROM Booking WHERE TrainID = ?");
