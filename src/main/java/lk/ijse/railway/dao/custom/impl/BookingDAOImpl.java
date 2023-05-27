@@ -2,6 +2,8 @@ package lk.ijse.railway.dao.custom.impl;
 
 
 import lk.ijse.railway.db.DBConnection;
+import lk.ijse.railway.dto.Booking;
+import lk.ijse.railway.dto.Passenger;
 import lk.ijse.railway.util.CrudUtil;
 
 import java.sql.*;
@@ -17,9 +19,9 @@ public class BookingDAOImpl {
             con = DBConnection.getInstance().getConnection();
             con.setAutoCommit(false);
 
-            boolean isBookingSaved = BookingDAOImpl.save(bookingId,date,toDate,trainId,stationName,seatsId,price);
+            boolean isBookingSaved = BookingDAOImpl.save(new Booking(bookingId,date,toDate,trainId,stationName,seatsId,price));
             if(isBookingSaved) {
-                boolean isPassengerSaved = PassengerDAOImpl.save(passengerId,passengerName,bookingId,contactNum,email,address,nic);
+                boolean isPassengerSaved = PassengerDAOImpl.save(new Passenger(passengerId,passengerName,bookingId,contactNum,email,address,nic));
 
                 if(isPassengerSaved) {
                     boolean isPaymentSaved = PaymentDAOImpl.saveB(paymentId,bookingId,date,price);
@@ -41,7 +43,7 @@ public class BookingDAOImpl {
 
     }
 
-    private static boolean save(String bookingId, String date, Date toDate, String trainId, String stationName, String SeatsId, Double price) throws SQLException {
+    private static boolean save(Booking booking) throws SQLException {
 
 
         String sql = "INSERT INTO Booking(BookingID,Date,ToDate,TrainID,StationName,SeatsID,price) VALUES(?,?,?,?,?,?,?)";
@@ -49,13 +51,13 @@ public class BookingDAOImpl {
 
         return CrudUtil.execute(
                 sql,
-                bookingId,
-                date,
-                toDate,
-                trainId,
-                stationName,
-                SeatsId,
-                price);
+                booking.getBId(),
+                booking.getCDate(),
+                booking.getTDate(),
+                booking.getTid(),
+                booking.getSName(),
+                booking.getSeatId(),
+                booking.getPrice());
 
     }
     public static int search3class(String idl) throws SQLException {

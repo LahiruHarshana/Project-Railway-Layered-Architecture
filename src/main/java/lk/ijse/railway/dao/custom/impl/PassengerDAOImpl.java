@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class PassengerDAOImpl {
-    public static boolean save(String passengerId, String passengerName, String bookingId, String contactNum, String email, String address, String nic) throws SQLException, SQLException {
+    public static boolean save(Passenger passenger) throws SQLException, SQLException {
 
 
         String sql = "INSERT INTO Passenger(PassengerID,PassengerName,BookingID,ContactNum,Email,Address,NIC) " +
@@ -20,13 +20,13 @@ public class PassengerDAOImpl {
         return CrudUtil.execute(
                 sql,
 
-        passengerId,
-        passengerName,
-        bookingId,
-        contactNum,
-        email,
-        address,
-        nic);
+        passenger.getId(),
+        passenger.getName(),
+        passenger.getBookinId(),
+        passenger.getContact(),
+        passenger.getEmail(),
+        passenger.getAddress(),
+        passenger.getNic());
     }
 
     public static int search() throws SQLException {
