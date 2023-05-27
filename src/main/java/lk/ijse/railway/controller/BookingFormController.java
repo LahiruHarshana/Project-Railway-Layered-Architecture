@@ -19,10 +19,12 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.custom.impl.BookingBOImpl;
 import lk.ijse.railway.dao.custom.impl.*;
 import lk.ijse.railway.db.DBConnection;
 import lk.ijse.railway.dto.Station;
 import lk.ijse.railway.dto.Ticket;
+import lk.ijse.railway.model.StationDTO;
 import lk.ijse.railway.util.AlertTypes;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.design.JRDesignQuery;
@@ -103,6 +105,8 @@ public class BookingFormController implements Initializable {
 
     TrainDAOImpl trainDAO = new TrainDAOImpl();
 
+    BookingBOImpl bookingBO = new BookingBOImpl();
+
     public static void seatsGetValue(String seatsId) {
         seat = seatsId;
 
@@ -149,8 +153,8 @@ public class BookingFormController implements Initializable {
         String name = StationNameCB.getValue();
 
         try {
-            Station ticket = stationDAO.searchById(name);
-            distance = ticket.getDistance();
+            StationDTO station = bookingBO.searchByStationId(name);
+            distance = station.getDistance();
             System.out.println(distance);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -283,7 +287,7 @@ public class BookingFormController implements Initializable {
         boolean isPlaced = false;
         try {
             if (validation==0) {
-                isPlaced = bookingDAO.paymentBooking(bookingId, date, toDate, trainId, stationName, seatsId, paymentId, price, passengerId, passengerName, contactNum, email, address, Nic);
+                isPlaced = bookingBO.paymentBooking(bookingId, date, toDate, trainId, stationName, seatsId, paymentId, price, passengerId, passengerName, contactNum, email, address, Nic);
             }
             if(isPlaced) {
                 value =1;
@@ -316,7 +320,7 @@ public class BookingFormController implements Initializable {
 //        seatsFormController.setId(idl, date);
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = stationDetailsDAO.searchById(idl);
+            List<String> ids = bookingBO.searchByStationName(idl);
 
             for (String id : ids) {
                 obList.add(id);
@@ -353,7 +357,7 @@ public class BookingFormController implements Initializable {
 
     private void LoadPassengerID() {
         try {
-            int id = passengerDAO.searchId();
+            int id = bookingBO.searchPassengerId();
             int idl = id+1;
 
             passengerLabel.setText(String.valueOf(idl));
@@ -377,7 +381,7 @@ public class BookingFormController implements Initializable {
     private void LoadTrainIDCB() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = trainDAO.loadtrainIds();
+            List<String> ids = bookingBO.loadtrainIds();
 
             for (String id : ids) {
                 obList.add(id);
