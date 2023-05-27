@@ -1,5 +1,6 @@
 package lk.ijse.railway.dao.custom.impl;
 
+import lk.ijse.railway.dao.custom.TicketDAO;
 import lk.ijse.railway.db.DBConnection;
 import lk.ijse.railway.dto.Ticket;
 
@@ -10,10 +11,47 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TicketDAOImpl {
+public class TicketDAOImpl implements TicketDAO {
+    @Override
+    public Ticket search(String text) throws SQLException {
+        return null;
+    }
 
-    public static int search() throws SQLException {
-        Connection con = DBConnection.getInstance().getConnection();
+    @Override
+    public boolean save(Ticket entity) throws SQLException {
+                Connection con = DBConnection.getInstance().getConnection();
+
+        String sql = "INSERT INTO Ticket(TicketID,TrainID,StationName,ClassType,HowMany,price) VALUES(?,?,?,?,?,?)";
+
+        PreparedStatement pstm = con.prepareStatement(sql);
+        pstm.setString(1, entity.getTId());
+        pstm.setString(2, entity.getTrainId());
+        pstm.setString(3, entity.getSName());
+        pstm.setString(4, entity.getCType());
+        pstm.setInt(5, entity.getHowMany());
+        pstm.setDouble(6, entity.getPrice());
+
+        return pstm.executeUpdate() > 0;
+    }
+
+    @Override
+    public boolean update(Ticket entity) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public boolean delete(String code) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public List<Ticket> getAll() throws SQLException {
+        return null;
+    }
+
+    @Override
+    public int search() throws SQLException {
+                Connection con = DBConnection.getInstance().getConnection();
         ResultSet resultSet = con.createStatement().executeQuery("SELECT MAX(TicketID) FROM Ticket");
         int id = 0;
 
@@ -22,12 +60,11 @@ public class TicketDAOImpl {
             id = resultSet.getInt(1);
         }
         return id;
-
     }
 
-
-    public static int search1class(String idl) throws SQLException {
-        Connection con = DBConnection.getInstance().getConnection();
+    @Override
+    public int search1class(String idl) throws SQLException {
+                Connection con = DBConnection.getInstance().getConnection();
         PreparedStatement pstm = con.prepareStatement("SELECT SUM(HowMany) FROM Ticket WHERE ClassType =? AND TrainID = ?");
         pstm.setString(1, "3rdClass");
         pstm.setString(2, idl);
@@ -39,8 +76,9 @@ public class TicketDAOImpl {
         return 0;
     }
 
-    public static int search2class(String idl) throws SQLException {
-        Connection con = DBConnection.getInstance().getConnection();
+    @Override
+    public int search2class(String idl) throws SQLException {
+                Connection con = DBConnection.getInstance().getConnection();
         PreparedStatement pstm = con.prepareStatement("SELECT SUM(HowMany) FROM Ticket WHERE TrainID = ? AND ClassType =?");
         pstm.setString(1, idl);
         pstm.setString(2, "2ndClass");
@@ -50,22 +88,5 @@ public class TicketDAOImpl {
             return resultSet.getInt(1);
         }
         return 0;
-    }
-
-    public static boolean save(Ticket ticket) throws SQLException {
-        Connection con = DBConnection.getInstance().getConnection();
-
-        String sql = "INSERT INTO Ticket(TicketID,TrainID,StationName,ClassType,HowMany,price) VALUES(?,?,?,?,?,?)";
-
-        PreparedStatement pstm = con.prepareStatement(sql);
-        pstm.setString(1, ticket.getTId());
-        pstm.setString(2, ticket.getTrainId());
-        pstm.setString(3, ticket.getSName());
-        pstm.setString(4, ticket.getCType());
-        pstm.setInt(5, ticket.getHowMany());
-        pstm.setDouble(6, ticket.getPrice());
-
-        return pstm.executeUpdate() > 0;
-
     }
 }
