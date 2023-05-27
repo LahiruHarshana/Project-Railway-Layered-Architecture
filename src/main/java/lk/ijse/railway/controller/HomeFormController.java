@@ -7,6 +7,7 @@ import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import lk.ijse.railway.Launcher;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.dao.custom.LoginHistoryDAO;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
@@ -24,7 +25,8 @@ public class HomeFormController implements Initializable {
 
     public static int uId;
 
-    LoginHistoryDAOImpl loginHistoryDAO = new LoginHistoryDAOImpl();
+    LoginHistoryDAO loginHistoryDAO = new LoginHistoryDAOImpl();
+
     @FXML
     void btnLogOutOnAction(ActionEvent event) throws Exception {
         Launcher launcher = new Launcher();
@@ -55,7 +57,7 @@ public class HomeFormController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         try {
-            LoginHistory loginHistory = LoginHistoryDAOImpl.searchLastID();
+            LoginHistory loginHistory = loginHistoryDAO.searchLastID();
             if (loginHistory != null) {
                 uId =loginHistory.getUId();
                 System.out.println(uId);

@@ -1,5 +1,6 @@
 package lk.ijse.railway.dao.custom.impl;
 
+import lk.ijse.railway.dao.custom.EmployeeDAO;
 import lk.ijse.railway.db.DBConnection;
 import lk.ijse.railway.dto.Employee;
 import lk.ijse.railway.util.CrudUtil;
@@ -8,9 +9,10 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeDAOImpl {
-    public static Employee search(String text) throws SQLException {
-        String sql = "SELECT * FROM Employee WHERE EmployeeID = ?";
+public class EmployeeDAOImpl implements EmployeeDAO {
+    @Override
+    public Employee search(String text) throws SQLException {
+                String sql = "SELECT * FROM Employee WHERE EmployeeID = ?";
         ResultSet rst = CrudUtil.execute(sql, text);
 
 
@@ -18,36 +20,38 @@ public class EmployeeDAOImpl {
             return new Employee(rst.getString(1),rst.getString(2),rst.getDate(3),rst.getString(4),rst.getString(5));
         }
         return null;
-
     }
 
-    public static boolean save(Employee employee) throws SQLException {
-            String sql = "INSERT INTO Employee(EmployeeID, EmpName, EmpDob,EmpContact,EmpAddress) " +
+    @Override
+    public boolean save(Employee entity) throws SQLException {
+        String sql = "INSERT INTO Employee(EmployeeID, EmpName, EmpDob,EmpContact,EmpAddress) " +
                     "VALUES(?,?,?,?,?)";
 
         return CrudUtil.execute(
                 sql,
-                employee.getId(),
-                employee.getName(),
-                employee.getDob(),
-                employee.getContact(),
-                employee.getAddress());
+                entity.getId(),
+                entity.getName(),
+                entity.getDob(),
+                entity.getContact(),
+                entity.getAddress());
+
 
     }
 
-    public static boolean update(Employee employee) throws SQLException {
-
-        String sql = "UPDATE Employee SET  EmpName = ?, EmpDob = ?, EmpContact =?, EmpAddress = ? WHERE EmployeeID = ?";
+    @Override
+    public boolean update(Employee entity) throws SQLException {
+                String sql = "UPDATE Employee SET  EmpName = ?, EmpDob = ?, EmpContact =?, EmpAddress = ? WHERE EmployeeID = ?";
         return CrudUtil.execute(
                 sql,
-                employee.getName(),
-                employee.getDob(),
-                employee.getContact(),
-                employee.getAddress(),
-                employee.getId());
+                entity.getName(),
+                entity.getDob(),
+                entity.getContact(),
+                entity.getAddress(),
+                entity.getId());
     }
 
-    public static boolean delete(String code) throws SQLException {
+    @Override
+    public boolean delete(String code) throws SQLException {
         Connection con = DBConnection.getInstance().getConnection();
         String sql = "DELETE FROM Employee WHERE EmployeeID = ?";
             PreparedStatement pstm = con.prepareStatement(sql);
@@ -56,8 +60,9 @@ public class EmployeeDAOImpl {
             return pstm.executeUpdate() > 0;
     }
 
-    public static List<Employee> getAll() throws SQLException {
-        List<Employee> data = new ArrayList<>();
+    @Override
+    public List<Employee> getAll() throws SQLException {
+                List<Employee> data = new ArrayList<>();
 
         String sql = "SELECT * FROM Employee";
         ResultSet resultSet = CrudUtil.execute(sql);
@@ -72,6 +77,5 @@ public class EmployeeDAOImpl {
             ));
         }
         return data;
-
     }
 }

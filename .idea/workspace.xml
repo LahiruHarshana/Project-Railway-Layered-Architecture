@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f7f2a54-4738-4d50-8966-9414667d47ef" name="Changes" comment="0.2.3 updated">
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/TrainDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/TrainDAO.java" afterDir="false" />
+    <list default="true" id="5f7f2a54-4738-4d50-8966-9414667d47ef" name="Changes" comment="0.2.6 updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/HomeFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/HomeFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/LoginHistoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/LoginHistoryDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/EmployeeDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/EmployeeDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/LoginHistoryDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/LoginHistoryDAOImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,21 +312,7 @@
       <workItem from="1684992910460" duration="2267000" />
       <workItem from="1684996171146" duration="7794000" />
       <workItem from="1685123703804" duration="1209000" />
-      <workItem from="1685178381435" duration="2957000" />
-    </task>
-    <task id="LOCAL-00001" summary="commit all">
-      <created>1680420622427</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1680420622427</updated>
-    </task>
-    <task id="LOCAL-00002" summary="commit all">
-      <created>1680420684752</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1680420684752</updated>
+      <workItem from="1685178381435" duration="4346000" />
     </task>
     <task id="LOCAL-00003" summary="commit all">
       <created>1680420694222</created>
@@ -653,7 +643,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685184661628</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="0.2.5 updated">
+      <created>1685184751679</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1685184751679</updated>
+    </task>
+    <task id="LOCAL-00051" summary="0.2.6 updated">
+      <created>1685185342348</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1685185342348</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -671,8 +675,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="DAO User added" />
-    <MESSAGE value="0.0.1 updated" />
     <MESSAGE value="0.0.2 updated" />
     <MESSAGE value="0.0.3 updated" />
     <MESSAGE value="0.0.4 updated" />
@@ -696,7 +698,9 @@
     <MESSAGE value="0.2.1 updated" />
     <MESSAGE value="0.2.2 updated" />
     <MESSAGE value="0.2.3 updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.2.3 updated" />
+    <MESSAGE value="0.2.5 updated" />
+    <MESSAGE value="0.2.6 updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.2.6 updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

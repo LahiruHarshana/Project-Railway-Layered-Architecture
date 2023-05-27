@@ -1,5 +1,6 @@
 package lk.ijse.railway.dao.custom.impl;
 
+import lk.ijse.railway.dao.custom.LoginHistoryDAO;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.util.CrudUtil;
 
@@ -10,8 +11,14 @@ import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoginHistoryDAOImpl {
-    public static boolean save(LoginHistory loginHistory) throws SQLException {
+public class LoginHistoryDAOImpl implements LoginHistoryDAO {
+    @Override
+    public LoginHistory search(String text) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public boolean save(LoginHistory entity) throws SQLException {
 
         {
             String sql = "INSERT INTO LogHistory(UserID, LogInDate, LogInTime) " +
@@ -19,27 +26,24 @@ public class LoginHistoryDAOImpl {
 
             return CrudUtil.execute(
                     sql,
-                    loginHistory.getUId(),loginHistory.getLogInDate(),loginHistory.getLogInTime());
+                    entity.getUId(),entity.getLogInDate(),entity.getLogInTime());
 
         }
-
     }
 
-    public static LoginHistory searchLastID() throws SQLException {
-        String sql = "select *from LogHistory ORDER BY LogInTime DESC LIMIT 1";
-        ResultSet rst = CrudUtil.execute(sql);
-
-
-        if (rst.next()){
-            return new LoginHistory(rst.getInt(1),rst.getDate(2),rst.getTime(3),rst.getDate(4),rst.getTime(5));
-        }
-        return null;
-
+    @Override
+    public boolean update(LoginHistory entity) throws SQLException {
+        return false;
     }
 
-    public static List<LoginHistory> getAll() throws SQLException {
+    @Override
+    public boolean delete(String code) throws SQLException {
+        return false;
+    }
 
-        List<LoginHistory> data = new ArrayList<>();
+    @Override
+    public List<LoginHistory> getAll() throws SQLException {
+                List<LoginHistory> data = new ArrayList<>();
 
         String sql = "SELECT * FROM LogHistory";
         ResultSet resultSet = CrudUtil.execute(sql);
@@ -54,11 +58,11 @@ public class LoginHistoryDAOImpl {
             ));
         }
         return data;
-
     }
 
-    public static boolean saveLogOut(LoginHistory loginHistory) throws SQLException {
-        {
+    @Override
+    public boolean saveLogOut(LoginHistory loginHistory) throws SQLException {
+                {
             String sql = "INSERT INTO LogHistory(UserID, LogOutDate, LogOutTime) " +
                     "VALUES(?,?,?)";
 
@@ -67,7 +71,19 @@ public class LoginHistoryDAOImpl {
                     loginHistory.getUId(),loginHistory.getLogInDate(),loginHistory.getLogInDate());
 
         }
-
-
     }
+
+    @Override
+    public LoginHistory searchLastID() throws SQLException {
+
+        String sql = "select *from LogHistory ORDER BY LogInTime DESC LIMIT 1";
+        ResultSet rst = CrudUtil.execute(sql);
+
+
+        if (rst.next()){
+            return new LoginHistory(rst.getInt(1),rst.getDate(2),rst.getTime(3),rst.getDate(4),rst.getTime(5));
+        }
+        return null;
+    }
+
 }
