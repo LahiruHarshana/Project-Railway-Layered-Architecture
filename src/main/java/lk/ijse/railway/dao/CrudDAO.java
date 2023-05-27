@@ -5,7 +5,7 @@ import lk.ijse.railway.dto.Employee;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface CrudDAO<T,J> {
+public interface CrudDAO<T,J> extends SuperDAO{
     public T search(J text) throws SQLException ;
 
     public boolean save(T entity) throws SQLException ;
