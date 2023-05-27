@@ -57,7 +57,7 @@ public class PassengerFormController implements Initializable {
     void searchButtonOnAction(ActionEvent event) {
 
         try {
-            Passenger passenger = passengerDAO.searchPassenger(passengerIDTextField.getText());
+            Passenger passenger = passengerDAO.search(passengerIDTextField.getText());
             if (passenger != null) {
                 passengerIDTextField.setText(passenger.getId());
                 nameTextField.setText(passenger.getName());

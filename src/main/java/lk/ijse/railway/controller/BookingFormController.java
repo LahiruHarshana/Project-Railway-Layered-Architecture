@@ -353,7 +353,7 @@ public class BookingFormController implements Initializable {
 
     private void LoadPassengerID() {
         try {
-            int id = passengerDAO.search();
+            int id = passengerDAO.searchId();
             int idl = id+1;
 
             passengerLabel.setText(String.valueOf(idl));
