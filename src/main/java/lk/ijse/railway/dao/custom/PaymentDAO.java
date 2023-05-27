@@ -1,4 +1,7 @@
 package lk.ijse.railway.dao.custom;
 
-public interface PaymentDAO {
+import lk.ijse.railway.dao.CrudDAO;
+import lk.ijse.railway.dto.Payment;
+
+public interface PaymentDAO extends CrudDAO<Payment,String> {
 }
