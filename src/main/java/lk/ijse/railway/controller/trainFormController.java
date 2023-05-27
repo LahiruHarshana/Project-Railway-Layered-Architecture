@@ -190,7 +190,7 @@ public class trainFormController implements Initializable {
         StationDetails stationDetails = new StationDetails(trainId,StationId, time);
 
         try {
-            boolean isSaved = stationDetailsDAO.saveTrainStation(stationDetails);
+            boolean isSaved = stationDetailsDAO.save(stationDetails);
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Item saved!").show();
             }
