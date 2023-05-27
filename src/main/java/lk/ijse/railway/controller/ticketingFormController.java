@@ -383,7 +383,7 @@ public class ticketingFormController implements Initializable {
     private void loadTrainCB() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = trainDAO.loadTrainIds();
+            List<String> ids = trainDAO.loadtrainIds();
 
             for (String id : ids) {
                 obList.add(id);

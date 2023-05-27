@@ -288,9 +288,9 @@ public class BookingFormController implements Initializable {
             if(isPlaced) {
                 value =1;
                 validation=0;
-                Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION","Booking is successful !");
+                Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION","BookingDTO is successful !");
             } else {
-                Notification.notification(AlertTypes.ERROR,"ERROR !","Booking is unsuccessful");
+                Notification.notification(AlertTypes.ERROR,"ERROR !","BookingDTO is unsuccessful");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -377,7 +377,7 @@ public class BookingFormController implements Initializable {
     private void LoadTrainIDCB() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = trainDAO.loadIds();
+            List<String> ids = trainDAO.loadtrainIds();
 
             for (String id : ids) {
                 obList.add(id);
@@ -394,7 +394,7 @@ public class BookingFormController implements Initializable {
         try {
             JasperDesign jasperDesign = JRXmlLoader.load("src/main/resources/Reports/BookingResit.jrxml");
             JRDesignQuery query = new JRDesignQuery();
-            query.setText("SELECT * FROM Booking WHERE BookingID ='"+BookingIdTextField.getText()+"'");
+            query.setText("SELECT * FROM BookingDTO WHERE BookingID ='"+BookingIdTextField.getText()+"'");
             jasperDesign.setQuery(query);
 
             JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);

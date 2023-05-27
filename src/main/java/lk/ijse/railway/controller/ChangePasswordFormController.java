@@ -74,7 +74,7 @@ public class ChangePasswordFormController implements Initializable {
             new Alert(Alert.AlertType.ERROR, "something happened!").show();
         }
         try {
-            User user = UserDAOImpl.searchAll(uId);
+            User user = userDAO.searchAll(uId);
             if (user != null) {
                 currentPswd = user.getPswd();
 

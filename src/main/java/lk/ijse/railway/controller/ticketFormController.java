@@ -16,6 +16,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.transform.Rotate;
 import javafx.util.Duration;
+import lk.ijse.railway.dao.custom.BookingDAO;
 import lk.ijse.railway.dao.custom.impl.BookingDAOImpl;
 import lk.ijse.railway.dao.custom.impl.TicketDAOImpl;
 import lk.ijse.railway.dao.custom.impl.TrainDAOImpl;
@@ -67,7 +68,7 @@ public class ticketFormController implements Initializable {
     private AnchorPane mainPane;
 
     TicketDAOImpl ticketDAO = new TicketDAOImpl();
-    BookingDAOImpl bookingDAO = new BookingDAOImpl();
+    BookingDAO bookingDAO = new BookingDAOImpl();
     TrainDAOImpl trainDAO = new TrainDAOImpl();
 
     @FXML
@@ -201,7 +202,7 @@ public class ticketFormController implements Initializable {
     private void loadSelectTrainCB() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = trainDAO.loadTrainIds();
+            List<String> ids = trainDAO.loadtrainIds();
 
             for (String id : ids) {
                 obList.add(id);

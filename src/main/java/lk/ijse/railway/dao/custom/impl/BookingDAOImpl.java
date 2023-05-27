@@ -16,7 +16,6 @@ import java.util.List;
 
 public class BookingDAOImpl implements BookingDAO {
 
-    BookingDAO bookingDAO = new BookingDAOImpl();
 
     PassengerDAO passengerDAO = new PassengerDAOImpl();
 
@@ -29,7 +28,7 @@ public class BookingDAOImpl implements BookingDAO {
 
     @Override
     public  boolean save(Booking entity) throws SQLException {
-        String sql = "INSERT INTO Booking(BookingID,Date,ToDate,TrainID,StationName,SeatsID,price) VALUES(?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO BookingDTO(BookingID,Date,ToDate,TrainID,StationName,SeatsID,price) VALUES(?,?,?,?,?,?,?)";
 
 
         return CrudUtil.execute(
@@ -95,7 +94,7 @@ public class BookingDAOImpl implements BookingDAO {
             con = DBConnection.getInstance().getConnection();
             con.setAutoCommit(false);
 
-            boolean isBookingSaved = bookingDAO.save(new Booking(bookingId,date,toDate,trainId,stationName,seatsId,price));
+            boolean isBookingSaved =save(new Booking(bookingId,date,toDate,trainId,stationName,seatsId,price));
             if(isBookingSaved) {
                 boolean isPassengerSaved = passengerDAO.save(new Passenger(passengerId,passengerName,bookingId,contactNum,email,address,nic));
 

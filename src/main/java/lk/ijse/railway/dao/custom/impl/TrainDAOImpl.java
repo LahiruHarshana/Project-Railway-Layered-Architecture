@@ -1,5 +1,6 @@
 package lk.ijse.railway.dao.custom.impl;
 
+import lk.ijse.railway.dao.custom.TrainDAO;
 import lk.ijse.railway.db.DBConnection;
 import lk.ijse.railway.dto.Train;
 import lk.ijse.railway.util.CrudUtil;
@@ -8,27 +9,10 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TrainDAOImpl {
-    public static Train search(String text) throws SQLException {
-        /*try (Connection con = DBConnection.getInstance().getConnection()) {
-            String sql = "SELECT * FROM Train WHERE TrainID = ?";
-            PreparedStatement pstm = con.prepareStatement(sql);
-            pstm.setString(1, text);
-
-            ResultSet resultSet = pstm.executeQuery();
-            if(resultSet.next()) {
-                return new Train(
-                        resultSet.getString(1),
-                        resultSet.getString(2),
-                        resultSet.getTime(3)
-                );
-
-            }
-
-            return null;
-        }*/
-        String sql = "SELECT * FROM Train WHERE TrainID = ?";
-//        ResultSet rst = CrudUtil.execute(sql, text);
+public class TrainDAOImpl implements TrainDAO {
+    @Override
+    public Train search(String text) throws SQLException {
+                String sql = "SELECT * FROM Train WHERE TrainID = ?";
           PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
           pstm.setString(1, text);
           ResultSet rst = pstm.executeQuery();
@@ -37,89 +21,43 @@ public class TrainDAOImpl {
             return new Train(rst.getString(1),rst.getString(2),rst.getTime(3),rst.getString(4));
         }
         return null;
-
     }
 
-    public static boolean update(Train train) throws SQLException {
-
-
-        String sql = "UPDATE Train SET TrainName = ?, Time = ? , EndStation = ? WHERE TrainID = ?";
-        PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
-        pstm.setString(1, train.getName());
-        pstm.setTime(2, train.getTime());
-        pstm.setString(3, train.getEndStation());
-        pstm.setString(4, train.getId());
-
-
-        return pstm.executeUpdate() > 0;
-
-    }
-
-
-
-
-
-
-//        try (Connection con = DBConnection.getInstance().getConnection()) {
-//            String sql = "UPDATE Train SET TrainName = ?, Time = ? WHERE TrainID = ?";
-//            PreparedStatement pstm = con.prepareStatement(sql);
-//            pstm.setString(1, train.getName());
-//            pstm.setTime(2, train.getTime());
-//            pstm.setString(3, train.getId());
-//
-//
-//            return pstm.executeUpdate() > 0;
-//        }catch (Exception e){
-//            System.out.println(e);
-//        }
-//        return false;
-
-
-//        String sql = "UPDATE Train SET TrainName = ?, Time = ? , EndStation = ? WHERE TrainID = ?";
-//
-//        PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
-//
-//        pstm.setString(1, train.getName());
-//        pstm.setString(2, String.valueOf(train.getTime()));
-//        pstm.setString(3, train.getEndStation());
-//        pstm.setString(4, train.getId());
-//
-////        return pstm.executeUpdate() > 0;
-//
-//        return  CrudUtil.execute(sql,train.getId(),train.getName(),train.getTime(),train.getEndStation());
-
-   // }
-
-    public static boolean save(Train train) throws SQLException {
-
-            String sql = "INSERT INTO Train(TrainID, TrainName, Time,EndStation) " +
+    @Override
+    public boolean save(Train entity) throws SQLException {
+                    String sql = "INSERT INTO Train(TrainID, TrainName, Time,EndStation) " +
                     "VALUES(?, ?, ?,?)";
             return CrudUtil.execute(
                     sql,
-            train.getId(),
-            train.getName(),
-            train.getTime(),
-            train.getEndStation());
-
+            entity.getId(),
+            entity.getName(),
+            entity.getTime(),
+            entity.getEndStation());
     }
 
+    @Override
+    public boolean update(Train entity) throws SQLException {
+                String sql = "UPDATE Train SET TrainName = ?, Time = ? , EndStation = ? WHERE TrainID = ?";
+        PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
+        pstm.setString(1, entity.getName());
+        pstm.setTime(2, entity.getTime());
+        pstm.setString(3, entity.getEndStation());
+        pstm.setString(4, entity.getId());
 
-    public static List<String> loadIds() throws SQLException {
 
-        Connection con = DBConnection.getInstance().getConnection();
-        ResultSet resultSet = con.createStatement().executeQuery("SELECT TrainID FROM Train");
-
-        List<String> data = new ArrayList<>();
-
-        while (resultSet.next()) {
-            data.add(resultSet.getString(1));
-        }
-        return data;
+        return pstm.executeUpdate() > 0;
     }
 
-    public static List<Train> getAll() throws SQLException {
+    @Override
+    public boolean delete(String code) throws SQLException {
+                String sql = "DELETE FROM Train WHERE TrainID = ?";
 
-        List<Train> data = new ArrayList<>();
+        return CrudUtil.execute(sql,code);
+    }
+
+    @Override
+    public List<Train> getAll() throws SQLException {
+                List<Train> data = new ArrayList<>();
 
         String sql = "SELECT * FROM Train";
         ResultSet resultSet = CrudUtil.execute(sql);
@@ -135,14 +73,8 @@ public class TrainDAOImpl {
         return data;
     }
 
-    public static boolean delete(String code) throws SQLException {
-        String sql = "DELETE FROM Train WHERE TrainID = ?";
-
-        return CrudUtil.execute(sql,code);
-
-    }
-
-    public static Train searchTime(Time formattedTime) throws SQLException {
+    @Override
+    public Train searchTime(Time formattedTime) throws SQLException {
         String sql = "SELECT * FROM Train WHERE Time = ?";
         ResultSet rst = CrudUtil.execute(sql, formattedTime);
 
@@ -153,7 +85,9 @@ public class TrainDAOImpl {
 
 
     }
-    public static List<String> loadtrainIds() throws SQLException {
+
+    @Override
+    public List<String> loadtrainIds() throws SQLException {
         Connection con = DBConnection.getInstance().getConnection();
         ResultSet resultSet = con.createStatement().executeQuery("SELECT TrainID FROM Train");
 
@@ -164,16 +98,5 @@ public class TrainDAOImpl {
         }
         return data;
     }
-    public static List<String> loadTrainIds() throws SQLException {
-        Connection con = DBConnection.getInstance().getConnection();
-        ResultSet resultSet = con.createStatement().executeQuery("SELECT TrainID FROM train");
 
-        List<String> data = new ArrayList<>();
-
-        while (resultSet.next()) {
-            data.add(resultSet.getString(1));
-        }
-        return data;
-
-    }
 }

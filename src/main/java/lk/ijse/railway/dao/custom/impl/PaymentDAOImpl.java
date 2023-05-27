@@ -1,6 +1,7 @@
 package lk.ijse.railway.dao.custom.impl;
 
 import lk.ijse.railway.dao.custom.PaymentDAO;
+import lk.ijse.railway.dao.custom.TicketDAO;
 import lk.ijse.railway.db.DBConnection;
 import lk.ijse.railway.dto.Payment;
 import lk.ijse.railway.dto.Ticket;
@@ -11,8 +12,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class PaymentDAOImpl implements PaymentDAO {
-
-    PaymentDAO paymentDAO = new PaymentDAOImpl();
+    TicketDAO ticketDAO =new TicketDAOImpl();
     @Override
     public Payment search(String text) throws SQLException {
         return null;
@@ -65,9 +65,9 @@ public class PaymentDAOImpl implements PaymentDAO {
             con = DBConnection.getInstance().getConnection();
             con.setAutoCommit(false);
 
-            boolean isTicketSaved = TicketDAOImpl.save(new Ticket(ticketID, trainID,stationName,classType,howMany,price));
+            boolean isTicketSaved = ticketDAO.save(new Ticket(ticketID, trainID,stationName,classType,howMany,price));
             if(isTicketSaved) {
-                boolean isPaymentSaved = paymentDAO.save(new Payment(paymentID,ticketID,date,price));
+                boolean isPaymentSaved =save(new Payment(paymentID,ticketID,date,price));
                 System.out.println(isPaymentSaved);
                 if(isPaymentSaved) {
                     con.commit();

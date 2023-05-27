@@ -211,7 +211,7 @@ public class EmployeeFormController implements Initializable {
             try {
                 boolean isUpdated = employeeDAO.update(employee);
                 if (isUpdated) {
-                    Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Employee is updated!");
+                    Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","EmployeeDTO is updated!");
 
                 }
             } catch (SQLException e) {
