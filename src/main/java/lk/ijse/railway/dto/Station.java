@@ -15,4 +15,7 @@ public class Station {
     private double distance;
 
 
+    public Station(double aDouble) {
+        this.distance=aDouble;
+    }
 }

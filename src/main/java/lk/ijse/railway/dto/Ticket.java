@@ -9,7 +9,12 @@ import lombok.*;
 @AllArgsConstructor
 
 public class Ticket {
-    private double distance;
+    private String tId;
+    private String trainId;
+    private String sName;
+    private String cType;
+    private int HowMany;
+    private double price;
 
 
 }

@@ -97,7 +97,7 @@ public class StationDAOImpl {
 
     }
 
-    public static Ticket searchById(String name) throws SQLException {
+    public static Station searchById(String name) throws SQLException {
 
         String sql = "SELECT Distance FROM Station WHERE StationName = ?";
 
@@ -105,7 +105,7 @@ public class StationDAOImpl {
 
         ResultSet resultSet = CrudUtil.execute(sql,name);
         if (resultSet.next()) {
-            return new Ticket(
+            return new Station(
                     resultSet.getDouble(1)
             );
         }

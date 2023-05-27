@@ -1,4 +1,7 @@
 package lk.ijse.railway.dao.custom;
 
-public interface EmployeeDAO {
+import lk.ijse.railway.dao.CrudDAO;
+import lk.ijse.railway.dto.Employee;
+
+public interface EmployeeDAO extends CrudDAO<Employee,String> {
 }

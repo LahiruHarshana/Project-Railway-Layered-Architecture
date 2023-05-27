@@ -207,7 +207,7 @@ public class ticketingFormController implements Initializable {
         String name = ticketStationComboBox.getValue();
 
         try {
-            Ticket ticket = stationDAO.searchById(name);
+            Station ticket = stationDAO.searchById(name);
              distance = ticket.getDistance();
             System.out.println(distance);
         } catch (SQLException e) {

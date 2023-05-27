@@ -21,6 +21,7 @@ import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
 import lk.ijse.railway.dao.custom.impl.*;
 import lk.ijse.railway.db.DBConnection;
+import lk.ijse.railway.dto.Station;
 import lk.ijse.railway.dto.Ticket;
 import lk.ijse.railway.util.AlertTypes;
 import net.sf.jasperreports.engine.*;
@@ -148,7 +149,7 @@ public class BookingFormController implements Initializable {
         String name = StationNameCB.getValue();
 
         try {
-            Ticket ticket = stationDAO.searchById(name);
+            Station ticket = stationDAO.searchById(name);
             distance = ticket.getDistance();
             System.out.println(distance);
         } catch (SQLException e) {

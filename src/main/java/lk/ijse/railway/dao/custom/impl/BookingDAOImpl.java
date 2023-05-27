@@ -4,6 +4,7 @@ package lk.ijse.railway.dao.custom.impl;
 import lk.ijse.railway.db.DBConnection;
 import lk.ijse.railway.dto.Booking;
 import lk.ijse.railway.dto.Passenger;
+import lk.ijse.railway.dto.Payment;
 import lk.ijse.railway.util.CrudUtil;
 
 import java.sql.*;
@@ -24,7 +25,7 @@ public class BookingDAOImpl {
                 boolean isPassengerSaved = PassengerDAOImpl.save(new Passenger(passengerId,passengerName,bookingId,contactNum,email,address,nic));
 
                 if(isPassengerSaved) {
-                    boolean isPaymentSaved = PaymentDAOImpl.saveB(paymentId,bookingId,date,price);
+                    boolean isPaymentSaved = PaymentDAOImpl.saveB(new Payment(paymentId,bookingId,date,price));
 
                     if(isPaymentSaved){
                         con.commit();

@@ -1,6 +1,7 @@
 package lk.ijse.railway.dao.custom.impl;
 
 import lk.ijse.railway.db.DBConnection;
+import lk.ijse.railway.dto.Ticket;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -51,18 +52,18 @@ public class TicketDAOImpl {
         return 0;
     }
 
-    public static boolean save(String ticketID, String trainID,String stationName,String classType,int howMany,Double price) throws SQLException {
+    public static boolean save(Ticket ticket) throws SQLException {
         Connection con = DBConnection.getInstance().getConnection();
 
         String sql = "INSERT INTO Ticket(TicketID,TrainID,StationName,ClassType,HowMany,price) VALUES(?,?,?,?,?,?)";
 
         PreparedStatement pstm = con.prepareStatement(sql);
-        pstm.setString(1, ticketID);
-        pstm.setString(2, trainID);
-        pstm.setString(3, stationName);
-        pstm.setString(4, classType);
-        pstm.setInt(5, howMany);
-        pstm.setDouble(6, price);
+        pstm.setString(1, ticket.getTId());
+        pstm.setString(2, ticket.getTrainId());
+        pstm.setString(3, ticket.getSName());
+        pstm.setString(4, ticket.getCType());
+        pstm.setInt(5, ticket.getHowMany());
+        pstm.setDouble(6, ticket.getPrice());
 
         return pstm.executeUpdate() > 0;
 

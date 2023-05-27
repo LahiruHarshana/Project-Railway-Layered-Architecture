@@ -1,6 +1,8 @@
 package lk.ijse.railway.dao.custom.impl;
 
 import lk.ijse.railway.db.DBConnection;
+import lk.ijse.railway.dto.Payment;
+import lk.ijse.railway.dto.Ticket;
 import lk.ijse.railway.util.CrudUtil;
 
 import java.sql.Connection;
@@ -13,9 +15,9 @@ public class PaymentDAOImpl {
             con = DBConnection.getInstance().getConnection();
             con.setAutoCommit(false);
 
-            boolean isTicketSaved = TicketDAOImpl.save(ticketID, trainID,stationName,classType,howMany,price);
+            boolean isTicketSaved = TicketDAOImpl.save(new Ticket(ticketID, trainID,stationName,classType,howMany,price));
             if(isTicketSaved) {
-                boolean isPaymentSaved = PaymentDAOImpl.save(paymentID,ticketID,date,price);
+                boolean isPaymentSaved = PaymentDAOImpl.save(new Payment(paymentID,ticketID,date,price));
                 System.out.println(isPaymentSaved);
                 if(isPaymentSaved) {
                     con.commit();
@@ -34,32 +36,32 @@ public class PaymentDAOImpl {
 
     }
 
-    static boolean save(String paymentID, String ticketID, String date, double price) throws SQLException {
+    static boolean save(Payment payment) throws SQLException {
 
 
         String sql = "INSERT INTO Payment(PaymentID,TicketID,Date,price) VALUES(?,?,?,?)";
         return CrudUtil.execute(
                 sql,
 
-        paymentID,
-        ticketID,
-        date,
-        price);
+        payment.getPId(),
+        payment.getTId(),
+        payment.getDate(),
+        payment.getPrice());
 
 
     }
 
-    static boolean saveB(String paymentID, String ticketID, String date, double price) throws SQLException {
+    static boolean saveB(Payment payment) throws SQLException {
 
 
         String sql = "INSERT INTO Payment(PaymentID,BookingID,Date,price) VALUES(?,?,?,?)";
 
         return CrudUtil.execute(
                 sql,
-        paymentID,
-        ticketID,
-        date,
-        price);
+        payment.getPId(),
+        payment.getTId(),
+        payment.getDate(),
+        payment.getPrice());
 
 
     }
