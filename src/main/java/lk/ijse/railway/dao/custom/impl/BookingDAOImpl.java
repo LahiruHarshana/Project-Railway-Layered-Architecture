@@ -2,6 +2,8 @@ package lk.ijse.railway.dao.custom.impl;
 
 
 import lk.ijse.railway.dao.custom.BookingDAO;
+import lk.ijse.railway.dao.custom.PassengerDAO;
+import lk.ijse.railway.dao.custom.PaymentDAO;
 import lk.ijse.railway.db.DBConnection;
 import lk.ijse.railway.dto.Booking;
 import lk.ijse.railway.dto.Passenger;
@@ -15,6 +17,10 @@ import java.util.List;
 public class BookingDAOImpl implements BookingDAO {
 
     BookingDAO bookingDAO = new BookingDAOImpl();
+
+    PassengerDAO passengerDAO = new PassengerDAOImpl();
+
+    PaymentDAO paymentDAO = new PaymentDAOImpl();
 
     @Override
     public Booking search(String text) throws SQLException {
@@ -91,10 +97,10 @@ public class BookingDAOImpl implements BookingDAO {
 
             boolean isBookingSaved = bookingDAO.save(new Booking(bookingId,date,toDate,trainId,stationName,seatsId,price));
             if(isBookingSaved) {
-                boolean isPassengerSaved = PassengerDAOImpl.save(new Passenger(passengerId,passengerName,bookingId,contactNum,email,address,nic));
+                boolean isPassengerSaved = passengerDAO.save(new Passenger(passengerId,passengerName,bookingId,contactNum,email,address,nic));
 
                 if(isPassengerSaved) {
-                    boolean isPaymentSaved = PaymentDAOImpl.saveB(new Payment(paymentId,bookingId,date,price));
+                    boolean isPaymentSaved = paymentDAO.saveB(new Payment(paymentId,bookingId,date,price));
 
                     if(isPaymentSaved){
                         con.commit();
