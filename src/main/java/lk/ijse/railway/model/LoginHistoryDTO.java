@@ -23,4 +23,8 @@ public class LoginHistoryDTO {
         this.logInDate = logInDate;
         this.logInTime = logInTime;
     }
+
+    public LoginHistoryDTO(int uId) {
+        this.uId=uId;
+    }
 }

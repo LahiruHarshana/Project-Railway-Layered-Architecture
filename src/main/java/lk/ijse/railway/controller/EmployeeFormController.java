@@ -13,9 +13,11 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.custom.impl.EmployeeBOImpl;
 import lk.ijse.railway.dto.Employee;
 import lk.ijse.railway.dto.tm.EmployeeTM;
 import lk.ijse.railway.dao.custom.impl.EmployeeDAOImpl;
+import lk.ijse.railway.model.EmployeeDTO;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.net.URL;
@@ -82,8 +84,7 @@ public class EmployeeFormController implements Initializable {
     @FXML
     private DatePicker pickerDob;
 
-    EmployeeDAOImpl employeeDAO = new EmployeeDAOImpl();
-
+    EmployeeBOImpl employeeBO = new EmployeeBOImpl();
     @FXML
     void btnAddOnAction(ActionEvent event) {
 
@@ -121,7 +122,7 @@ public class EmployeeFormController implements Initializable {
             Employee employee = new Employee(id, name, date, contact, address);
 
             try {
-                boolean isSaved = employeeDAO.save(employee);
+                boolean isSaved = employeeBO.save(employee);
                 if (isSaved) {
                     new Alert(Alert.AlertType.CONFIRMATION, "Item saved!").show();
                 }
@@ -139,7 +140,7 @@ public class EmployeeFormController implements Initializable {
     void btnDeleteOnAction(ActionEvent event) {
         String code = textId.getText();
         try {
-            boolean isDeleted = employeeDAO.delete(code);
+            boolean isDeleted = employeeBO.delete(code);
             if (isDeleted) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Deleted !");
 
@@ -156,7 +157,7 @@ public class EmployeeFormController implements Initializable {
     @FXML
     void btnSearchOnAction(ActionEvent event) {
         try {
-            Employee employee = employeeDAO.search(textId.getText());
+            EmployeeDTO employee = employeeBO.search(textId.getText());
             if (employee != null) {
                 textId.setText(employee.getId());
                 textName.setText(employee.getName());
@@ -209,7 +210,7 @@ public class EmployeeFormController implements Initializable {
             Employee employee = new Employee(id, name, date, contact, address);
 
             try {
-                boolean isUpdated = employeeDAO.update(employee);
+                boolean isUpdated = employeeBO.update(employee);
                 if (isUpdated) {
                     Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","EmployeeDTO is updated!");
 
@@ -242,7 +243,7 @@ public class EmployeeFormController implements Initializable {
     private void LoadTable() {
         try {
             ObservableList<EmployeeTM> obList = FXCollections.observableArrayList();
-            List<Employee> cusList = employeeDAO.getAll();
+            List<Employee> cusList = employeeBO.getAll();
 
             for (Employee employee : cusList) {
                 obList.add(new EmployeeTM(

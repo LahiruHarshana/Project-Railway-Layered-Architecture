@@ -11,6 +11,8 @@ import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.User;
 import lk.ijse.railway.dao.custom.impl.UserDAOImpl;
 import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
+import lk.ijse.railway.model.LoginHistoryDTO;
+import lk.ijse.railway.model.UserDTO;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.net.URL;
@@ -62,7 +64,7 @@ public class  ChangePasswordFormController implements Initializable {
 
     private void LoadUId() {
         try {
-            LoginHistory loginHistory = changePasswordBO.searchLastID();
+            LoginHistoryDTO loginHistory = changePasswordBO.searchLastID();
             if (loginHistory != null) {
                 uId =loginHistory.getUId();
                 System.out.println(uId);
@@ -73,7 +75,7 @@ public class  ChangePasswordFormController implements Initializable {
             new Alert(Alert.AlertType.ERROR, "something happened!").show();
         }
         try {
-            User user = changePasswordBO.searchAll(uId);
+            UserDTO user = changePasswordBO.searchAll(uId);
             if (user != null) {
                 currentPswd = user.getPswd();
 

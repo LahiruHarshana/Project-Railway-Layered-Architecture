@@ -33,4 +33,8 @@ public class UserDTO {
         this.uId=uId;
         this.pswd=currentPswd;
     }
+
+    public UserDTO(String pswd) {
+        this.pswd = pswd;
+    }
 }

@@ -1,42 +1,34 @@
 package lk.ijse.railway.bo.custom.impl;
 
+import lk.ijse.railway.dao.custom.LoginHistoryDAO;
+import lk.ijse.railway.dao.custom.UserDAO;
+import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
+import lk.ijse.railway.dao.custom.impl.UserDAOImpl;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.User;
+import lk.ijse.railway.model.LoginHistoryDTO;
+import lk.ijse.railway.model.UserDTO;
 import lk.ijse.railway.util.CrudUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ChangePasswordBOImpl {
+
+    UserDAO userDAO = new UserDAOImpl();
+    LoginHistoryDAO loginHistoryDAO = new LoginHistoryDAOImpl();
     public boolean updatePassword(User user) throws SQLException {
-        String sql = "UPDATE User SET  PassWord = ?  WHERE UserID = ?";
-        return CrudUtil.execute(
-                sql,
-                user.getPswd(),
-                user.getUId());
+        return userDAO.update1(user);
+
     }
 
-    public User searchAll(int uId) throws SQLException {
-        String sql = "SELECT * FROM User WHERE UserID = ?";
-        ResultSet rst = CrudUtil.execute(sql, uId);
-
-
-        if (rst.next()){
-            return new User(rst.getInt(1),rst.getString(2),rst.getString(3),rst.getString(4),rst.getString(5), rst.getString(6));
-        }
-        return null;
+    public UserDTO searchAll(int uId) throws SQLException {
+      return new UserDTO(userDAO.searchAll(uId).getPswd());
     }
 
-    public LoginHistory searchLastID() throws SQLException {
-
-        String sql = "select *from LogHistory ORDER BY LogInTime DESC LIMIT 1";
-        ResultSet rst = CrudUtil.execute(sql);
-
-
-        if (rst.next()){
-            return new LoginHistory(rst.getInt(1),rst.getDate(2),rst.getTime(3),rst.getDate(4),rst.getTime(5));
-        }
-        return null;
+    public LoginHistoryDTO searchLastID() throws SQLException {
+        return new LoginHistoryDTO(loginHistoryDAO.searchLastID().getUId());
     }
+
 
 }
