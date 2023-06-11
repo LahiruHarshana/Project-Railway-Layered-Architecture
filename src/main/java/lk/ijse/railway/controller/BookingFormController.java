@@ -95,16 +95,6 @@ public class BookingFormController implements Initializable {
     @FXML
     private JFXComboBox<String > trainIdCB;
 
-    StationDAOImpl stationDAO = new StationDAOImpl();
-
-    BookingDAOImpl bookingDAO = new BookingDAOImpl();
-
-    PassengerDAOImpl passengerDAO = new PassengerDAOImpl();
-
-    StationDetailsDAOImpl stationDetailsDAO = new StationDetailsDAOImpl();
-
-    TrainDAOImpl trainDAO = new TrainDAOImpl();
-
     BookingBOImpl bookingBO = new BookingBOImpl();
 
     public static void seatsGetValue(String seatsId) {

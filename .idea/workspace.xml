@@ -4,25 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f7f2a54-4738-4d50-8966-9414667d47ef" name="Changes" comment="0.3.3 updated">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/LoginBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/LoginHistoryBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/PassengerBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/SalaryBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/SeatsBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/SettingBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/SignUpPasswordBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/StationBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/TicketBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/TicketingBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/TrainBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/TrainSheduleBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/ViewTrainsBOImpl.java" afterDir="false" />
+    <list default="true" id="5f7f2a54-4738-4d50-8966-9414667d47ef" name="Changes" comment="0.3.4 updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/BookingBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/BookingBOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/ChangePasswordBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/ChangePasswordBOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/BookingFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/BookingFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/BookingDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/BookingDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/BookingDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/BookingDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/ChangePasswordFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/ChangePasswordFormController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -326,14 +312,9 @@
       <workItem from="1684996171146" duration="7794000" />
       <workItem from="1685123703804" duration="1209000" />
       <workItem from="1685178381435" duration="12287000" />
-      <workItem from="1685210662028" duration="1843000" />
-    </task>
-    <task id="LOCAL-00010" summary="near also">
-      <created>1682717933764</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1682717933764</updated>
+      <workItem from="1685210662028" duration="1861000" />
+      <workItem from="1686387035524" duration="768000" />
+      <workItem from="1686470668724" duration="463000" />
     </task>
     <task id="LOCAL-00011" summary="near also">
       <created>1682719246800</created>
@@ -671,7 +652,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685208490317</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="0.3.4 updated">
+      <created>1685212733130</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1685212733131</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -689,7 +677,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="0.0.9 updated" />
     <MESSAGE value="0.0.10 updated" />
     <MESSAGE value="0.1.0 updated" />
     <MESSAGE value="0.1.1 updated" />
@@ -714,7 +701,8 @@
     <MESSAGE value="0.3.1 updated" />
     <MESSAGE value="0.3.2 updated" />
     <MESSAGE value="0.3.3 updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.3.3 updated" />
+    <MESSAGE value="0.3.4 updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.3.4 updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

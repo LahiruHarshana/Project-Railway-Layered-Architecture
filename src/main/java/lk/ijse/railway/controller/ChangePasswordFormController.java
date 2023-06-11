@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.custom.impl.ChangePasswordBOImpl;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.User;
 import lk.ijse.railway.dao.custom.impl.UserDAOImpl;
@@ -16,7 +17,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class ChangePasswordFormController implements Initializable {
+public class  ChangePasswordFormController implements Initializable {
 
     @FXML
     private TextField txtConfirm;
@@ -30,9 +31,7 @@ public class ChangePasswordFormController implements Initializable {
     @FXML
     private TextField txtNew;
 
-    UserDAOImpl userDAO = new UserDAOImpl();
-
-    LoginHistoryDAOImpl loginHistoryDAO = new LoginHistoryDAOImpl();
+    ChangePasswordBOImpl changePasswordBO = new ChangePasswordBOImpl();
 
     @FXML
     void btnChangeOnAction(ActionEvent event) {
@@ -44,7 +43,7 @@ public class ChangePasswordFormController implements Initializable {
                 User user = new User( uId,txtConfirm.getText());
 
                 try {
-                    boolean isUpdated = userDAO.update1(user);
+                    boolean isUpdated = changePasswordBO.updatePassword(user);
                     if (isUpdated) {
                         Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","User Updated!");
                     }
@@ -63,7 +62,7 @@ public class ChangePasswordFormController implements Initializable {
 
     private void LoadUId() {
         try {
-            LoginHistory loginHistory = loginHistoryDAO.searchLastID();
+            LoginHistory loginHistory = changePasswordBO.searchLastID();
             if (loginHistory != null) {
                 uId =loginHistory.getUId();
                 System.out.println(uId);
@@ -74,7 +73,7 @@ public class ChangePasswordFormController implements Initializable {
             new Alert(Alert.AlertType.ERROR, "something happened!").show();
         }
         try {
-            User user = userDAO.searchAll(uId);
+            User user = changePasswordBO.searchAll(uId);
             if (user != null) {
                 currentPswd = user.getPswd();
 
