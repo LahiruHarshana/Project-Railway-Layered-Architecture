@@ -12,10 +12,13 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import lk.ijse.railway.Launcher;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.custom.impl.SettingBOImpl;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.User;
 import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
 import lk.ijse.railway.dao.custom.impl.UserDAOImpl;
+import lk.ijse.railway.model.LoginHistoryDTO;
+import lk.ijse.railway.model.UserDTO;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.io.IOException;
@@ -56,8 +59,7 @@ public class settingFormController implements Initializable {
     @FXML
     private TextField txtRoll;
 
-    UserDAOImpl userDAO = new UserDAOImpl();
-    LoginHistoryDAOImpl loginHistoryDAO = new LoginHistoryDAOImpl();
+    SettingBOImpl settingBO = new SettingBOImpl();
 
     private void setUI(String fileName) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/"+fileName));
@@ -91,7 +93,7 @@ public class settingFormController implements Initializable {
         User user = new User( uId,name,num,address,email);
 
         try {
-            boolean isUpdated = userDAO.update(user);
+            boolean isUpdated = settingBO.update(user);
             if (isUpdated) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Updated Successfull !");
             }
@@ -136,7 +138,7 @@ public class settingFormController implements Initializable {
             LocalTime time = LocalTime.now();
             Time time1 = Time.valueOf(time);
 
-            boolean isSaved = loginHistoryDAO.saveLogOut(new LoginHistory(uId,date,time1));
+            boolean isSaved = settingBO.saveLogOut(new LoginHistory(uId,date,time1));
             if (isSaved) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Save Successfull !");
             }
@@ -158,7 +160,7 @@ public class settingFormController implements Initializable {
     private void LoadTxts() {
 
         try {
-            LoginHistory loginHistory = loginHistoryDAO.searchLastID();
+            LoginHistoryDTO loginHistory = settingBO.searchLastID();
             if (loginHistory != null) {
                 uId =loginHistory.getUId();
                 System.out.println(uId);
@@ -169,7 +171,7 @@ public class settingFormController implements Initializable {
             new Alert(Alert.AlertType.ERROR, "something happened!").show();
         }
         try {
-            User user = userDAO.searchAll(uId);
+            UserDTO user = settingBO.searchAll(uId);
             if (user != null) {
                 txtID.setText(String.valueOf(user.getUId()));
                 txtName.setText(user.getName());

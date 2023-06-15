@@ -1,5 +1,6 @@
 package lk.ijse.railway.model;
 
+import lk.ijse.railway.dto.LoginHistory;
 import lombok.*;
 
 import java.sql.Date;
@@ -27,5 +28,12 @@ public class LoginHistoryDTO {
 
     public LoginHistoryDTO(int uId) {
         this.uId=uId;
+    }
+    public LoginHistoryDTO(LoginHistory loginHistory) {
+        this.uId=loginHistory.getUId();
+        this.logInDate=loginHistory.getLogInDate();
+        this.logInTime=loginHistory.getLogInTime();
+        this.logOutDate=loginHistory.getLogOutDate();
+        this.logOutTime=loginHistory.getLogOutTime();
     }
 }

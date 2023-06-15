@@ -12,9 +12,11 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.custom.impl.StationBOImpl;
 import lk.ijse.railway.dto.Station;
 import lk.ijse.railway.dto.tm.StationTM;
 import lk.ijse.railway.dao.custom.impl.StationDAOImpl;
+import lk.ijse.railway.model.StationDTO;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.net.URL;
@@ -53,14 +55,15 @@ public class stationFormController implements Initializable {
 
     @FXML
     private TableView<StationTM> tblStations;
-    StationDAOImpl stationDAO = new StationDAOImpl();
+    StationBOImpl stationBO = new StationBOImpl();
 
+    //
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
         String code = idText.getText();
         try {
-            boolean isDeleted = stationDAO.delete(code);
+            boolean isDeleted = stationBO.delete(code);
             if (isDeleted) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Delete Successfull !");
             }
@@ -94,7 +97,7 @@ public class stationFormController implements Initializable {
         Station station = new Station(id,name,distance);
 
         try {
-            boolean isSaved = stationDAO.save(station);
+            boolean isSaved = stationBO.save(station);
             if (isSaved) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","save Successfull !");
             }
@@ -110,7 +113,7 @@ public class stationFormController implements Initializable {
     @FXML
     void searchButtonOnAction(ActionEvent event) {
         try {
-            Station station = stationDAO.search(idText.getText());
+            StationDTO station = stationBO.search(idText.getText());
             if (station != null) {
                 idText.setText(station.getId());
                 stationNameText.setText(station.getName());
@@ -133,7 +136,7 @@ public class stationFormController implements Initializable {
 
 
         try {
-            boolean isUpdated = stationDAO.update(station);
+            boolean isUpdated = stationBO.update(station);
             Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Updated Successfull !");
         } catch (SQLException e) {
             e.printStackTrace();
@@ -156,9 +159,9 @@ public class stationFormController implements Initializable {
     private void LoadTable() {
         try {
             ObservableList<StationTM> obList = FXCollections.observableArrayList();
-            List<Station> cusList = stationDAO.getAll();
+            List<StationDTO> cusList = stationBO.getAll();
 
-            for (Station station : cusList) {
+            for (StationDTO station : cusList) {
                 obList.add(new StationTM(
                         station.getId(),
                         station.getName(),

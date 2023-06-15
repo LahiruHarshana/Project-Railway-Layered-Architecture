@@ -2,7 +2,9 @@ package lk.ijse.railway.bo.custom.impl;
 
 import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
 import lk.ijse.railway.dao.custom.impl.UserDAOImpl;
+import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.User;
+import lk.ijse.railway.model.LoginHistoryDTO;
 import lk.ijse.railway.model.UserDTO;
 import lk.ijse.railway.util.CrudUtil;
 
@@ -19,6 +21,14 @@ public class SettingBOImpl {
     public UserDTO searchAll(int uId) throws SQLException {
         String s = null;
         return new UserDTO(userDAO.searchAll(uId),s);
+
+    }
+    public boolean saveLogOut(LoginHistory loginHistory) throws SQLException {
+    return loginHistoryDAO.saveLogOut(loginHistory);
+    }
+
+    public LoginHistoryDTO searchLastID() throws SQLException {
+        return new LoginHistoryDTO(loginHistoryDAO.searchLastID());
 
     }
 }

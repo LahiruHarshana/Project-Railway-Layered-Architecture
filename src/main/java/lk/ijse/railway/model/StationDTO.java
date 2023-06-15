@@ -1,4 +1,5 @@
 package lk.ijse.railway.model;
+import lk.ijse.railway.dto.Station;
 import lombok.*;
 
 @NoArgsConstructor
@@ -18,4 +19,11 @@ public class StationDTO {
     public StationDTO(double aDouble) {
         this.distance=aDouble;
     }
+
+    public StationDTO(Station search) {
+        this.distance=search.getDistance();
+        this.id=search.getId();
+        this.name=search.getName();
+    }
+
 }
