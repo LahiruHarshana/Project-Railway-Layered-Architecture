@@ -4,37 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f7f2a54-4738-4d50-8966-9414667d47ef" name="Changes" comment="0.3.6 updated">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/ChangePasswordBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/ChangePasswordBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/ChangePasswordBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/HomeBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/HomeBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/LoginBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/LoginBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/LoginHistoryBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/LoginHistoryBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/PassengerBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/PassengerBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/SalaryBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/SalaryBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/SeatsBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/SeatsBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/ChangePasswordFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/ChangePasswordFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/EmployeeFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/EmployeeFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/HomeFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/HomeFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/LogHistoryFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/LogHistoryFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/LoginFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/PassengerFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/PassengerFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/SalaryFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/SalaryFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/SeatsFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/SeatsFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/LoginHistoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/LoginHistoryDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/model/LoginHistoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/model/LoginHistoryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/model/PassengerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/model/PassengerDTO.java" afterDir="false" />
+    <list default="true" id="5f7f2a54-4738-4d50-8966-9414667d47ef" name="Changes" comment="0.3.7 updated">
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/SettingBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/SettingBOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/model/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/model/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/BookingFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/BookingFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/ChangePasswordFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/ChangePasswordFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/EmployeeFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/EmployeeFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/HomeFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/HomeFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/LogHistoryFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/LogHistoryFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/LoginFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/LoginFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/PassengerFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/PassengerFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/SalaryFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/SalaryFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/SeatsFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/SeatsFormController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,14 +320,7 @@
       <workItem from="1686565278701" duration="1789000" />
       <workItem from="1686672166557" duration="592000" />
       <workItem from="1686731802565" duration="3192000" />
-      <workItem from="1686840733435" duration="3363000" />
-    </task>
-    <task id="LOCAL-00013" summary="check">
-      <created>1684996227983</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1684996227983</updated>
+      <workItem from="1686840733435" duration="3957000" />
     </task>
     <task id="LOCAL-00014" summary="check">
       <created>1685005252404</created>
@@ -693,7 +658,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686476597440</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="0.3.7 updated">
+      <created>1686846968662</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1686846968663</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,7 +683,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="0.1.1 updated" />
     <MESSAGE value="0.1.2 updated" />
     <MESSAGE value="0.1.3 updated" />
     <MESSAGE value="0.1.4 updated" />
@@ -736,7 +707,8 @@
     <MESSAGE value="0.3.4 updated" />
     <MESSAGE value="0.3.5 updated" />
     <MESSAGE value="0.3.6 updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.3.6 updated" />
+    <MESSAGE value="0.3.7 updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.3.7 updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
