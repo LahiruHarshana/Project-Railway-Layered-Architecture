@@ -16,4 +16,8 @@ public class PassengerDTO {
     private String email;
     private String address;
     private String nic;
+
+    public PassengerDTO(String id) {
+        this.id= id;
+    }
 }

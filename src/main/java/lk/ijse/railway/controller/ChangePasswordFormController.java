@@ -6,11 +6,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.custom.ChangePasswordBO;
 import lk.ijse.railway.bo.custom.impl.ChangePasswordBOImpl;
-import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.User;
-import lk.ijse.railway.dao.custom.impl.UserDAOImpl;
-import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
 import lk.ijse.railway.model.LoginHistoryDTO;
 import lk.ijse.railway.model.UserDTO;
 import lk.ijse.railway.util.AlertTypes;
@@ -32,9 +30,7 @@ public class  ChangePasswordFormController implements Initializable {
 
     @FXML
     private TextField txtNew;
-
     ChangePasswordBOImpl changePasswordBO = new ChangePasswordBOImpl();
-
     @FXML
     void btnChangeOnAction(ActionEvent event) {
 

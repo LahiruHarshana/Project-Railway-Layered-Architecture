@@ -1,5 +1,6 @@
 package lk.ijse.railway.model;
 
+import lk.ijse.railway.dto.User;
 import lombok.*;
 
 @Getter
@@ -36,5 +37,13 @@ public class UserDTO {
 
     public UserDTO(String pswd) {
         this.pswd = pswd;
+    }
+
+    public UserDTO(User search) {
+        this.pswd=search.getPswd();
+    }
+
+    public UserDTO(int uId, String s, String t) {
+        this.uId=uId;
     }
 }

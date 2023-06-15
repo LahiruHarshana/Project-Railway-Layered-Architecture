@@ -11,6 +11,7 @@ import java.sql.Time;
 @AllArgsConstructor
 
 public class LoginHistoryDTO {
+
     private int uId;
     private Date logInDate;
     private Time logInTime;

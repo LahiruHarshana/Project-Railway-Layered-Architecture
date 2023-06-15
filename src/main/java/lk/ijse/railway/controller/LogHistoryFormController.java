@@ -8,9 +8,12 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import lk.ijse.railway.bo.custom.impl.LoginBOImpl;
+import lk.ijse.railway.bo.custom.impl.LoginHistoryBOImpl;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.tm.LoginHistoryTM;
 import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
+import lk.ijse.railway.model.LoginHistoryDTO;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -38,7 +41,7 @@ public class LogHistoryFormController implements Initializable {
     @FXML
     private TableView<LoginHistoryTM> tblLoginHistory;
 
-    LoginHistoryDAOImpl loginHistoryDAO = new LoginHistoryDAOImpl();
+    LoginHistoryBOImpl loginHistoryBO = new LoginHistoryBOImpl();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -49,9 +52,11 @@ public class LogHistoryFormController implements Initializable {
     private void LoadTable() {
         try {
             ObservableList<LoginHistoryTM> obList = FXCollections.observableArrayList();
-            List<LoginHistory> cusList = loginHistoryDAO.getAll();
+            List<LoginHistoryDTO> cusList = loginHistoryBO.getAll();
 
-            for (LoginHistory loginHistory : cusList) {
+            System.out.println("hi");
+
+            for (LoginHistoryDTO loginHistory : cusList) {
                 obList.add(new LoginHistoryTM(
                         loginHistory.getUId(),
                         loginHistory.getLogInDate(),

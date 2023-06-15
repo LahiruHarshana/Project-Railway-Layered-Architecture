@@ -13,10 +13,12 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.custom.impl.LoginBOImpl;
 import lk.ijse.railway.dto.LoginHistory;
+import lk.ijse.railway.dto.Salary;
 import lk.ijse.railway.dto.User;
-import lk.ijse.railway.dao.custom.impl.UserDAOImpl;
 import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
+import lk.ijse.railway.model.UserDTO;
 import lk.ijse.railway.util.AlertTypes;
 import lk.ijse.railway.util.TimeChecker;
 import lombok.SneakyThrows;
@@ -66,8 +68,7 @@ public class LoginFormController implements Initializable {
 
     int eka;
 
-    UserDAOImpl userDAO = new UserDAOImpl();
-    LoginHistoryDAOImpl loginHistoryDAO = new LoginHistoryDAOImpl();
+    LoginBOImpl loginBO = new LoginBOImpl();
 
     @FXML
     void loginButtonOnAction(ActionEvent event) throws IOException {
@@ -76,7 +77,9 @@ public class LoginFormController implements Initializable {
         String user = txtUser.getText();
 
         try {
-            User user1 = userDAO.search(txtUser.getText());
+            System.out.println("sas");
+            UserDTO user1 = loginBO.search(txtUser.getText());
+            System.out.println("hahaha");
             if (user1 != null) {
                 password=user1.getPswd();
                 System.out.println(password);
@@ -100,11 +103,9 @@ public class LoginFormController implements Initializable {
             }
 
             try {
-                User user1 = userDAO.search(txtUser.getText());
+                UserDTO user1 = loginBO.searchid(txtUser.getText());
                 if (user1 != null) {
                     uid = user1.getUId();
-
-
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -120,7 +121,8 @@ public class LoginFormController implements Initializable {
                 LocalTime time = LocalTime.now();
                 Time time1 = Time.valueOf(time);
 
-                boolean isSaved = loginHistoryDAO.save(new LoginHistory(uid,date,time1));
+                boolean isSaved = loginBO.save(new LoginHistory(uid,date,time1));
+
                 if (isSaved) {
                     Notification.notification(AlertTypes.CONFORMATION,"CONFIRMATION ","Saved Log History");
                 }

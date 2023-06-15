@@ -12,10 +12,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.custom.impl.SalaryBOImpl;
 import lk.ijse.railway.dto.Employee;
 import lk.ijse.railway.dto.Salary;
 import lk.ijse.railway.dao.custom.impl.EmployeeDAOImpl;
 import lk.ijse.railway.dao.custom.impl.SalaryDAOImpl;
+import lk.ijse.railway.model.EmployeeDTO;
 import lk.ijse.railway.util.AlertTypes;
 
 
@@ -50,9 +52,7 @@ public class SalaryFormController implements Initializable {
     @FXML
     private TextField txtsalaryId;
 
-    EmployeeDAOImpl employeeDAO = new EmployeeDAOImpl();
-    SalaryDAOImpl salaryDAO = new SalaryDAOImpl();
-
+    SalaryBOImpl salaryBO = new SalaryBOImpl();
 
 
     @FXML
@@ -66,7 +66,7 @@ public class SalaryFormController implements Initializable {
          Salary salary = new Salary(id, empId, date,amount);
 
         try {
-            boolean isSaved = salaryDAO.save(salary);
+            boolean isSaved = salaryBO.save(salary);
             if (isSaved) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Saved Successfull !");
 
@@ -82,7 +82,7 @@ public class SalaryFormController implements Initializable {
     @FXML
     void btnSearchOnAction(ActionEvent event) {
         try {
-            Employee employee = employeeDAO.search(txtId.getText());
+            EmployeeDTO employee = salaryBO.search(txtId.getText());
             if (employee != null) {
                 txtId.setText(employee.getId());
                 txtName.setText(employee.getName());

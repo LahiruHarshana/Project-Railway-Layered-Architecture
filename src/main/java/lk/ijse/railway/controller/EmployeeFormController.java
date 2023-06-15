@@ -243,9 +243,9 @@ public class EmployeeFormController implements Initializable {
     private void LoadTable() {
         try {
             ObservableList<EmployeeTM> obList = FXCollections.observableArrayList();
-            List<Employee> cusList = employeeBO.getAll();
+            List<EmployeeDTO> cusList = employeeBO.getAll();
 
-            for (Employee employee : cusList) {
+            for (EmployeeDTO employee : cusList) {
                 obList.add(new EmployeeTM(
                         employee.getId(),
                         employee.getName(),

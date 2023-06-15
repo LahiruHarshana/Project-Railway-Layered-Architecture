@@ -12,8 +12,10 @@ import javafx.scene.layout.Pane;
 import javafx.scene.transform.Rotate;
 import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.custom.impl.PassengerBOImpl;
 import lk.ijse.railway.dto.Passenger;
 import lk.ijse.railway.dao.custom.impl.PassengerDAOImpl;
+import lk.ijse.railway.model.PassengerDTO;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.net.URL;
@@ -47,7 +49,9 @@ public class PassengerFormController implements Initializable {
     private JFXButton updateButton;
     @FXML
     private TextField textBookingID;
-    PassengerDAOImpl passengerDAO = new PassengerDAOImpl();
+
+    PassengerBOImpl passengerBO = new PassengerBOImpl();
+
     @FXML
     void deleteButtonOnAction(ActionEvent event) {
 
@@ -57,7 +61,7 @@ public class PassengerFormController implements Initializable {
     void searchButtonOnAction(ActionEvent event) {
 
         try {
-            Passenger passenger = passengerDAO.search(passengerIDTextField.getText());
+            PassengerDTO passenger = passengerBO.search(passengerIDTextField.getText());
             if (passenger != null) {
                 passengerIDTextField.setText(passenger.getId());
                 nameTextField.setText(passenger.getName());
@@ -137,7 +141,7 @@ public class PassengerFormController implements Initializable {
 
             Passenger passenger = new Passenger(id, name, bookingID, contact, email, address, nic);
 
-            boolean isUpdated = passengerDAO.update(passenger);
+            boolean isUpdated = passengerBO.update(passenger);
             System.out.println(isUpdated);
             if (isUpdated) Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Passenger Updated !");
         }

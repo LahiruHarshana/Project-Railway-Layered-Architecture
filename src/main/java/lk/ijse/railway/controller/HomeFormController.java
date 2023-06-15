@@ -7,9 +7,12 @@ import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import lk.ijse.railway.Launcher;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.custom.impl.HomeBOImpl;
+import lk.ijse.railway.bo.custom.impl.LoginHistoryBOImpl;
 import lk.ijse.railway.dao.custom.LoginHistoryDAO;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
+import lk.ijse.railway.model.LoginHistoryDTO;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.net.URL;
@@ -25,7 +28,7 @@ public class HomeFormController implements Initializable {
 
     public static int uId;
 
-    LoginHistoryDAO loginHistoryDAO = new LoginHistoryDAOImpl();
+    HomeBOImpl homeBO = new HomeBOImpl();
 
     @FXML
     void btnLogOutOnAction(ActionEvent event) throws Exception {
@@ -41,7 +44,7 @@ public class HomeFormController implements Initializable {
             LocalTime time = LocalTime.now();
             Time time1 = Time.valueOf(time);
 
-            boolean isSaved = loginHistoryDAO.saveLogOut(new LoginHistory(uId,date,time1));
+            boolean isSaved = homeBO.saveLogOut(new LoginHistory(uId,date,time1));
             if (isSaved) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !"," Log out saved!");
 
@@ -57,7 +60,7 @@ public class HomeFormController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         try {
-            LoginHistory loginHistory = loginHistoryDAO.searchLastID();
+            LoginHistoryDTO loginHistory = homeBO.searchLastID();
             if (loginHistory != null) {
                 uId =loginHistory.getUId();
                 System.out.println(uId);
