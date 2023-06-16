@@ -1,5 +1,7 @@
 package lk.ijse.railway.bo.custom.impl;
 
+import lk.ijse.railway.bo.custom.EmployeeBO;
+import lk.ijse.railway.dao.DAOFactory;
 import lk.ijse.railway.dao.custom.EmployeeDAO;
 import lk.ijse.railway.dao.custom.impl.EmployeeDAOImpl;
 import lk.ijse.railway.dto.Employee;
@@ -10,23 +12,28 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeBOImpl {
+public class EmployeeBOImpl implements EmployeeBO {
 
-    EmployeeDAO employeeDAO = new EmployeeDAOImpl();
+    EmployeeDAO employeeDAO = (EmployeeDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.EMPLOYEE);
+    @Override
     public boolean save(Employee entity) throws SQLException {
         return employeeDAO.save(entity);
     }
+    @Override
 
     public boolean delete(String code) throws SQLException {
         return employeeDAO.delete(code);
     }
+    @Override
 
     public EmployeeDTO search(String text) throws SQLException {
         return new EmployeeDTO(employeeDAO.search(text));
     }
+    @Override
     public boolean update(Employee entity) throws SQLException {
         return employeeDAO.update(entity);
     }
+    @Override
     public List<EmployeeDTO> getAll() throws SQLException {
         List<Employee> allEntityData = employeeDAO.getAll();
         ArrayList<EmployeeDTO> allDTOData= new ArrayList<>();

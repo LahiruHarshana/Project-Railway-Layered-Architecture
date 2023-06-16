@@ -7,6 +7,8 @@ import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import lk.ijse.railway.Launcher;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.BOFactory;
+import lk.ijse.railway.bo.custom.HomeBO;
 import lk.ijse.railway.bo.custom.impl.HomeBOImpl;
 import lk.ijse.railway.bo.custom.impl.LoginHistoryBOImpl;
 import lk.ijse.railway.dao.custom.LoginHistoryDAO;
@@ -28,7 +30,7 @@ public class HomeFormController implements Initializable {
 
     public static int uId;
 
-    HomeBOImpl homeBO = new HomeBOImpl();
+    HomeBO homeBO = (HomeBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.HOME);
 
     @FXML
     void btnLogOutOnAction(ActionEvent event) throws Exception {

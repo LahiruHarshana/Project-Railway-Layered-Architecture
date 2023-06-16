@@ -10,6 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.impl.SeatsBOImpl;
 import lk.ijse.railway.dao.custom.impl.BookingDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
@@ -658,7 +659,7 @@ public class SeatsFormController implements Initializable {
 
     }
 
-    SeatsBOImpl seatsBO = new SeatsBOImpl();
+    SeatsBOImpl seatsBO = (SeatsBOImpl) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.SEATS);
 
 
 

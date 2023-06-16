@@ -1,5 +1,7 @@
 package lk.ijse.railway.bo.custom.impl;
 
+import lk.ijse.railway.bo.custom.LoginHistoryBO;
+import lk.ijse.railway.dao.DAOFactory;
 import lk.ijse.railway.dao.custom.LoginHistoryDAO;
 import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
 import lk.ijse.railway.dto.Employee;
@@ -13,8 +15,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LoginHistoryBOImpl {
-    LoginHistoryDAO loginHistoryDAO = new LoginHistoryDAOImpl();
+public class LoginHistoryBOImpl implements LoginHistoryBO {
+    LoginHistoryDAO loginHistoryDAO = (LoginHistoryDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.LOGINHISTORY);
+    @Override
     public List<LoginHistoryDTO> getAll() throws SQLException {
         List<LoginHistory> allEntityData = loginHistoryDAO.getAll();
         ArrayList<LoginHistoryDTO> allDTOData= new ArrayList<>();

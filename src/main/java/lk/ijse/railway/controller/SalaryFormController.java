@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.impl.SalaryBOImpl;
 import lk.ijse.railway.dto.Employee;
 import lk.ijse.railway.dto.Salary;
@@ -52,7 +53,7 @@ public class SalaryFormController implements Initializable {
     @FXML
     private TextField txtsalaryId;
 
-    SalaryBOImpl salaryBO = new SalaryBOImpl();
+    SalaryBOImpl salaryBO = (SalaryBOImpl) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.SALARY);
 
 
     @FXML

@@ -1,5 +1,6 @@
 package lk.ijse.railway.model;
 
+import lk.ijse.railway.dto.Train;
 import lombok.*;
 
 import java.sql.Time;
@@ -17,4 +18,10 @@ public class TrainDTO {
 
     private String endStation;
 
+    public TrainDTO(Train search) {
+        this.endStation=search.getEndStation();
+        this.id=search.getId();
+        this.name=search.getName();
+        this.Time=search.getTime();
+    }
 }

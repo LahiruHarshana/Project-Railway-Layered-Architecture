@@ -19,6 +19,8 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.BOFactory;
+import lk.ijse.railway.bo.custom.BookingBO;
 import lk.ijse.railway.bo.custom.impl.BookingBOImpl;
 import lk.ijse.railway.dao.custom.impl.*;
 import lk.ijse.railway.db.DBConnection;
@@ -95,7 +97,7 @@ public class BookingFormController implements Initializable {
     @FXML
     private JFXComboBox<String > trainIdCB;
 
-    BookingBOImpl bookingBO = new BookingBOImpl();
+    BookingBO bookingBO = (BookingBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.BOOKING);
 
     public static void seatsGetValue(String seatsId) {
         seat = seatsId;

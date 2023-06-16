@@ -8,6 +8,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.BOFactory;
+import lk.ijse.railway.bo.custom.SignUpPasswordBO;
+import lk.ijse.railway.bo.custom.impl.SignUpPasswordBOImpl;
 import lk.ijse.railway.dto.User;
 import lk.ijse.railway.dao.custom.impl.UserDAOImpl;
 import lk.ijse.railway.util.AlertTypes;
@@ -34,14 +37,13 @@ public class signUpPasswordFormController {
     @FXML
     private PasswordField txtPswd;
 
-    UserDAOImpl userDAO = new UserDAOImpl();
-
+    SignUpPasswordBO sign = (SignUpPasswordBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.SIGNUP);
     @FXML
     void btnRegisterOnAction(ActionEvent event) {
 
         if (txtPswd.getText().equals(txtConfirmPswd.getText())){
             try {
-                int id = userDAO.search();
+                int id = sign.search();
                 int idl = id+1;
 
                  uID = idl;
@@ -58,7 +60,7 @@ public class signUpPasswordFormController {
             User user = new User(uID,Name,pswd, Num,Address,Email);
 
             try {
-                boolean isSaved = userDAO.save(user);
+                boolean isSaved = sign.save(user);
                 if (isSaved) {
                     Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION !","Registered Successfull !");
                 }

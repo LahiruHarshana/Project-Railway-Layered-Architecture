@@ -13,6 +13,8 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.BOFactory;
+import lk.ijse.railway.bo.custom.LoginBO;
 import lk.ijse.railway.bo.custom.impl.LoginBOImpl;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.Salary;
@@ -68,7 +70,7 @@ public class LoginFormController implements Initializable {
 
     int eka;
 
-    LoginBOImpl loginBO = new LoginBOImpl();
+    LoginBO loginBO = (LoginBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.LOGIN);
 
     @FXML
     void loginButtonOnAction(ActionEvent event) throws IOException {

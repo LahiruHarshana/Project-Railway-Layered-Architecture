@@ -12,6 +12,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.impl.StationBOImpl;
 import lk.ijse.railway.dto.Station;
 import lk.ijse.railway.dto.tm.StationTM;
@@ -55,7 +56,7 @@ public class stationFormController implements Initializable {
 
     @FXML
     private TableView<StationTM> tblStations;
-    StationBOImpl stationBO = new StationBOImpl();
+    StationBOImpl stationBO = (StationBOImpl) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.STATION);
 
     //
 

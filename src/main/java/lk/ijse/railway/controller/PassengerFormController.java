@@ -12,6 +12,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.transform.Rotate;
 import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.impl.PassengerBOImpl;
 import lk.ijse.railway.dto.Passenger;
 import lk.ijse.railway.dao.custom.impl.PassengerDAOImpl;
@@ -50,7 +51,7 @@ public class PassengerFormController implements Initializable {
     @FXML
     private TextField textBookingID;
 
-    PassengerBOImpl passengerBO = new PassengerBOImpl();
+    PassengerBOImpl passengerBO = (PassengerBOImpl) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.PASSENGER);
 
     @FXML
     void deleteButtonOnAction(ActionEvent event) {

@@ -13,6 +13,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.BOFactory;
+import lk.ijse.railway.bo.custom.EmployeeBO;
 import lk.ijse.railway.bo.custom.impl.EmployeeBOImpl;
 import lk.ijse.railway.dto.Employee;
 import lk.ijse.railway.dto.tm.EmployeeTM;
@@ -84,7 +86,7 @@ public class EmployeeFormController implements Initializable {
     @FXML
     private DatePicker pickerDob;
 
-    EmployeeBOImpl employeeBO = new EmployeeBOImpl();
+    EmployeeBO employeeBO = (EmployeeBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.EMPLOYEE);
     @FXML
     void btnAddOnAction(ActionEvent event) {
 

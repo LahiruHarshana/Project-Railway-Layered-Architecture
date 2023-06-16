@@ -12,6 +12,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import lk.ijse.railway.Launcher;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.impl.SettingBOImpl;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.User;
@@ -59,7 +60,7 @@ public class settingFormController implements Initializable {
     @FXML
     private TextField txtRoll;
 
-    SettingBOImpl settingBO = new SettingBOImpl();
+    SettingBOImpl settingBO = (SettingBOImpl) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.SETTINGS);
 
     private void setUI(String fileName) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/"+fileName));

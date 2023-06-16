@@ -14,9 +14,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.BOFactory;
+import lk.ijse.railway.bo.custom.impl.TicketBOImpl;
+import lk.ijse.railway.bo.custom.impl.TicketingBOImpl;
 import lk.ijse.railway.dao.custom.impl.*;
 import lk.ijse.railway.db.DBConnection;
 import lk.ijse.railway.dto.*;
+import lk.ijse.railway.model.StationDTO;
 import lk.ijse.railway.util.AlertTypes;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.design.JRDesignQuery;
@@ -86,15 +90,7 @@ public class ticketingFormController implements Initializable {
 
     @FXML
     private Pane ticketingPane;
-
-    TrainDAOImpl trainDAO = new TrainDAOImpl();
-
-    TicketDAOImpl ticketDAO = new TicketDAOImpl();
-    PaymentDAOImpl paymentDAO  = new PaymentDAOImpl();
-
-    StationDetailsDAOImpl stationDetailsDAO = new StationDetailsDAOImpl();
-
-    StationDAOImpl stationDAO = new StationDAOImpl();
+    TicketingBOImpl ticketBO = (TicketingBOImpl) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.TICKET);
 
     @FXML
     void howManyTextFieldOnAction(ActionEvent event) {
@@ -130,7 +126,7 @@ public class ticketingFormController implements Initializable {
 
         boolean isPlaced = false;
         try {
-            isPlaced = paymentDAO.payemntTicket(ticketID, trainID, paymentID,date,price,classType,stationName,howMany);
+            isPlaced = ticketBO.payemntTicket(ticketID, trainID, paymentID,date,price,classType,stationName,howMany);
             if(isPlaced) {
                 Notification.notification(AlertTypes.CONFORMATION,"CONFORMATION","Bought the ticket");
             } else {
@@ -156,7 +152,7 @@ public class ticketingFormController implements Initializable {
         String idl = ticketTrainComboBox.getValue();
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = stationDetailsDAO.searchById(idl);
+            List<String> ids = ticketBO.searchById(idl);
 
             for (String id : ids) {
                 obList.add(id);
@@ -207,7 +203,7 @@ public class ticketingFormController implements Initializable {
         String name = ticketStationComboBox.getValue();
 
         try {
-            Station ticket = stationDAO.searchById(name);
+            StationDTO ticket = ticketBO.searchByStationId(name);
              distance = ticket.getDistance();
             System.out.println(distance);
         } catch (SQLException e) {
@@ -366,7 +362,7 @@ public class ticketingFormController implements Initializable {
     private void loadTicketID() {
 
         try {
-            int id = ticketDAO.search();
+            int id = ticketBO.search();
                 int idl = id+1;
 
 
@@ -383,7 +379,7 @@ public class ticketingFormController implements Initializable {
     private void loadTrainCB() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = trainDAO.loadtrainIds();
+            List<String> ids = ticketBO.loadtrainIds();
 
             for (String id : ids) {
                 obList.add(id);

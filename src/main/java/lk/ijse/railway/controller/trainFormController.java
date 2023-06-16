@@ -18,11 +18,14 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.BOFactory;
+import lk.ijse.railway.bo.custom.impl.TrainBOImpl;
 import lk.ijse.railway.dto.StationDetails;
 import lk.ijse.railway.dto.Train;
 import lk.ijse.railway.dao.custom.impl.StationDetailsDAOImpl;
 import lk.ijse.railway.dao.custom.impl.StationDAOImpl;
 import lk.ijse.railway.dao.custom.impl.TrainDAOImpl;
+import lk.ijse.railway.model.TrainDTO;
 import lk.ijse.railway.util.AlertTypes;
 
 import java.io.IOException;
@@ -90,11 +93,7 @@ public class trainFormController implements Initializable {
     @FXML
     private JFXComboBox<?> wichComboBox;
 
-    TrainDAOImpl trainDAO = new TrainDAOImpl();
-    StationDAOImpl stationDAO = new StationDAOImpl();
-
-    StationDetailsDAOImpl stationDetailsDAO = new StationDetailsDAOImpl();
-
+    TrainBOImpl trainBO = (TrainBOImpl) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.TRAIN);
 
 
     @Override
@@ -147,7 +146,7 @@ public class trainFormController implements Initializable {
     private void loadTrainIDCB() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = trainDAO.loadtrainIds();
+            List<String> ids = trainBO.loadtrainIds();
 
             for (String id : ids) {
                 obList.add(id);
@@ -162,7 +161,7 @@ public class trainFormController implements Initializable {
     private void loadStationNameComboBox() {
         try {
             ObservableList<String> obList = FXCollections.observableArrayList();
-            List<String> ids = stationDAO.loadIds();
+            List<String> ids = trainBO.loadIds();
 
             for (String id : ids) {
                 obList.add(id);
@@ -190,7 +189,7 @@ public class trainFormController implements Initializable {
         StationDetails stationDetails = new StationDetails(trainId,StationId, time);
 
         try {
-            boolean isSaved = stationDetailsDAO.save(stationDetails);
+            boolean isSaved = trainBO.save(stationDetails);
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Item saved!").show();
             }
@@ -219,7 +218,7 @@ public class trainFormController implements Initializable {
         Train train = new Train(id, name, time,endStation);
 
         try {
-            boolean isSaved = trainDAO.save(train);
+            boolean isSaved = trainBO.save(train);
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Item saved!").show();
             }
@@ -233,7 +232,7 @@ public class trainFormController implements Initializable {
     void deleteButtonOnAction(ActionEvent event) throws SQLException {
         String code = trainIDButton.getText();
         try {
-            boolean isDeleted = trainDAO.delete(code);
+            boolean isDeleted = trainBO.delete(code);
             if (isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "deleted!").show();
             }
@@ -248,7 +247,7 @@ public class trainFormController implements Initializable {
     @FXML
     void searchButtonOnAction(ActionEvent event) {
         try {
-            Train train = trainDAO.search(trainIDButton.getText());
+            TrainDTO train = trainBO.search(trainIDButton.getText());
             if (train != null) {
                 trainIDButton.setText(train.getId());
                 nameTextField.setText(train.getName());
@@ -275,7 +274,7 @@ public class trainFormController implements Initializable {
          Train train=new Train(id,name,time,endStation);
 
         try {
-            boolean isUpdated= trainDAO.update(train);
+            boolean isUpdated= trainBO.update(train);
             System.out.println(isUpdated);
             if(isUpdated) new Alert(Alert.AlertType.CONFIRMATION, "updated!").show();
         } catch (SQLException e) {

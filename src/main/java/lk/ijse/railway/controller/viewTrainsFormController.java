@@ -12,9 +12,12 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
+import lk.ijse.railway.bo.BOFactory;
+import lk.ijse.railway.bo.custom.impl.ViewTrainsBOImpl;
 import lk.ijse.railway.dto.Train;
 import lk.ijse.railway.dto.tm.TrainTM;
 import lk.ijse.railway.dao.custom.impl.TrainDAOImpl;
+import lk.ijse.railway.model.TrainDTO;
 
 
 import java.io.IOException;
@@ -45,7 +48,7 @@ public class viewTrainsFormController implements Initializable {
     @FXML
     private AnchorPane viewTrain;
 
-    TrainDAOImpl trainDAO = new TrainDAOImpl();
+    ViewTrainsBOImpl viewTrainsBO = (ViewTrainsBOImpl) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.VIEWTRAIN);
 
     @FXML
     void btnBackOnAction(ActionEvent event) throws IOException {
@@ -98,9 +101,9 @@ public class viewTrainsFormController implements Initializable {
     private void LoadTable() {
         try {
             ObservableList<TrainTM> obList = FXCollections.observableArrayList();
-            List<Train> cusList = trainDAO.getAll();
+            List<TrainDTO> cusList = viewTrainsBO.getAll();
 
-            for (Train train : cusList) {
+            for (TrainDTO train : cusList) {
                 obList.add(new TrainTM(
                         train.getId(),
                         train.getName(),

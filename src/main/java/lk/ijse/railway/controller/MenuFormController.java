@@ -69,8 +69,6 @@ public class MenuFormController {
     @FXML
     private JFXButton trainButton;
 
-    LoginHistoryDAOImpl loginHistoryDAO = new LoginHistoryDAOImpl();
-
     @FXML
     void btnSettingOnAction(ActionEvent event) throws IOException {
         setUI("setting_form.fxml");

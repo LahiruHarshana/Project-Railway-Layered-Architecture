@@ -10,9 +10,13 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Duration;
+import lk.ijse.railway.bo.BOFactory;
+import lk.ijse.railway.bo.custom.impl.TrainBOImpl;
+import lk.ijse.railway.bo.custom.impl.TrainSheduleBOImpl;
 import lk.ijse.railway.dto.Train;
 import lk.ijse.railway.dto.tm.TrainTM;
 import lk.ijse.railway.dao.custom.impl.TrainDAOImpl;
+import lk.ijse.railway.model.TrainDTO;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -36,7 +40,7 @@ public class trainSheduleFormController implements Initializable {
     @FXML
     private TableView<TrainTM> timeTable;
 
-    TrainDAOImpl trainDAO = new TrainDAOImpl();
+    TrainSheduleBOImpl trainSheduleBO = (TrainSheduleBOImpl) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.TRAINSHEDULE);
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -58,9 +62,9 @@ public class trainSheduleFormController implements Initializable {
     private void LoadTable() {
         try {
             ObservableList<TrainTM> obList = FXCollections.observableArrayList();
-            List<Train> cusList = trainDAO.getAll();
+            List<TrainDTO> cusList = trainSheduleBO.getAll();
 
-            for (Train train : cusList) {
+            for (TrainDTO train : cusList) {
                 obList.add(new TrainTM(
                         train.getId(),
                         train.getName(),

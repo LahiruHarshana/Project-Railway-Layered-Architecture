@@ -8,8 +8,11 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import lk.ijse.railway.bo.BOFactory;
+import lk.ijse.railway.bo.custom.LoginHistoryBO;
 import lk.ijse.railway.bo.custom.impl.LoginBOImpl;
 import lk.ijse.railway.bo.custom.impl.LoginHistoryBOImpl;
+import lk.ijse.railway.dao.DAOFactory;
 import lk.ijse.railway.dto.LoginHistory;
 import lk.ijse.railway.dto.tm.LoginHistoryTM;
 import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
@@ -41,7 +44,7 @@ public class LogHistoryFormController implements Initializable {
     @FXML
     private TableView<LoginHistoryTM> tblLoginHistory;
 
-    LoginHistoryBOImpl loginHistoryBO = new LoginHistoryBOImpl();
+    LoginHistoryBO loginHistoryBO = (LoginHistoryBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.LOGINHISTORY);
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

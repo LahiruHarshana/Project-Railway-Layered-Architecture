@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.ChangePasswordBO;
 import lk.ijse.railway.bo.custom.impl.ChangePasswordBOImpl;
 import lk.ijse.railway.dto.User;
@@ -30,7 +31,7 @@ public class  ChangePasswordFormController implements Initializable {
 
     @FXML
     private TextField txtNew;
-    ChangePasswordBOImpl changePasswordBO = new ChangePasswordBOImpl();
+    ChangePasswordBO changePasswordBO = (ChangePasswordBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.CHANGEPSWD);
     @FXML
     void btnChangeOnAction(ActionEvent event) {
 

@@ -16,6 +16,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.transform.Rotate;
 import javafx.util.Duration;
+import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.impl.TicketBOImpl;
 import lk.ijse.railway.dao.custom.BookingDAO;
 import lk.ijse.railway.dao.custom.impl.BookingDAOImpl;
@@ -68,7 +69,7 @@ public class ticketFormController implements Initializable {
     @FXML
     private AnchorPane mainPane;
 
-    TicketBOImpl ticketBO = new TicketBOImpl();
+    TicketBOImpl ticketBO = (TicketBOImpl) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.TICKET);
 
     @FXML
     void selectTrainOnAction(ActionEvent event) {
