@@ -1,8 +1,8 @@
 package lk.ijse.railway.bo.custom;
 
 import lk.ijse.railway.bo.SuperBO;
-import lk.ijse.railway.dto.LoginHistory;
-import lk.ijse.railway.dto.User;
+import lk.ijse.railway.entity.LoginHistory;
+import lk.ijse.railway.entity.User;
 import lk.ijse.railway.model.LoginHistoryDTO;
 import lk.ijse.railway.model.UserDTO;
 

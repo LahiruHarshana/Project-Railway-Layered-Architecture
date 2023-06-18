@@ -14,7 +14,7 @@ public class Launcher extends Application {
         Parent parent =  FXMLLoader.load(getClass().getResource("/view/loginPage_form.fxml"));
         stage.getIcons().add(image);
         stage.setScene(new Scene(parent));
-        stage.setTitle("Login");
+        stage.setTitle("Railway Station");
         stage.centerOnScreen();
         stage.setResizable(false);
 

@@ -11,15 +11,12 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
-import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.controller.util.Notification;
 import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.impl.SalaryBOImpl;
-import lk.ijse.railway.dto.Employee;
-import lk.ijse.railway.dto.Salary;
-import lk.ijse.railway.dao.custom.impl.EmployeeDAOImpl;
-import lk.ijse.railway.dao.custom.impl.SalaryDAOImpl;
+import lk.ijse.railway.entity.Salary;
 import lk.ijse.railway.model.EmployeeDTO;
-import lk.ijse.railway.util.AlertTypes;
+import lk.ijse.railway.controller.util.AlertTypes;
 
 
 import java.net.URL;

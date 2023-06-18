@@ -11,14 +11,13 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.controller.util.Notification;
 import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.impl.StationBOImpl;
-import lk.ijse.railway.dto.Station;
-import lk.ijse.railway.dto.tm.StationTM;
-import lk.ijse.railway.dao.custom.impl.StationDAOImpl;
+import lk.ijse.railway.entity.Station;
+import lk.ijse.railway.view.tm.StationTM;
 import lk.ijse.railway.model.StationDTO;
-import lk.ijse.railway.util.AlertTypes;
+import lk.ijse.railway.controller.util.AlertTypes;
 
 import java.net.URL;
 import java.sql.SQLException;

@@ -3,16 +3,9 @@ package lk.ijse.railway.bo.custom.impl;
 import lk.ijse.railway.bo.custom.StationBO;
 import lk.ijse.railway.dao.DAOFactory;
 import lk.ijse.railway.dao.custom.impl.StationDAOImpl;
-import lk.ijse.railway.db.DBConnection;
-import lk.ijse.railway.dto.LoginHistory;
-import lk.ijse.railway.dto.Station;
-import lk.ijse.railway.model.LoginHistoryDTO;
+import lk.ijse.railway.entity.Station;
 import lk.ijse.railway.model.StationDTO;
-import lk.ijse.railway.util.CrudUtil;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;

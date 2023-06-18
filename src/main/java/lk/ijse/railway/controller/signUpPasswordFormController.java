@@ -7,13 +7,11 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.controller.util.Notification;
 import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.SignUpPasswordBO;
-import lk.ijse.railway.bo.custom.impl.SignUpPasswordBOImpl;
-import lk.ijse.railway.dto.User;
-import lk.ijse.railway.dao.custom.impl.UserDAOImpl;
-import lk.ijse.railway.util.AlertTypes;
+import lk.ijse.railway.entity.User;
+import lk.ijse.railway.controller.util.AlertTypes;
 
 import java.sql.SQLException;
 

@@ -1,7 +1,7 @@
 package lk.ijse.railway.controller;
 
-import lk.ijse.railway.Notification.Notification;
-import lk.ijse.railway.util.AlertTypes;
+import lk.ijse.railway.controller.util.Notification;
+import lk.ijse.railway.controller.util.AlertTypes;
 
 import javax.mail.*;
 import javax.mail.internet.*;

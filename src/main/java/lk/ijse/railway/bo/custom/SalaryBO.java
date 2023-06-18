@@ -1,7 +1,7 @@
 package lk.ijse.railway.bo.custom;
 
 import lk.ijse.railway.bo.SuperBO;
-import lk.ijse.railway.dto.Salary;
+import lk.ijse.railway.entity.Salary;
 import lk.ijse.railway.model.EmployeeDTO;
 
 import java.sql.SQLException;

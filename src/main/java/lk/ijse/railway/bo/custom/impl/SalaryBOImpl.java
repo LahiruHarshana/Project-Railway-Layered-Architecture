@@ -4,12 +4,9 @@ import lk.ijse.railway.bo.custom.SalaryBO;
 import lk.ijse.railway.dao.DAOFactory;
 import lk.ijse.railway.dao.custom.impl.EmployeeDAOImpl;
 import lk.ijse.railway.dao.custom.impl.SalaryDAOImpl;
-import lk.ijse.railway.dto.Employee;
-import lk.ijse.railway.dto.Salary;
+import lk.ijse.railway.entity.Salary;
 import lk.ijse.railway.model.EmployeeDTO;
-import lk.ijse.railway.util.CrudUtil;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class SalaryBOImpl implements SalaryBO {

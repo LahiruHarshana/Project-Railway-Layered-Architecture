@@ -1,8 +1,8 @@
 package lk.ijse.railway.bo.custom;
 
 import lk.ijse.railway.bo.SuperBO;
-import lk.ijse.railway.dto.StationDetails;
-import lk.ijse.railway.dto.Train;
+import lk.ijse.railway.entity.StationDetails;
+import lk.ijse.railway.entity.Train;
 import lk.ijse.railway.model.TrainDTO;
 
 import java.sql.SQLException;

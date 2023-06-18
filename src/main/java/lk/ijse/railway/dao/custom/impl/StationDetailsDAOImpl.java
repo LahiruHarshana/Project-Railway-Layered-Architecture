@@ -1,8 +1,8 @@
 package lk.ijse.railway.dao.custom.impl;
 
 import lk.ijse.railway.dao.custom.StationDetailsDAO;
-import lk.ijse.railway.dto.StationDetails;
-import lk.ijse.railway.util.CrudUtil;
+import lk.ijse.railway.entity.StationDetails;
+import lk.ijse.railway.dao.custom.impl.util.CrudUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

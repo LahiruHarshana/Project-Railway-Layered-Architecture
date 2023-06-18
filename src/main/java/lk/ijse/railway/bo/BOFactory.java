@@ -15,38 +15,40 @@ public class BOFactory {
         }
 
         //Object creation logic for BO objects
-        public SuperBO getBO(BOTypes types){
+        public <T extends SuperBO>T getBO(BOTypes types){
             switch (types){
                 case BOOKING:
-                    return new BookingBOImpl();
+                    return (T) new BookingBOImpl();
                 case CHANGEPSWD:
-                    return new ChangePasswordBOImpl();
+                    return (T) new ChangePasswordBOImpl();
                 case EMPLOYEE:
-                    return new EmployeeBOImpl();
+                    return (T) new EmployeeBOImpl();
                 case HOME:
-                    return new LoginBOImpl();
+                    return (T) new HomeBOImpl();
                 case LOGIN:
-                    return new LoginHistoryBOImpl();
+                    return (T) new LoginBOImpl();
+                case LOGINHISTORY:
+                    return (T) new LoginHistoryBOImpl();
                 case PASSENGER:
-                    return new PassengerBOImpl();
+                    return (T) new PassengerBOImpl();
                 case SALARY:
-                    return new SalaryBOImpl();
+                    return (T) new SalaryBOImpl();
                 case SEATS:
-                    return new SeatsBOImpl();
+                    return (T) new SeatsBOImpl();
                 case SETTINGS:
-                    return new SettingBOImpl();
+                    return (T) new SettingBOImpl();
                 case SIGNUP:
-                    return new SignUpPasswordBOImpl();
+                    return (T) new SignUpPasswordBOImpl();
                 case STATION:
-                    return new StationBOImpl();
+                    return (T) new StationBOImpl();
                 case TICKET:
-                    return new TicketBOImpl();
+                    return (T) new TicketBOImpl();
                 case TICKETING:
-                    return new TicketingBOImpl();
+                    return (T) new TicketingBOImpl();
                 case TRAIN:
-                    return new TrainBOImpl();
+                    return (T) new TrainBOImpl();
                 case TRAINSHEDULE:
-                    return new TrainSheduleBOImpl();
+                    return (T) new TrainSheduleBOImpl();
                 case VIEWTRAIN:
                 default:
                     return null;

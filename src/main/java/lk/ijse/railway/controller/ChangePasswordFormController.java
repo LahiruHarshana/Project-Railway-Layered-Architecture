@@ -5,14 +5,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
-import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.controller.util.Notification;
 import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.ChangePasswordBO;
-import lk.ijse.railway.bo.custom.impl.ChangePasswordBOImpl;
-import lk.ijse.railway.dto.User;
+import lk.ijse.railway.entity.User;
 import lk.ijse.railway.model.LoginHistoryDTO;
 import lk.ijse.railway.model.UserDTO;
-import lk.ijse.railway.util.AlertTypes;
+import lk.ijse.railway.controller.util.AlertTypes;
 
 import java.net.URL;
 import java.sql.SQLException;

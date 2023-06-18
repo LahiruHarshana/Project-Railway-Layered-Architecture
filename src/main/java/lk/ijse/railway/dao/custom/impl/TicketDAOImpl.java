@@ -2,13 +2,12 @@ package lk.ijse.railway.dao.custom.impl;
 
 import lk.ijse.railway.dao.custom.TicketDAO;
 import lk.ijse.railway.db.DBConnection;
-import lk.ijse.railway.dto.Ticket;
+import lk.ijse.railway.entity.Ticket;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class TicketDAOImpl implements TicketDAO {

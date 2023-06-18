@@ -1,11 +1,10 @@
 package lk.ijse.railway.bo.custom;
 
 import lk.ijse.railway.bo.SuperBO;
-import lk.ijse.railway.dto.Station;
+import lk.ijse.railway.entity.Station;
 import lk.ijse.railway.model.StationDTO;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public interface StationBO extends SuperBO {

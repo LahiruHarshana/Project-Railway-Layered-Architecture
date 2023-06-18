@@ -18,16 +18,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.controller.util.Notification;
 import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.BookingBO;
-import lk.ijse.railway.bo.custom.impl.BookingBOImpl;
-import lk.ijse.railway.dao.custom.impl.*;
 import lk.ijse.railway.db.DBConnection;
-import lk.ijse.railway.dto.Station;
-import lk.ijse.railway.dto.Ticket;
 import lk.ijse.railway.model.StationDTO;
-import lk.ijse.railway.util.AlertTypes;
+import lk.ijse.railway.controller.util.AlertTypes;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.design.JRDesignQuery;
 import net.sf.jasperreports.engine.design.JasperDesign;
@@ -254,8 +250,6 @@ public class BookingFormController implements Initializable {
 
 
         }
-
-
 
         String bookingId = BookingIdTextField.getText();
         String date = CurrentDateLabel.getText();

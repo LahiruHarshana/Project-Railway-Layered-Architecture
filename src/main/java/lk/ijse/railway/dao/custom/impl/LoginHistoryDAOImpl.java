@@ -1,13 +1,11 @@
 package lk.ijse.railway.dao.custom.impl;
 
 import lk.ijse.railway.dao.custom.LoginHistoryDAO;
-import lk.ijse.railway.dto.LoginHistory;
-import lk.ijse.railway.util.CrudUtil;
+import lk.ijse.railway.entity.LoginHistory;
+import lk.ijse.railway.dao.custom.impl.util.CrudUtil;
 
-import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 

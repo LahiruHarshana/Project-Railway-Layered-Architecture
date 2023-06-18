@@ -1,5 +1,5 @@
 package lk.ijse.railway.model;
-import lk.ijse.railway.dto.Station;
+import lk.ijse.railway.entity.Station;
 import lombok.*;
 
 @NoArgsConstructor

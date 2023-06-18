@@ -1,6 +1,6 @@
 package lk.ijse.railway.model;
 
-import lk.ijse.railway.dto.Employee;
+import lk.ijse.railway.entity.Employee;
 import lombok.*;
 
 import java.sql.Date;

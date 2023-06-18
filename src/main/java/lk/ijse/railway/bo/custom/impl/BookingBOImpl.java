@@ -3,17 +3,13 @@ package lk.ijse.railway.bo.custom.impl;
 import lk.ijse.railway.bo.custom.BookingBO;
 import lk.ijse.railway.dao.DAOFactory;
 import lk.ijse.railway.dao.custom.*;
-import lk.ijse.railway.dao.custom.impl.*;
 import lk.ijse.railway.db.DBConnection;
-import lk.ijse.railway.dto.Booking;
-import lk.ijse.railway.dto.Passenger;
-import lk.ijse.railway.dto.Payment;
-import lk.ijse.railway.dto.Station;
+import lk.ijse.railway.entity.Booking;
+import lk.ijse.railway.entity.Passenger;
+import lk.ijse.railway.entity.Payment;
 import lk.ijse.railway.model.StationDTO;
-import lk.ijse.railway.util.CrudUtil;
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 
 

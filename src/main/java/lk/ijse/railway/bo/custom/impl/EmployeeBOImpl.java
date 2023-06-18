@@ -3,11 +3,9 @@ package lk.ijse.railway.bo.custom.impl;
 import lk.ijse.railway.bo.custom.EmployeeBO;
 import lk.ijse.railway.dao.DAOFactory;
 import lk.ijse.railway.dao.custom.EmployeeDAO;
-import lk.ijse.railway.dao.custom.impl.EmployeeDAOImpl;
-import lk.ijse.railway.dto.Employee;
+import lk.ijse.railway.entity.Employee;
 import lk.ijse.railway.model.EmployeeDTO;
-import lk.ijse.railway.util.CrudUtil;
-import java.sql.ResultSet;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
 package lk.ijse.railway.dao.custom;
 
 import lk.ijse.railway.dao.CrudDAO;
-import lk.ijse.railway.dto.Train;
+import lk.ijse.railway.entity.Train;
 
 import java.sql.SQLException;
 import java.sql.Time;

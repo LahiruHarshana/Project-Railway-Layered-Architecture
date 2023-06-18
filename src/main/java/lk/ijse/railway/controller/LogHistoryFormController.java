@@ -10,12 +10,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.LoginHistoryBO;
-import lk.ijse.railway.bo.custom.impl.LoginBOImpl;
-import lk.ijse.railway.bo.custom.impl.LoginHistoryBOImpl;
-import lk.ijse.railway.dao.DAOFactory;
-import lk.ijse.railway.dto.LoginHistory;
-import lk.ijse.railway.dto.tm.LoginHistoryTM;
-import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
+import lk.ijse.railway.view.tm.LoginHistoryTM;
 import lk.ijse.railway.model.LoginHistoryDTO;
 
 import java.net.URL;

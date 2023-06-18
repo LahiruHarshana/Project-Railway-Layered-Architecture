@@ -3,8 +3,8 @@ package lk.ijse.railway.dao.custom.impl;
 
 import lk.ijse.railway.dao.custom.PassengerDAO;
 import lk.ijse.railway.db.DBConnection;
-import lk.ijse.railway.dto.Passenger;
-import lk.ijse.railway.util.CrudUtil;
+import lk.ijse.railway.entity.Passenger;
+import lk.ijse.railway.dao.custom.impl.util.CrudUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

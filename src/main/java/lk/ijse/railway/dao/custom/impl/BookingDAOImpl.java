@@ -5,10 +5,8 @@ import lk.ijse.railway.dao.custom.BookingDAO;
 import lk.ijse.railway.dao.custom.PassengerDAO;
 import lk.ijse.railway.dao.custom.PaymentDAO;
 import lk.ijse.railway.db.DBConnection;
-import lk.ijse.railway.dto.Booking;
-import lk.ijse.railway.dto.Passenger;
-import lk.ijse.railway.dto.Payment;
-import lk.ijse.railway.util.CrudUtil;
+import lk.ijse.railway.entity.Booking;
+import lk.ijse.railway.dao.custom.impl.util.CrudUtil;
 
 import java.sql.*;
 import java.util.ArrayList;

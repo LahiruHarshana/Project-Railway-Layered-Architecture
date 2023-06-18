@@ -14,9 +14,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.impl.ViewTrainsBOImpl;
-import lk.ijse.railway.dto.Train;
-import lk.ijse.railway.dto.tm.TrainTM;
-import lk.ijse.railway.dao.custom.impl.TrainDAOImpl;
+import lk.ijse.railway.view.tm.TrainTM;
 import lk.ijse.railway.model.TrainDTO;
 
 

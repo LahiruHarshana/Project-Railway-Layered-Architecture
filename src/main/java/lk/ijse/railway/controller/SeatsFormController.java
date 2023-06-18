@@ -9,11 +9,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.controller.util.Notification;
 import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.impl.SeatsBOImpl;
-import lk.ijse.railway.dao.custom.impl.BookingDAOImpl;
-import lk.ijse.railway.util.AlertTypes;
+import lk.ijse.railway.controller.util.AlertTypes;
 
 import java.net.URL;
 import java.sql.Date;

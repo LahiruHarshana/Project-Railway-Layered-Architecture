@@ -1,7 +1,5 @@
 package lk.ijse.railway.dao;
 
-import lk.ijse.railway.dto.Employee;
-
 import java.sql.SQLException;
 import java.util.List;
 

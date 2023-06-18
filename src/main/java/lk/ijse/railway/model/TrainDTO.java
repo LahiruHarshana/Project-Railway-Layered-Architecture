@@ -1,6 +1,6 @@
 package lk.ijse.railway.model;
 
-import lk.ijse.railway.dto.Train;
+import lk.ijse.railway.entity.Train;
 import lombok.*;
 
 import java.sql.Time;

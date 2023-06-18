@@ -11,13 +11,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.transform.Rotate;
 import javafx.util.Duration;
-import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.controller.util.Notification;
 import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.impl.PassengerBOImpl;
-import lk.ijse.railway.dto.Passenger;
-import lk.ijse.railway.dao.custom.impl.PassengerDAOImpl;
+import lk.ijse.railway.entity.Passenger;
 import lk.ijse.railway.model.PassengerDTO;
-import lk.ijse.railway.util.AlertTypes;
+import lk.ijse.railway.controller.util.AlertTypes;
 
 import java.net.URL;
 import java.sql.SQLException;

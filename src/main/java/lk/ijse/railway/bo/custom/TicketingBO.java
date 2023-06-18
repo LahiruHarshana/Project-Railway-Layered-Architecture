@@ -1,12 +1,8 @@
 package lk.ijse.railway.bo.custom;
 
 import lk.ijse.railway.bo.SuperBO;
-import lk.ijse.railway.db.DBConnection;
-import lk.ijse.railway.dto.Payment;
-import lk.ijse.railway.dto.Ticket;
 import lk.ijse.railway.model.StationDTO;
 
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 

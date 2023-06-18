@@ -12,17 +12,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.bo.custom.impl.LoginBOImpl;
+import lk.ijse.railway.controller.util.Notification;
 import lk.ijse.railway.bo.BOFactory;
 import lk.ijse.railway.bo.custom.LoginBO;
-import lk.ijse.railway.bo.custom.impl.LoginBOImpl;
-import lk.ijse.railway.dto.LoginHistory;
-import lk.ijse.railway.dto.Salary;
-import lk.ijse.railway.dto.User;
-import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
+import lk.ijse.railway.entity.LoginHistory;
 import lk.ijse.railway.model.UserDTO;
-import lk.ijse.railway.util.AlertTypes;
-import lk.ijse.railway.util.TimeChecker;
+import lk.ijse.railway.controller.util.AlertTypes;
+import lk.ijse.railway.controller.util.TimeChecker;
 import lombok.SneakyThrows;
 import java.io.IOException;
 import java.net.URL;
@@ -70,7 +67,7 @@ public class LoginFormController implements Initializable {
 
     int eka;
 
-    LoginBO loginBO = (LoginBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.LOGIN);
+    LoginBO loginBO = BOFactory.getBoFactory().getBO(BOFactory.BOTypes.LOGIN);
 
     @FXML
     void loginButtonOnAction(ActionEvent event) throws IOException {

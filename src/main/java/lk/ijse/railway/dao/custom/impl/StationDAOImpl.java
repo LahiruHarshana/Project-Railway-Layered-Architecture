@@ -1,11 +1,9 @@
 package lk.ijse.railway.dao.custom.impl;
 
-import lk.ijse.railway.dao.custom.SalaryDAO;
 import lk.ijse.railway.dao.custom.StationDAO;
 import lk.ijse.railway.db.DBConnection;
-import lk.ijse.railway.dto.Station;
-import lk.ijse.railway.dto.Ticket;
-import lk.ijse.railway.util.CrudUtil;
+import lk.ijse.railway.entity.Station;
+import lk.ijse.railway.dao.custom.impl.util.CrudUtil;
 
 import java.sql.*;
 import java.util.ArrayList;

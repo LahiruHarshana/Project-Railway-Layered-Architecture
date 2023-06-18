@@ -1,6 +1,6 @@
 package lk.ijse.railway.model;
 
-import lk.ijse.railway.dto.LoginHistory;
+import lk.ijse.railway.entity.LoginHistory;
 import lombok.*;
 
 import java.sql.Date;

@@ -1,7 +1,7 @@
 package lk.ijse.railway.bo.custom;
 
 import lk.ijse.railway.bo.SuperBO;
-import lk.ijse.railway.dto.User;
+import lk.ijse.railway.entity.User;
 
 import java.sql.SQLException;
 

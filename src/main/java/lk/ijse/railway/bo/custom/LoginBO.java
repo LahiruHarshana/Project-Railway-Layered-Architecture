@@ -1,7 +1,7 @@
 package lk.ijse.railway.bo.custom;
 
 import lk.ijse.railway.bo.SuperBO;
-import lk.ijse.railway.dto.LoginHistory;
+import lk.ijse.railway.entity.LoginHistory;
 import lk.ijse.railway.model.UserDTO;
 
 import java.sql.SQLException;

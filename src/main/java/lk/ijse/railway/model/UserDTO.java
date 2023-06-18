@@ -1,9 +1,7 @@
 package lk.ijse.railway.model;
 
-import lk.ijse.railway.dto.User;
+import lk.ijse.railway.entity.User;
 import lombok.*;
-
-import javax.swing.*;
 
 @Getter
 @AllArgsConstructor

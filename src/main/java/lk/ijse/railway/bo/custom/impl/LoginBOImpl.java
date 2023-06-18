@@ -4,14 +4,10 @@ import lk.ijse.railway.bo.custom.LoginBO;
 import lk.ijse.railway.dao.DAOFactory;
 import lk.ijse.railway.dao.custom.LoginHistoryDAO;
 import lk.ijse.railway.dao.custom.UserDAO;
-import lk.ijse.railway.dao.custom.impl.LoginHistoryDAOImpl;
 import lk.ijse.railway.dao.custom.impl.UserDAOImpl;
-import lk.ijse.railway.dto.LoginHistory;
-import lk.ijse.railway.dto.User;
+import lk.ijse.railway.entity.LoginHistory;
 import lk.ijse.railway.model.UserDTO;
-import lk.ijse.railway.util.CrudUtil;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class LoginBOImpl implements LoginBO {

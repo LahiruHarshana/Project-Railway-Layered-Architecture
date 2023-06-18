@@ -13,15 +13,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
-import lk.ijse.railway.Notification.Notification;
+import lk.ijse.railway.controller.util.Notification;
 import lk.ijse.railway.bo.BOFactory;
-import lk.ijse.railway.bo.custom.impl.TicketBOImpl;
 import lk.ijse.railway.bo.custom.impl.TicketingBOImpl;
-import lk.ijse.railway.dao.custom.impl.*;
 import lk.ijse.railway.db.DBConnection;
-import lk.ijse.railway.dto.*;
 import lk.ijse.railway.model.StationDTO;
-import lk.ijse.railway.util.AlertTypes;
+import lk.ijse.railway.controller.util.AlertTypes;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.design.JRDesignQuery;
 import net.sf.jasperreports.engine.design.JasperDesign;
@@ -90,7 +87,7 @@ public class ticketingFormController implements Initializable {
 
     @FXML
     private Pane ticketingPane;
-    TicketingBOImpl ticketBO = (TicketingBOImpl) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.TICKET);
+    TicketingBOImpl ticketBO =  BOFactory.getBoFactory().getBO(BOFactory.BOTypes.TICKETING);
 
     @FXML
     void howManyTextFieldOnAction(ActionEvent event) {
