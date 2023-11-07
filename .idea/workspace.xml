@@ -4,152 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f7f2a54-4738-4d50-8966-9414667d47ef" name="Changes" comment="0.4.1 updated">
+    <list default="true" id="5f7f2a54-4738-4d50-8966-9414667d47ef" name="Changes" comment="0.4.2 updated">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d1a10015-50ff-4cd8-a7be-7ee19bb18149.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d1a10015-50ff-4cd8-a7be-7ee19bb18149.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/Notification/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/util/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/BOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/BOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/BookingBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/BookingBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/ChangePasswordBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/ChangePasswordBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/EmployeeBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/EmployeeBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/HomeBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/HomeBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/LoginBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/LoginBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/LoginHistoryBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/LoginHistoryBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/PassengerBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/PassengerBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/SalaryBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/SalaryBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/SettingBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/SettingBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/SignUpPasswordBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/SignUpPasswordBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/StationBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/StationBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/TicketingBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/TicketingBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/TrainBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/TrainBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/TrainSheduleBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/TrainSheduleBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/ViewTrainBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/ViewTrainBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/BookingBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/BookingBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/ChangePasswordBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/ChangePasswordBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/EmployeeBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/EmployeeBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/HomeBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/HomeBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/LoginBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/LoginBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/LoginHistoryBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/LoginHistoryBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/PassengerBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/PassengerBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/SalaryBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/SalaryBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/SettingBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/SettingBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/SignUpPasswordBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/SignUpPasswordBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/StationBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/StationBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/TicketingBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/TicketingBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/TrainBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/TrainBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/TrainSheduleBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/TrainSheduleBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/ViewTrainsBOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/bo/custom/impl/ViewTrainsBOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/BookingFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/BookingFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/ChangePasswordFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/ChangePasswordFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/EmployeeFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/EmployeeFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/HomeFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/HomeFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/LogHistoryFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/LogHistoryFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/LoginFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/PassengerFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/PassengerFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/SalaryFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/SalaryFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/SeatsFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/SeatsFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/sendMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/sendMail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/sendOTP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/sendOTP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/settingFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/settingFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/signUpPasswordFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/signUpPasswordFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/stationFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/stationFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/ticketingFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/ticketingFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/trainFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/trainFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/trainSheduleFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/trainSheduleFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/viewTrainsFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/viewTrainsFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/CrudDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/CrudDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/BookingDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/BookingDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/EmployeeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/LoginHistoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/LoginHistoryDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/PassengerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/PassengerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/PaymentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/PaymentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/SalaryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/SalaryDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/StationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/StationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/StationDetailsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/StationDetailsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/TicketDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/TicketDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/TrainDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/TrainDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/BookingDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/BookingDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/EmployeeDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/EmployeeDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/LoginHistoryDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/LoginHistoryDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/PassengerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/PassengerDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/PaymentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/PaymentDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/SalaryDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/SalaryDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/StationDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/StationDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/StationDetailsDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/StationDetailsDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/TicketDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/TicketDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/TrainDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/TrainDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/entity/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/entity/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/LoginHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/entity/LoginHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/OTP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/entity/OTP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/entity/Passenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/entity/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/Salary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/entity/Salary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/entity/Station.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/StationDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/entity/StationDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/entity/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/TicketAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/entity/TicketAdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/entity/Train.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/tm/EmployeeTM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/view/tm/EmployeeTM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/tm/LoginHistoryTM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/view/tm/LoginHistoryTM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/tm/PassengerTM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/view/tm/PassengerTM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/tm/StationTM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/view/tm/StationTM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dto/tm/TrainTM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/view/tm/TrainTM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/model/EmployeeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/model/EmployeeDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/model/LoginHistoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/model/LoginHistoryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/model/StationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/model/StationDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/model/TrainDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/model/TrainDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/model/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/model/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/util/AlertTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/util/AlertTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/util/CrudUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/dao/custom/impl/util/CrudUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/util/TimeChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/railway/controller/util/TimeChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/Launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/Launcher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/Notification/Notification$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/Notification/Notification$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/Notification/Notification.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/BookingFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/BookingFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/ChangePasswordFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/ChangePasswordFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/EmployeeFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/EmployeeFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/HomeFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/HomeFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/LogHistoryFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/LogHistoryFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/LoginFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/LoginFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/MenuFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/MenuFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/PassengerFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/PassengerFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/SalaryFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/SalaryFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/SeatsFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/SeatsFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/sendMail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/sendMail$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/sendMail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/sendMail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/sendOTP.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/sendOTP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/settingFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/settingFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/signUpPasswordFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/signUpPasswordFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/stationFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/stationFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/ticketFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/ticketFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/ticketingFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/ticketingFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/trainFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/trainFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/trainSheduleFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/trainSheduleFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/viewTrainsFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/railway/controller/viewTrainsFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/dto/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/dto/LoginHistory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/dto/OTP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/dto/Passenger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/dto/Salary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/dto/Station.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/dto/StationDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/dto/Ticket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/dto/TicketAdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/dto/Train.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/dto/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/dto/tm/EmployeeTM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/dto/tm/LoginHistoryTM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/dto/tm/PassengerTM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/dto/tm/StationTM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/dto/tm/TrainTM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/util/AlertTypes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/util/CrudUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/railway/util/TimeChecker.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,6 +28,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="4dada3c6-c151-43f3-ad56-dd37aa533d24" />
+        <option name="url" value="https://github.com/LahiruHarshana/Project-Railway-Layered-Architecture.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -467,14 +338,19 @@
       <workItem from="1686882799487" duration="5112000" />
       <workItem from="1686888060695" duration="5514000" />
       <workItem from="1686907829259" duration="1874000" />
-      <workItem from="1687072044855" duration="667000" />
-    </task>
-    <task id="LOCAL-00018" summary="DAO Seats added">
-      <created>1685005527176</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1685005527176</updated>
+      <workItem from="1687072044855" duration="1822000" />
+      <workItem from="1687074140479" duration="1563000" />
+      <workItem from="1687196751773" duration="605000" />
+      <workItem from="1687685960444" duration="16000" />
+      <workItem from="1688110009464" duration="35000" />
+      <workItem from="1691850350685" duration="200000" />
+      <workItem from="1692455488097" duration="252000" />
+      <workItem from="1693809173320" duration="545000" />
+      <workItem from="1693813790901" duration="190000" />
+      <workItem from="1693822421137" duration="1602000" />
+      <workItem from="1693925912627" duration="15000" />
+      <workItem from="1693929548796" duration="11000" />
+      <workItem from="1694055907447" duration="519000" />
     </task>
     <task id="LOCAL-00019" summary="DAO Station Details added">
       <created>1685005591131</created>
@@ -812,7 +688,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686907581757</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="0.4.2 updated">
+      <created>1687072789018</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1687072789019</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -830,7 +713,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="0.1.6 updated" />
     <MESSAGE value="0.1.7 updated" />
     <MESSAGE value="0.1.8 updated" />
     <MESSAGE value="0.1.9 updated" />
@@ -855,7 +737,8 @@
     <MESSAGE value="0.3.9 updated" />
     <MESSAGE value="0.4.0 updated" />
     <MESSAGE value="0.4.1 updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.4.1 updated" />
+    <MESSAGE value="0.4.2 updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.4.2 updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

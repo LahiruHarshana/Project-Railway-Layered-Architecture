@@ -11,11 +11,8 @@ import java.util.List;
 public class UserDAOImpl implements UserDAO {
     @Override
     public User search(String text) throws SQLException {
-
         String sql = "SELECT * FROM User WHERE UserName = ?";
         ResultSet rst = CrudUtil.execute(sql, text);
-
-
         if (rst.next()){
             return new User(rst.getInt(1),rst.getString(2),rst.getString(3),rst.getString(4),rst.getString(5), rst.getString(6));
         }
