@@ -13,7 +13,6 @@ import java.sql.*;
 import java.util.List;
 
 
-
 public class BookingBOImpl implements BookingBO {
 
     TrainDAO trainDAO = (TrainDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.TRAIN);

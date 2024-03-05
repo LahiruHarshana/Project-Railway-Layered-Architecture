@@ -10,8 +10,5 @@
         <module name="RailwayStationManagementSystem" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="RailwayStationManagementSystem" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

@@ -135,7 +135,6 @@ public class MenuFormController {
         transition(ticketButton, imgTicket);
         setUI("ticket_form.fxml");
     }
-
     private void setUI(String fileName) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/" + fileName));
         Pane registerPane = fxmlLoader.load();

@@ -4,5 +4,4 @@
     -fx-border-radius: 35;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);
     -fx-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-
 }
