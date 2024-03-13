@@ -114,7 +114,6 @@ public class SalaryFormController implements Initializable {
         String formattedDate = currentDate.format(formatter);
         txtDate.setText(formattedDate);
     }
-
     private void LoadPane() {
         TranslateTransition tt = new TranslateTransition(Duration.seconds(0.5), paneSalary);
         tt.setFromY(paneSalary.getHeight());
